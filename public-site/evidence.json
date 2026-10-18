@@ -3,7 +3,7 @@
   "mode": "recorded-evidence",
   "generated_at": "2026-10-18T01:43:42.481Z",
   "source_commit": "f53eb5209ec5569544ac6818af3bb26c344a5708",
-  "scope": "Actual recorded local experiments. Static public projection. No fresh backend operations run on this website. Email-bearing issue titles omitted from publication; source corpus remains in the private repository.",
+  "scope": "Actual recorded local experiments. Static public projection. No fresh backend operations run on this website. Email-bearing issue titles omitted from publication; a reviewed current source snapshot is public; original history remains private.",
   "products": [
     {
       "slug": "switchboard",
