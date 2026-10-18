@@ -45,7 +45,7 @@ function display(data) {
       node("h1", "Catch the bugs\nusers notice."),
       node(
         "p",
-        "A teammate sees the wrong data. A bike rental is charged twice. A game creates an extra item. Explore six tools built to catch these everyday failures.",
+        "A teammate sees the wrong data. A rental removes two bikes from stock. A game creates an extra item. Explore six tools built to catch these everyday failures.",
       ),
     );
     hero.append(link("Explore the tools ↓", "#tools", "button"));
