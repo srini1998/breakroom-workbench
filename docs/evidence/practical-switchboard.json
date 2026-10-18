@@ -1,0 +1,4096 @@
+{
+  "version": 1,
+  "provenance": "recorded real local execution; synthetic workload",
+  "run": {
+    "id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+    "workspace_id": "00000000-0000-4000-8000-000000000011",
+    "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+    "fixture_version": "Switchboard-v1",
+    "spec": {
+      "mode": "live",
+      "rate": 4,
+      "seed": 42,
+      "levels": [
+        1
+      ],
+      "limits": {
+        "seconds": 720,
+        "max_experiments": 26,
+        "max_model_calls": 3,
+        "max_model_tokens": 8000
+      },
+      "variant": "scoped",
+      "version": 1,
+      "workload": "tenant-orders-insert-update",
+      "warmup_ms": 250,
+      "operations": 4,
+      "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+      "repetitions": 3,
+      "contract_hash": "ea1932c061d3b843f19745049cd2c798a7819778fa03e4ec979b25a23ddcff41",
+      "payload_bytes": 128,
+      "observation_ms": 1500,
+      "payload_source": "earthquakes",
+      "fixture_version": "Switchboard-v1",
+      "dataset_snapshot": {
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+        "name": "USGS earthquake observations",
+        "rows": [
+          {
+            "id": "nc75451196",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+            "date": "2026-10-17T21:34:24.600Z",
+            "name": "2 km NW of The Geysers, CA",
+            "magnitude": 0.26
+          },
+          {
+            "id": "aka2026uplgqp",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+            "date": "2026-10-17T21:27:33.901Z",
+            "name": "85 km NNW of Karluk, Alaska",
+            "magnitude": 0.7
+          },
+          {
+            "id": "aka2026uplcme",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+            "date": "2026-10-17T21:22:45.352Z",
+            "name": "111 km S of McCarthy, Alaska",
+            "magnitude": 0.9
+          },
+          {
+            "id": "ci41348639",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+            "date": "2026-10-17T21:22:37.320Z",
+            "name": "11 km S of Anza, CA",
+            "magnitude": 0.5
+          },
+          {
+            "id": "aka2026uplbtx",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplbtx",
+            "date": "2026-10-17T21:21:56.748Z",
+            "name": "60 km SSW of Central, Alaska",
+            "magnitude": 1.7
+          },
+          {
+            "id": "aka2026upkzuo",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkzuo",
+            "date": "2026-10-17T21:19:40.099Z",
+            "name": "18 km N of Skwentna, Alaska",
+            "magnitude": 1.6
+          },
+          {
+            "id": "ci41348631",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348631",
+            "date": "2026-10-17T21:03:33.340Z",
+            "name": "22 km ESE of Anza, CA",
+            "magnitude": 0.94
+          },
+          {
+            "id": "aka2026upkdpk",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkdpk",
+            "date": "2026-10-17T20:54:04.232Z",
+            "name": "55 km E of Whittier, Alaska",
+            "magnitude": 1.1
+          },
+          {
+            "id": "hv75059831",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059831",
+            "date": "2026-10-17T20:53:42.240Z",
+            "name": "9 km SSW of Volcano, Hawaii",
+            "magnitude": 1.76
+          },
+          {
+            "id": "aka2026upjkal",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upjkal",
+            "date": "2026-10-17T20:31:29.300Z",
+            "name": "26 km ENE of Susitna North, Alaska",
+            "magnitude": 1.5
+          },
+          {
+            "id": "aka2026upisja",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upisja",
+            "date": "2026-10-17T20:11:11.204Z",
+            "name": "58 km WNW of Happy Valley, Alaska",
+            "magnitude": 2.8
+          },
+          {
+            "id": "ci41348623",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348623",
+            "date": "2026-10-17T20:00:44.210Z",
+            "name": "4 km NNW of Big Bear City, CA",
+            "magnitude": 1.09
+          },
+          {
+            "id": "nc75451131",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451131",
+            "date": "2026-10-17T19:48:39.660Z",
+            "name": "3 km SE of The Geysers, CA",
+            "magnitude": 1.23
+          },
+          {
+            "id": "aka2026uphtgp",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphtgp",
+            "date": "2026-10-17T19:42:10.340Z",
+            "name": "11 km ENE of Fox, Alaska",
+            "magnitude": 1.4
+          },
+          {
+            "id": "ci41348615",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348615",
+            "date": "2026-10-17T19:37:30.510Z",
+            "name": "4 km WSW of Anza, CA",
+            "magnitude": 1.02
+          },
+          {
+            "id": "uu80160531",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80160531",
+            "date": "2026-10-17T19:30:56.270Z",
+            "name": "1 km ENE of Summit Park, Utah",
+            "magnitude": 2.54
+          },
+          {
+            "id": "hv75059776",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059776",
+            "date": "2026-10-17T19:24:08.300Z",
+            "name": "7 km WSW of Volcano, Hawaii",
+            "magnitude": 1.32
+          },
+          {
+            "id": "hv75059771",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059771",
+            "date": "2026-10-17T19:23:46.820Z",
+            "name": "13 km ENE of Pāhala, Hawaii",
+            "magnitude": 2.76
+          },
+          {
+            "id": "aka2026uphcnz",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphcnz",
+            "date": "2026-10-17T19:23:28.201Z",
+            "name": "48 km ESE of Halibut Cove, Alaska",
+            "magnitude": 3.1
+          },
+          {
+            "id": "hv75059766",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059766",
+            "date": "2026-10-17T19:20:30.190Z",
+            "name": "19 km ESE of Naalehu, Hawaii",
+            "magnitude": 2.06
+          }
+        ],
+        "content_hash": "55c9a293c25cffed5da0340d9e429e449536f93bf263cbe68f859f69a05dda81",
+        "retrieved_at": "2026-10-17T21:37:31.393Z",
+        "source_manifest_json": "{\"id\":\"earthquakes\",\"name\":\"USGS earthquake observations\",\"url\":\"https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php\",\"feed_url\":\"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson\",\"retrieved_at\":\"2026-10-17T21:37:31.393Z\",\"period\":\"Past-day feed snapshot; not a continuously connected alert service\",\"license\":\"USGS-produced data: public domain; see USGS copyright policy\",\"attribution\":\"U.S. Geological Survey Earthquake Hazards Program\",\"transformation\":\"First 20 features; public ID, place, magnitude, origin time and source URL only. Replayed as application updates, not newly detected earthquakes.\",\"rows\":[{\"id\":\"nc75451196\",\"name\":\"2 km NW of The Geysers, CA\",\"magnitude\":0.26,\"date\":\"2026-10-17T21:34:24.600Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196\"},{\"id\":\"aka2026uplgqp\",\"name\":\"85 km NNW of Karluk, Alaska\",\"magnitude\":0.7,\"date\":\"2026-10-17T21:27:33.901Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp\"},{\"id\":\"aka2026uplcme\",\"name\":\"111 km S of McCarthy, Alaska\",\"magnitude\":0.9,\"date\":\"2026-10-17T21:22:45.352Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme\"},{\"id\":\"ci41348639\",\"name\":\"11 km S of Anza, CA\",\"magnitude\":0.5,\"date\":\"2026-10-17T21:22:37.320Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639\"},{\"id\":\"aka2026uplbtx\",\"name\":\"60 km SSW of Central, Alaska\",\"magnitude\":1.7,\"date\":\"2026-10-17T21:21:56.748Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplbtx\"},{\"id\":\"aka2026upkzuo\",\"name\":\"18 km N of Skwentna, Alaska\",\"magnitude\":1.6,\"date\":\"2026-10-17T21:19:40.099Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkzuo\"},{\"id\":\"ci41348631\",\"name\":\"22 km ESE of Anza, CA\",\"magnitude\":0.94,\"date\":\"2026-10-17T21:03:33.340Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/ci41348631\"},{\"id\":\"aka2026upkdpk\",\"name\":\"55 km E of Whittier, Alaska\",\"magnitude\":1.1,\"date\":\"2026-10-17T20:54:04.232Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkdpk\"},{\"id\":\"hv75059831\",\"name\":\"9 km SSW of Volcano, Hawaii\",\"magnitude\":1.76,\"date\":\"2026-10-17T20:53:42.240Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/hv75059831\"},{\"id\":\"aka2026upjkal\",\"name\":\"26 km ENE of Susitna North, Alaska\",\"magnitude\":1.5,\"date\":\"2026-10-17T20:31:29.300Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upjkal\"},{\"id\":\"aka2026upisja\",\"name\":\"58 km WNW of Happy Valley, Alaska\",\"magnitude\":2.8,\"date\":\"2026-10-17T20:11:11.204Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upisja\"},{\"id\":\"ci41348623\",\"name\":\"4 km NNW of Big Bear City, CA\",\"magnitude\":1.09,\"date\":\"2026-10-17T20:00:44.210Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/ci41348623\"},{\"id\":\"nc75451131\",\"name\":\"3 km SE of The Geysers, CA\",\"magnitude\":1.23,\"date\":\"2026-10-17T19:48:39.660Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/nc75451131\"},{\"id\":\"aka2026uphtgp\",\"name\":\"11 km ENE of Fox, Alaska\",\"magnitude\":1.4,\"date\":\"2026-10-17T19:42:10.340Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphtgp\"},{\"id\":\"ci41348615\",\"name\":\"4 km WSW of Anza, CA\",\"magnitude\":1.02,\"date\":\"2026-10-17T19:37:30.510Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/ci41348615\"},{\"id\":\"uu80160531\",\"name\":\"1 km ENE of Summit Park, Utah\",\"magnitude\":2.54,\"date\":\"2026-10-17T19:30:56.270Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/uu80160531\"},{\"id\":\"hv75059776\",\"name\":\"7 km WSW of Volcano, Hawaii\",\"magnitude\":1.32,\"date\":\"2026-10-17T19:24:08.300Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/hv75059776\"},{\"id\":\"hv75059771\",\"name\":\"13 km ENE of Pāhala, Hawaii\",\"magnitude\":2.76,\"date\":\"2026-10-17T19:23:46.820Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/hv75059771\"},{\"id\":\"aka2026uphcnz\",\"name\":\"48 km ESE of Halibut Cove, Alaska\",\"magnitude\":3.1,\"date\":\"2026-10-17T19:23:28.201Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphcnz\"},{\"id\":\"hv75059766\",\"name\":\"19 km ESE of Naalehu, Hawaii\",\"magnitude\":2.06,\"date\":\"2026-10-17T19:20:30.190Z\",\"url\":\"https://earthquake.usgs.gov/earthquakes/eventpage/hv75059766\"}],\"source_fingerprint_sha256\":\"46a308db466d57c336a53a2381de87014935b7d30044e660a3cac142c8faafa0\",\"fingerprint_method\":\"SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints.\"}"
+      },
+      "coverage_objective": 1,
+      "latency_objective_ms": 1000
+    },
+    "config_hash": "c55fbbb33cd030e2108e503c5d8c0f85593106315792f58273a1dfe51b609b54",
+    "parent_id": null,
+    "status": "completed",
+    "verdict": {
+      "scope": "Supported local INSERT/UPDATE fixture only",
+      "result": "pass",
+      "reasons": [
+        "Candidate met correctness and configured objective for this fixture and measured local conditions."
+      ],
+      "comparison": [
+        {
+          "level": 1,
+          "pairs": [
+            {
+              "delta_ms": -37.48816799999622,
+              "repetition": 0,
+              "baseline_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+              "baseline_p95": 42.701084000000264,
+              "candidate_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+              "baseline_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+              "candidate_p95": 5.212916000004043,
+              "candidate_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71"
+            },
+            {
+              "delta_ms": -366.859749999996,
+              "repetition": 1,
+              "baseline_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+              "baseline_p95": 379.3225420000017,
+              "candidate_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+              "baseline_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+              "candidate_p95": 12.46279200000572,
+              "candidate_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293"
+            },
+            {
+              "delta_ms": -181.73695899999439,
+              "repetition": 2,
+              "baseline_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+              "baseline_p95": 192.88779200000135,
+              "candidate_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+              "baseline_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+              "candidate_p95": 11.150833000006969,
+              "candidate_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Observed association only; no server bottleneck attribution.",
+        "No universal equivalence or guaranteed speedup.",
+        "Synthetic fixtures; no custom model training."
+      ],
+      "evidence_refs": [
+        "e2574297-a01e-4ee8-83fc-8a51b030a5dc"
+      ],
+      "experiments_used": 8,
+      "valid_conclusions": 1,
+      "missed_seeded_failure": false,
+      "estimated_inference_spend": "unknown local inference"
+    },
+    "created_at": "2026-10-17T21:53:29.977Z",
+    "updated_at": "2026-10-17T21:54:42.235Z",
+    "lease_until": null,
+    "worker_id": "74893a54-d078-479a-90cf-43c4d59a9eea",
+    "attempts": 1,
+    "cancel_requested": false,
+    "deadline_at": "2026-10-17T22:05:29.977Z"
+  },
+  "contract": {
+    "version": 1,
+    "fixture": "two-tenant-orders-v1",
+    "operations": [
+      "INSERT",
+      "UPDATE"
+    ],
+    "tenants": [
+      "Northstar",
+      "Control"
+    ],
+    "recipients": "Owner and viewer receive only their own tenant rows. Only owners write.",
+    "unsupported": [
+      "DELETE",
+      "tenant reassignment",
+      "row exceptions",
+      "membership revocation",
+      "reconnect/replay semantics",
+      "arbitrary projects"
+    ],
+    "timing": "One process monotonic clock: write-start-to-receipt (not pure server latency); write completion measured separately.",
+    "quantile": "Nearest rank: sorted[ceil(p*n)-1]; observed authorized first receipts only. Misses stay in coverage denominator. p99 unstable below 100 samples."
+  },
+  "contract_hash": "ea1932c061d3b843f19745049cd2c798a7819778fa03e4ec979b25a23ddcff41",
+  "experiments": [
+    {
+      "id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 0,
+      "config": {
+        "level": 1,
+        "smoke": true,
+        "transport": "changes",
+        "repetition": -1
+      },
+      "config_hash": "b81bc5dd2bbf77bb063d9fdd33b5a592596733ec52a82f2213484e0cdb58644e",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 381.1687090000005,
+          "p95": 415.05083300000024,
+          "p99": 415.05083300000024,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            381.1687090000005,
+            415.05083300000024
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "1c82f6fa-4db9-467b-8b15-f576bb2573b8",
+              "client_id": "observer-1",
+              "latency_ms": 381.1687090000005
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "cf0cc901-5b9b-4023-8a4b-19ce77160fb4",
+              "client_id": "observer-1",
+              "latency_ms": 415.05083300000024
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 177.946,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 83918848,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 17.399807,
+          "event_loop_delay_mean_ms": 10.835805460317461,
+          "actual_operations_per_second": 4.0012478891854375
+        },
+        "negative": [
+          {
+            "check": "anonymous_subscription",
+            "status": "SUBSCRIBED",
+            "expected": "RLS filters all forbidden rows",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 8.824666999999863,
+        "write_p95": 25.394916000000194,
+        "observed_at": "2026-10-17T21:53:33.975Z"
+      },
+      "created_at": "2026-10-17T21:53:30.626Z"
+    },
+    {
+      "id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 1,
+      "config": {
+        "level": 1,
+        "smoke": true,
+        "transport": "broadcast",
+        "repetition": -1
+      },
+      "config_hash": "496d4c360be20017f2f568ec86c9fea679cd8960fb7f074fb47f5eaad21fb825",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 13.526749999997264,
+          "p95": 13.75879200000054,
+          "p99": 13.75879200000054,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            13.75879200000054,
+            13.526749999997264
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "ea855501-379b-4e29-8dee-3c6b53afe2d9",
+              "client_id": "observer-1",
+              "latency_ms": 13.75879200000054
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "090c8e52-0c70-4ac8-8442-904a7f9646c8",
+              "client_id": "observer-1",
+              "latency_ms": 13.526749999997264
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 158.488,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 71827456,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 31.588351,
+          "event_loop_delay_mean_ms": 10.862517894736841,
+          "actual_operations_per_second": 4.002051719849057
+        },
+        "negative": [
+          {
+            "check": "cross_tenant_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "observer-1"
+          },
+          {
+            "check": "anonymous_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 10.628499999998894,
+        "write_p95": 17.001250000001164,
+        "observed_at": "2026-10-17T21:53:47.539Z"
+      },
+      "created_at": "2026-10-17T21:53:34.836Z"
+    },
+    {
+      "id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 2,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "changes",
+        "repetition": 0
+      },
+      "config_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 25.47633300000234,
+          "p95": 42.701084000000264,
+          "p99": 42.701084000000264,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            25.47633300000234,
+            42.701084000000264
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "a4bf820f-c4be-4007-8f71-28513d243c7d",
+              "client_id": "observer-1",
+              "latency_ms": 25.47633300000234
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "07679ab0-77e1-47e9-8410-75a069260564",
+              "client_id": "observer-1",
+              "latency_ms": 42.701084000000264
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 73.17,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 90980352,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 11.698175,
+          "event_loop_delay_mean_ms": 10.790144879725085,
+          "actual_operations_per_second": 4.002306164832928
+        },
+        "negative": [
+          {
+            "check": "anonymous_subscription",
+            "status": "SUBSCRIBED",
+            "expected": "RLS filters all forbidden rows",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 7.857834000002185,
+        "write_p95": 27.787334000000556,
+        "observed_at": "2026-10-17T21:53:54.699Z"
+      },
+      "created_at": "2026-10-17T21:53:51.801Z"
+    },
+    {
+      "id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 3,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "broadcast",
+        "repetition": 0
+      },
+      "config_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 4.395375000000058,
+          "p95": 5.212916000004043,
+          "p99": 5.212916000004043,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            4.395375000000058,
+            5.212916000004043
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "a8100213-a215-4be0-869f-68eb9129b0a8",
+              "client_id": "observer-1",
+              "latency_ms": 4.395375000000058
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "30940702-bfc5-4661-8226-6d75b7083b07",
+              "client_id": "observer-1",
+              "latency_ms": 5.212916000004043
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 193.461,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 70041600,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 12.107775,
+          "event_loop_delay_mean_ms": 10.86223567854184,
+          "actual_operations_per_second": 3.9993835950034162
+        },
+        "negative": [
+          {
+            "check": "cross_tenant_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "observer-1"
+          },
+          {
+            "check": "anonymous_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 4.151499999999942,
+        "write_p95": 20.70958399999654,
+        "observed_at": "2026-10-17T21:54:08.145Z"
+      },
+      "created_at": "2026-10-17T21:53:55.619Z"
+    },
+    {
+      "id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 4,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "broadcast",
+        "repetition": 1
+      },
+      "config_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 5.310457999999926,
+          "p95": 12.46279200000572,
+          "p99": 12.46279200000572,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            5.310457999999926,
+            12.46279200000572
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "b4ae4575-3c58-48bc-898e-05ce383ef362",
+              "client_id": "observer-1",
+              "latency_ms": 5.310457999999926
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "b777219c-634e-4766-8c64-da548e0a4be0",
+              "client_id": "observer-1",
+              "latency_ms": 12.46279200000572
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 133.321,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 73465856,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 17.694719,
+          "event_loop_delay_mean_ms": 10.87405670058382,
+          "actual_operations_per_second": 3.996948493699942
+        },
+        "negative": [
+          {
+            "check": "cross_tenant_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "observer-1"
+          },
+          {
+            "check": "anonymous_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 10.200666000004276,
+        "write_p95": 22.59100000000035,
+        "observed_at": "2026-10-17T21:54:21.528Z"
+      },
+      "created_at": "2026-10-17T21:54:08.523Z"
+    },
+    {
+      "id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 5,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "changes",
+        "repetition": 1
+      },
+      "config_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 365.03870800000004,
+          "p95": 379.3225420000017,
+          "p99": 379.3225420000017,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            365.03870800000004,
+            379.3225420000017
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "c02042d7-5c0e-4183-896e-58bdf3b90899",
+              "client_id": "observer-1",
+              "latency_ms": 365.03870800000004
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "6c9d9f45-b992-49c3-8f8a-8d4237a213a9",
+              "client_id": "observer-1",
+              "latency_ms": 379.3225420000017
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 76.455,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 74842112,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 12.845055,
+          "event_loop_delay_mean_ms": 10.797344450704227,
+          "actual_operations_per_second": 3.998657614650847
+        },
+        "negative": [
+          {
+            "check": "anonymous_subscription",
+            "status": "SUBSCRIBED",
+            "expected": "RLS filters all forbidden rows",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 7.770167000002402,
+        "write_p95": 29.833333000002312,
+        "observed_at": "2026-10-17T21:54:24.957Z"
+      },
+      "created_at": "2026-10-17T21:54:21.870Z"
+    },
+    {
+      "id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 6,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "changes",
+        "repetition": 2
+      },
+      "config_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 174.03916700000264,
+          "p95": 192.88779200000135,
+          "p99": 192.88779200000135,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            174.03916700000264,
+            192.88779200000135
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "de127e02-fc34-4af7-8846-da7d7d17d580",
+              "client_id": "observer-1",
+              "latency_ms": 174.03916700000264
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "5e4c1808-30ea-4c93-8360-ab3d40a4ba7e",
+              "client_id": "observer-1",
+              "latency_ms": 192.88779200000135
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 70.893,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 72761344,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 18.317311,
+          "event_loop_delay_mean_ms": 10.796941825783971,
+          "actual_operations_per_second": 4.0017604424485445
+        },
+        "negative": [
+          {
+            "check": "anonymous_subscription",
+            "status": "SUBSCRIBED",
+            "expected": "RLS filters all forbidden rows",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 4.5679589999999735,
+        "write_p95": 22.518083999995724,
+        "observed_at": "2026-10-17T21:54:28.399Z"
+      },
+      "created_at": "2026-10-17T21:54:26.095Z"
+    },
+    {
+      "id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "ordinal": 7,
+      "config": {
+        "level": 1,
+        "smoke": false,
+        "transport": "broadcast",
+        "repetition": 2
+      },
+      "config_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e",
+      "status": "completed",
+      "summary": {
+        "result": "pass",
+        "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+        "metrics": {
+          "p50": 4.149166999995941,
+          "p95": 11.150833000006969,
+          "p99": 11.150833000006969,
+          "late": 0,
+          "missing": 0,
+          "on_time": 2,
+          "samples": [
+            4.149166999995941,
+            11.150833000006969
+          ],
+          "coverage": 1,
+          "duplicate": 0,
+          "denominator": 2,
+          "p99_unstable": true,
+          "unauthorized": 0,
+          "uncorrelated": 0,
+          "after_deadline": 0,
+          "classifications": [
+            {
+              "state": "authorized_on_time",
+              "event_id": "ccbb0232-08f8-406c-89a9-0766cfa41b18",
+              "client_id": "observer-1",
+              "latency_ms": 4.149166999995941
+            },
+            {
+              "state": "authorized_on_time",
+              "event_id": "ed18eda7-37b3-44ba-8e02-72dda45120be",
+              "client_id": "observer-1",
+              "latency_ms": 11.150833000006969
+            }
+          ],
+          "on_time_coverage": 1
+        },
+        "quality": {
+          "cpu_ms": 126.312,
+          "requested": 1,
+          "subscribed": 1,
+          "compromised": false,
+          "memory_rss_bytes": 74006528,
+          "operation_errors": 0,
+          "connection_errors": [],
+          "persistence_error": false,
+          "event_loop_delay_max_ms": 16.539647,
+          "event_loop_delay_mean_ms": 10.861392505823627,
+          "actual_operations_per_second": 3.996892084662179
+        },
+        "negative": [
+          {
+            "check": "cross_tenant_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "observer-1"
+          },
+          {
+            "check": "anonymous_subscription",
+            "status": "CHANNEL_ERROR",
+            "expected": "join denied",
+            "client_id": "anonymous"
+          },
+          {
+            "rows": 0,
+            "check": "cross_tenant_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "viewer_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_write",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "check": "tenant_reassignment",
+            "denied": true,
+            "error_code": "42501"
+          },
+          {
+            "rows": 0,
+            "check": "anonymous_read",
+            "denied": true
+          }
+        ],
+        "window_ms": 1500,
+        "write_p50": 10.468332999997074,
+        "write_p95": 30.17720800000825,
+        "observed_at": "2026-10-17T21:54:41.779Z"
+      },
+      "created_at": "2026-10-17T21:54:29.530Z"
+    }
+  ],
+  "operations": [
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "event_id": "b4ae4575-3c58-48bc-898e-05ce383ef362",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "b4ae4575-3c58-48bc-898e-05ce383ef362",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 10541.523125,
+        "write_ms": 3.3939580000005662,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "event_id": "4870545a-7b36-4e57-8712-ca37ca4667e5",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "4870545a-7b36-4e57-8712-ca37ca4667e5",
+        "expected": [],
+        "start_ms": 10792.859582999998,
+        "write_ms": 22.59100000000035,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "event_id": "b777219c-634e-4766-8c64-da548e0a4be0",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "b777219c-634e-4766-8c64-da548e0a4be0",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 11047.158832999994,
+        "write_ms": 12.040167000006477,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "event_id": "75cc82c3-6ede-42c3-87e2-a37f41186815",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "75cc82c3-6ede-42c3-87e2-a37f41186815",
+        "expected": [],
+        "start_ms": 11296.448166999995,
+        "write_ms": 10.200666000004276,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "event_id": "a8100213-a215-4be0-869f-68eb9129b0a8",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "a8100213-a215-4be0-869f-68eb9129b0a8",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 10585.138584,
+        "write_ms": 3.8679580000025453,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "event_id": "2dc9c2e4-c94f-475b-8ab9-aac805fc893b",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "2dc9c2e4-c94f-475b-8ab9-aac805fc893b",
+        "expected": [],
+        "start_ms": 10844.763250000004,
+        "write_ms": 20.70958399999654,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "event_id": "30940702-bfc5-4661-8226-6d75b7083b07",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "30940702-bfc5-4661-8226-6d75b7083b07",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 11085.879958999998,
+        "write_ms": 5.012625000003027,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "event_id": "02b44980-7c2b-4d5f-8b73-2ad352b2f9a8",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "02b44980-7c2b-4d5f-8b73-2ad352b2f9a8",
+        "expected": [],
+        "start_ms": 11336.225584,
+        "write_ms": 4.151499999999942,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "event_id": "ccbb0232-08f8-406c-89a9-0766cfa41b18",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "ccbb0232-08f8-406c-89a9-0766cfa41b18",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 10516.721792000004,
+        "write_ms": 3.5422919999982696,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "event_id": "1152b4de-1cf6-4072-8d05-db75ff046282",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "1152b4de-1cf6-4072-8d05-db75ff046282",
+        "expected": [],
+        "start_ms": 10773.277083999994,
+        "write_ms": 30.17720800000825,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "event_id": "ed18eda7-37b3-44ba-8e02-72dda45120be",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "ed18eda7-37b3-44ba-8e02-72dda45120be",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 11021.835583999993,
+        "write_ms": 10.468332999997074,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "event_id": "62e7e446-eb7c-4318-8cd9-c7d206028756",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "62e7e446-eb7c-4318-8cd9-c7d206028756",
+        "expected": [],
+        "start_ms": 11273.562958999995,
+        "write_ms": 11.133874999999534,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "event_id": "c02042d7-5c0e-4183-896e-58bdf3b90899",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "c02042d7-5c0e-4183-896e-58bdf3b90899",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 559.8432499999981,
+        "write_ms": 2.9565829999992275,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "event_id": "00843cd0-bf28-4333-8b2f-629c46353820",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "00843cd0-bf28-4333-8b2f-629c46353820",
+        "expected": [],
+        "start_ms": 816.5412920000017,
+        "write_ms": 29.833333000002312,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "event_id": "6c9d9f45-b992-49c3-8f8a-8d4237a213a9",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "6c9d9f45-b992-49c3-8f8a-8d4237a213a9",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 1065.4959579999995,
+        "write_ms": 11.453208999999333,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "event_id": "e215a85e-1210-4cb0-87b3-8efabbfe6c41",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "e215a85e-1210-4cb0-87b3-8efabbfe6c41",
+        "expected": [],
+        "start_ms": 1312.304333,
+        "write_ms": 7.770167000002402,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "event_id": "1c82f6fa-4db9-467b-8b15-f576bb2573b8",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "1c82f6fa-4db9-467b-8b15-f576bb2573b8",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 882.8802079999996,
+        "write_ms": 6.885209000000032,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "event_id": "0c0cabb3-c107-414e-8eb8-c5dcf14a3266",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "0c0cabb3-c107-414e-8eb8-c5dcf14a3266",
+        "expected": [],
+        "start_ms": 1136.4966669999994,
+        "write_ms": 25.394916000000194,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "event_id": "cf0cc901-5b9b-4023-8a4b-19ce77160fb4",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "cf0cc901-5b9b-4023-8a4b-19ce77160fb4",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 1383.32625,
+        "write_ms": 8.824666999999863,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "event_id": "78aeb3b6-f4bf-45bf-864c-cfe506b58ec1",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "78aeb3b6-f4bf-45bf-864c-cfe506b58ec1",
+        "expected": [],
+        "start_ms": 1637.162042,
+        "write_ms": 13.61383300000034,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "event_id": "de127e02-fc34-4af7-8846-da7d7d17d580",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "de127e02-fc34-4af7-8846-da7d7d17d580",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 585.4507079999967,
+        "write_ms": 2.8510000000023865,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "event_id": "87a38b7e-fac4-4bdc-88a8-cad456345a20",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "87a38b7e-fac4-4bdc-88a8-cad456345a20",
+        "expected": [],
+        "start_ms": 836.6180830000012,
+        "write_ms": 22.518083999995724,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "event_id": "5e4c1808-30ea-4c93-8360-ab3d40a4ba7e",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "5e4c1808-30ea-4c93-8360-ab3d40a4ba7e",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 1086.7213330000013,
+        "write_ms": 4.5679589999999735,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "event_id": "7294658d-c6e7-4aec-8c89-2c9ec949f6c7",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "7294658d-c6e7-4aec-8c89-2c9ec949f6c7",
+        "expected": [],
+        "start_ms": 1337.387208,
+        "write_ms": 5.597834000000148,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "event_id": "a4bf820f-c4be-4007-8f71-28513d243c7d",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "a4bf820f-c4be-4007-8f71-28513d243c7d",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 605.8319999999985,
+        "write_ms": 3.55487500000163,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "event_id": "1d022e32-bd14-4ab8-8ab8-487d7021d172",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "1d022e32-bd14-4ab8-8ab8-487d7021d172",
+        "expected": [],
+        "start_ms": 863.1394579999978,
+        "write_ms": 27.787334000000556,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "event_id": "07679ab0-77e1-47e9-8410-75a069260564",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "07679ab0-77e1-47e9-8410-75a069260564",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 1107.0042079999985,
+        "write_ms": 7.857834000002185,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "event_id": "cea7c01f-0cfe-4f0f-8187-68049c3ba901",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "cea7c01f-0cfe-4f0f-8187-68049c3ba901",
+        "expected": [],
+        "start_ms": 1363.5303329999988,
+        "write_ms": 12.37079200000153,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "event_id": "ea855501-379b-4e29-8dee-3c6b53afe2d9",
+      "seq": 0,
+      "observation": {
+        "seq": 0,
+        "tenant": 1,
+        "version": 1,
+        "event_id": "ea855501-379b-4e29-8dee-3c6b53afe2d9",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 10669.162875,
+        "write_ms": 9.055374999999913,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 175,
+        "source_record": {
+          "id": "nc75451196",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+          "date": "2026-10-17T21:34:24.600Z",
+          "name": "2 km NW of The Geysers, CA",
+          "magnitude": 0.26
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "event_id": "b7547021-c16a-4c06-8ef9-c04daf31eb80",
+      "seq": 1,
+      "observation": {
+        "seq": 1,
+        "tenant": 2,
+        "version": 1,
+        "event_id": "b7547021-c16a-4c06-8ef9-c04daf31eb80",
+        "expected": [],
+        "start_ms": 10917.981291999999,
+        "write_ms": 17.001250000001164,
+        "operation": "INSERT",
+        "write_error": null,
+        "payload_bytes": 181,
+        "source_record": {
+          "id": "aka2026uplgqp",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+          "date": "2026-10-17T21:27:33.901Z",
+          "name": "85 km NNW of Karluk, Alaska",
+          "magnitude": 0.7
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "event_id": "090c8e52-0c70-4ac8-8442-904a7f9646c8",
+      "seq": 2,
+      "observation": {
+        "seq": 2,
+        "tenant": 1,
+        "version": 2,
+        "event_id": "090c8e52-0c70-4ac8-8442-904a7f9646c8",
+        "expected": [
+          "observer-1"
+        ],
+        "start_ms": 11172.91725,
+        "write_ms": 11.967957999997452,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 182,
+        "source_record": {
+          "id": "aka2026uplcme",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+          "date": "2026-10-17T21:22:45.352Z",
+          "name": "111 km S of McCarthy, Alaska",
+          "magnitude": 0.9
+        }
+      }
+    },
+    {
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "event_id": "87dcea0a-4cf0-4a2f-8525-5af16a741383",
+      "seq": 3,
+      "observation": {
+        "seq": 3,
+        "tenant": 2,
+        "version": 2,
+        "event_id": "87dcea0a-4cf0-4a2f-8525-5af16a741383",
+        "expected": [],
+        "start_ms": 11421.794708,
+        "write_ms": 10.628499999998894,
+        "operation": "UPDATE",
+        "write_error": null,
+        "payload_bytes": 167,
+        "source_record": {
+          "id": "ci41348639",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+          "date": "2026-10-17T21:22:37.320Z",
+          "name": "11 km S of Anza, CA",
+          "magnitude": 0.5
+        }
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "id": "4456",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "observation": {
+        "at_ms": 1264.048917,
+        "tenant": 1,
+        "event_id": "1c82f6fa-4db9-467b-8b15-f576bb2573b8",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4457",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+      "observation": {
+        "at_ms": 1798.3770830000003,
+        "tenant": 1,
+        "event_id": "cf0cc901-5b9b-4023-8a4b-19ce77160fb4",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4458",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "observation": {
+        "at_ms": 10682.921667,
+        "tenant": 1,
+        "event_id": "ea855501-379b-4e29-8dee-3c6b53afe2d9",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4459",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+      "observation": {
+        "at_ms": 11186.443999999998,
+        "tenant": 1,
+        "event_id": "090c8e52-0c70-4ac8-8442-904a7f9646c8",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4460",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "observation": {
+        "at_ms": 631.3083330000009,
+        "tenant": 1,
+        "event_id": "a4bf820f-c4be-4007-8f71-28513d243c7d",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4461",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+      "observation": {
+        "at_ms": 1149.7052919999987,
+        "tenant": 1,
+        "event_id": "07679ab0-77e1-47e9-8410-75a069260564",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4462",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "observation": {
+        "at_ms": 10589.533959,
+        "tenant": 1,
+        "event_id": "a8100213-a215-4be0-869f-68eb9129b0a8",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4463",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+      "observation": {
+        "at_ms": 11091.092875000002,
+        "tenant": 1,
+        "event_id": "30940702-bfc5-4661-8226-6d75b7083b07",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4464",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "observation": {
+        "at_ms": 10546.833583,
+        "tenant": 1,
+        "event_id": "b4ae4575-3c58-48bc-898e-05ce383ef362",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4465",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+      "observation": {
+        "at_ms": 11059.621625,
+        "tenant": 1,
+        "event_id": "b777219c-634e-4766-8c64-da548e0a4be0",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4466",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "observation": {
+        "at_ms": 924.8819579999981,
+        "tenant": 1,
+        "event_id": "c02042d7-5c0e-4183-896e-58bdf3b90899",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4467",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+      "observation": {
+        "at_ms": 1444.8185000000012,
+        "tenant": 1,
+        "event_id": "6c9d9f45-b992-49c3-8f8a-8d4237a213a9",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4468",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "observation": {
+        "at_ms": 759.4898749999993,
+        "tenant": 1,
+        "event_id": "de127e02-fc34-4af7-8846-da7d7d17d580",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4469",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+      "observation": {
+        "at_ms": 1279.6091250000027,
+        "tenant": 1,
+        "event_id": "5e4c1808-30ea-4c93-8360-ab3d40a4ba7e",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4470",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "observation": {
+        "at_ms": 10520.870959,
+        "tenant": 1,
+        "event_id": "ccbb0232-08f8-406c-89a9-0766cfa41b18",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    },
+    {
+      "id": "4471",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+      "observation": {
+        "at_ms": 11032.986417,
+        "tenant": 1,
+        "event_id": "ed18eda7-37b3-44ba-8e02-72dda45120be",
+        "client_id": "observer-1",
+        "row_tenant": 1
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "a407bc86-0dd2-4674-95c9-dcbf7bc6e4ff",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "environment",
+      "content": {
+        "node": "v26.0.0",
+        "sources": [
+          "https://supabase.com/docs/guides/realtime/subscribing-to-database-changes",
+          "https://supabase.com/docs/guides/realtime/authorization"
+        ],
+        "postgres": "17.11",
+        "inference_cost": "unknown local inference",
+        "pinned_services": {
+          "node": "v26.0.0",
+          "roles": [
+            {
+              "rolsuper": false,
+              "current_user": "breakroom_control_owner",
+              "rolbypassrls": false
+            },
+            {
+              "rolsuper": false,
+              "current_user": "breakroom_target_owner",
+              "rolbypassrls": false
+            }
+          ],
+          "images": [
+            {
+              "image": "public.ecr.aws/supabase/postgres-meta:v0.100.0",
+              "digests": [
+                "public.ecr.aws/supabase/postgres-meta@sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd"
+              ],
+              "container": "supabase_pg_meta_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/storage-api:v1.82.1",
+              "digests": [
+                "public.ecr.aws/supabase/storage-api@sha256:ec2ad41411eac8fc2b769b4bb00d1af32ae37eca3745c15bdb329db27d218934"
+              ],
+              "container": "supabase_storage_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/postgrest:v16.4",
+              "digests": [
+                "public.ecr.aws/supabase/postgrest@sha256:d155c6718ed9a9f990d159a2ab7c0a3f16944dbb6d0a0344557421042acfe0df"
+              ],
+              "container": "supabase_rest_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/realtime:v2.143.4",
+              "digests": [
+                "public.ecr.aws/supabase/realtime@sha256:35e99d3f1cbba5aa5585e8ac3cf70ecc54909ee4aee0626effed93c60fb41439"
+              ],
+              "container": "supabase_realtime_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/mailpit:v1.31.3",
+              "digests": [
+                "public.ecr.aws/supabase/mailpit@sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d"
+              ],
+              "container": "supabase_inbucket_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/gotrue:v2.197.0",
+              "digests": [
+                "public.ecr.aws/supabase/gotrue@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b"
+              ],
+              "container": "supabase_auth_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/kong:2.8.1",
+              "digests": [
+                "public.ecr.aws/supabase/kong@sha256:1b53405d8680a09d6f44494b7990bf7da2ea43f84a258c59717d4539abf09f6d"
+              ],
+              "container": "supabase_kong_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/logflare:1.53.0",
+              "digests": [
+                "public.ecr.aws/supabase/logflare@sha256:9d9c8f8c462650b5a99789e1adc6906df85cfb15e2515a8a3b44953893434470"
+              ],
+              "container": "supabase_analytics_supa1"
+            },
+            {
+              "image": "public.ecr.aws/supabase/postgres:17.11.0.004",
+              "digests": [
+                "public.ecr.aws/supabase/postgres@sha256:b15d862126dd2dac02da524696ccfde2dcce2ceaee0a58973b2727befe492706"
+              ],
+              "container": "supabase_db_supa1"
+            }
+          ],
+          "models": {
+            "models": [
+              {
+                "name": "qwen2.5:3b",
+                "size": 1929912432,
+                "model": "qwen2.5:3b",
+                "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+                "details": {
+                  "family": "qwen2",
+                  "format": "gguf",
+                  "runner": "ggml",
+                  "families": [
+                    "qwen2"
+                  ],
+                  "parent_model": "",
+                  "context_length": 32768,
+                  "parameter_size": "3.1B",
+                  "embedding_length": 2048,
+                  "quantization_level": "Q4_K_M"
+                },
+                "modified_at": "2026-10-17T15:34:37.362523058-04:00",
+                "capabilities": [
+                  "completion",
+                  "tools"
+                ]
+              }
+            ]
+          },
+          "verified_at": "2026-10-17T21:07:29.590Z",
+          "architecture": "arm64",
+          "supabase_postgres": "17.11"
+        }
+      },
+      "content_hash": "457efc8dd92439a6f2a5c3ec0eca0cab90bbc42457a98cc02dee7242fd2a816c",
+      "created_at": "2026-10-17T21:53:30.611Z"
+    },
+    {
+      "id": "d12d188d-5245-4d8c-8996-a6ad1454d832",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_contract",
+      "content": {
+        "status": "completed",
+        "action_id": "9ba69fb4-a2c7-4bd4-a953-62f16fe5ec70",
+        "observed_at": "2026-10-17T21:53:30.506Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "budget": {
+            "experiments": 8,
+            "total_seconds": 720,
+            "max_model_calls": 3,
+            "max_model_tokens": 8000
+          },
+          "contract": {
+            "timing": "One process monotonic clock: write-start-to-receipt (not pure server latency); write completion measured separately.",
+            "fixture": "two-tenant-orders-v1",
+            "tenants": [
+              "Northstar",
+              "Control"
+            ],
+            "version": 1,
+            "quantile": "Nearest rank: sorted[ceil(p*n)-1]; observed authorized first receipts only. Misses stay in coverage denominator. p99 unstable below 100 samples.",
+            "operations": [
+              "INSERT",
+              "UPDATE"
+            ],
+            "recipients": "Owner and viewer receive only their own tenant rows. Only owners write.",
+            "unsupported": [
+              "DELETE",
+              "tenant reassignment",
+              "row exceptions",
+              "membership revocation",
+              "reconnect/replay semantics",
+              "arbitrary projects"
+            ]
+          },
+          "contract_hash": "ea1932c061d3b843f19745049cd2c798a7819778fa03e4ec979b25a23ddcff41"
+        }
+      },
+      "content_hash": "9f2729a332c58b2d71f424645d49d989041489d5a200b7c5ae1c53da12124d4e",
+      "created_at": "2026-10-17T21:53:30.617Z"
+    },
+    {
+      "id": "ba768142-41db-4844-8c33-4e698dab43e1",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_prior_runs",
+      "content": {
+        "status": "completed",
+        "action_id": "0ba13059-6e1d-435c-a438-f0d09705cfd3",
+        "observed_at": "2026-10-17T21:53:30.509Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "prior": [
+            {
+              "id": "2961c485-f55a-42b6-89c4-97d293a90607",
+              "verdict": {
+                "scope": "Supported local INSERT/UPDATE fixture only",
+                "result": "pass",
+                "reasons": [
+                  "Candidate met correctness and configured objective for this fixture and measured local conditions."
+                ],
+                "comparison": [
+                  {
+                    "level": 1,
+                    "pairs": [
+                      {
+                        "delta_ms": -296.8847489999971,
+                        "repetition": 0,
+                        "baseline_id": "90ace182-97f3-4be9-8233-0585eb98b42e",
+                        "baseline_p95": 304.5272079999995,
+                        "candidate_id": "1691b544-f2b0-4905-9d47-38ffc79e62fd",
+                        "baseline_hash": "bb2f33885b60ff32a1a40e79010abc84f290c689942a9da61135b8ec38200e15",
+                        "candidate_p95": 7.642459000002418,
+                        "candidate_hash": "a50ab988feb0637f5cb419fd6acf9db885e10008ee2903b02587500055f895dc"
+                      },
+                      {
+                        "delta_ms": -501.05612499998824,
+                        "repetition": 1,
+                        "baseline_id": "15697335-9bdf-4eb8-80bc-e666ef816671",
+                        "baseline_p95": 507.6946249999892,
+                        "candidate_id": "b322c397-e46c-496a-9d9d-9c5ba9cf5968",
+                        "baseline_hash": "c97cc32a856ca123307f7a35a8a2267ab44cadd469f7624ae7d95c93d49528f3",
+                        "candidate_p95": 6.638500000000931,
+                        "candidate_hash": "0d10200b7b15093dd32f2c568b5c750f20ce673d8e5ecc11a8562ce3a6cb9831"
+                      },
+                      {
+                        "delta_ms": -476.7863329999818,
+                        "repetition": 2,
+                        "baseline_id": "20ff4a57-30c3-4d58-a845-10aef119d248",
+                        "baseline_p95": 489.46699999998964,
+                        "candidate_id": "2ba63c49-c5a5-4693-9e21-7f2060eab658",
+                        "baseline_hash": "9a77d08e994e88ae8d8d290f30403e6726a612760e58e1ee15545171a497b422",
+                        "candidate_p95": 12.680667000007816,
+                        "candidate_hash": "3f59386640fc2ab738ca4be0405b08d555497d9abc9cec3b089949bbd1ecb8f4"
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "Observed association only; no server bottleneck attribution.",
+                  "No universal equivalence or guaranteed speedup.",
+                  "Synthetic fixtures; no custom model training."
+                ],
+                "evidence_refs": [
+                  "52e8390d-4db2-4d71-84f7-a824d042f897"
+                ],
+                "experiments_used": 8,
+                "valid_conclusions": 1,
+                "missed_seeded_failure": false,
+                "estimated_inference_spend": "unknown local inference"
+              },
+              "config_hash": "b9d073d959b6bc8a05aded6809804279b077c5256fbafcf988bb7dc10f74d5da"
+            },
+            {
+              "id": "a2cd309a-b0a0-4d99-bf75-3a7af26464bc",
+              "verdict": {
+                "result": "inconclusive",
+                "reasons": [
+                  "Milestone one smoke only; not paired comparison"
+                ]
+              },
+              "config_hash": "06d3b9e9b4387eee4c56dac48dcad2d6c8c952ede958148d5b90e6416d7c54ad"
+            },
+            {
+              "id": "211264e7-5fda-46df-8a24-be6a6d91037b",
+              "verdict": {
+                "scope": "Supported local INSERT/UPDATE fixture only",
+                "result": "fail",
+                "reasons": [
+                  "Unauthorized event or forbidden operation observed: correctness hard gate failed.",
+                  "Candidate missed configured on-time recipient coverage."
+                ],
+                "comparison": [
+                  {
+                    "level": 5,
+                    "pairs": [
+                      {
+                        "delta_ms": null,
+                        "repetition": 0,
+                        "baseline_id": "6cb9a288-400b-4f99-8e97-fc67ddbdb6ad",
+                        "baseline_p95": 477.30354100000113,
+                        "candidate_id": "1a13f61b-8626-478e-8e63-c8251f0be691",
+                        "baseline_hash": "3c1a6442bf6ff6cf47ad8a6e0b145bc0d2bee3171a21b6bf0dcd1b51b5e6151c",
+                        "candidate_p95": null,
+                        "candidate_hash": "59e16c196c58c175413b06a0c974f2db91034b4b3c48f0a7deeeb10f177f6d9b"
+                      },
+                      {
+                        "delta_ms": -425.54220800002804,
+                        "repetition": 1,
+                        "baseline_id": "a3b15234-5fd0-48e5-9ac4-4ff6c1568cd9",
+                        "baseline_p95": 442.4004999999888,
+                        "candidate_id": "b38fc18d-2b1f-4ed5-8999-1124f64f5c8c",
+                        "baseline_hash": "ffc6eb257064926e6bacc449e37be51154ba4216315e2d763635ee49c1086127",
+                        "candidate_p95": 16.858291999960784,
+                        "candidate_hash": "f92d286de2c019b3209cecb06116508909c344cdcf08c50c09e50ecfadcf7319"
+                      },
+                      {
+                        "delta_ms": -505.2146669999929,
+                        "repetition": 2,
+                        "baseline_id": "afb28017-1aa7-4f48-ac69-c26f368ad662",
+                        "baseline_p95": 522.0623749999795,
+                        "candidate_id": "077bb695-1f71-4016-be09-a03c4e033450",
+                        "baseline_hash": "e996d599990f5cfea2f65002d2d0686b72aaaee501f928847301ce1b98a282cc",
+                        "candidate_p95": 16.847707999986596,
+                        "candidate_hash": "d53dd4adbe37e66f494d78f34a1d9219b5dde06c393d683e8ce7f834fc62ba66"
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "Observed association only; no server bottleneck attribution.",
+                  "No universal equivalence or guaranteed speedup.",
+                  "Synthetic fixtures; no custom model training."
+                ],
+                "evidence_refs": [
+                  "88860a18-afd1-40f8-ae5f-a6b777b5ec92"
+                ],
+                "experiments_used": 8,
+                "valid_conclusions": 1,
+                "missed_seeded_failure": false,
+                "estimated_inference_spend": "unknown local inference"
+              },
+              "config_hash": "bfdd8614003b630a81f9dedd91aa68a590557343c4dbc0206c1e559876058e77"
+            },
+            {
+              "id": "424d51a4-a91f-43bd-88f8-f3beca1b5695",
+              "verdict": {
+                "scope": "Supported local INSERT/UPDATE fixture only",
+                "result": "fail",
+                "reasons": [
+                  "Unauthorized event or forbidden operation observed: correctness hard gate failed."
+                ],
+                "comparison": [
+                  {
+                    "level": 5,
+                    "pairs": [
+                      {
+                        "delta_ms": -408.19316699999035,
+                        "repetition": 0,
+                        "baseline_id": "c30d6c34-9bb8-4cb7-bf87-08b79bb41366",
+                        "baseline_p95": 426.49137499998324,
+                        "candidate_id": "fd099bf2-b4e9-4ce3-9267-ac302e97dfec",
+                        "baseline_hash": "3c1a6442bf6ff6cf47ad8a6e0b145bc0d2bee3171a21b6bf0dcd1b51b5e6151c",
+                        "candidate_p95": 18.298207999992883,
+                        "candidate_hash": "59e16c196c58c175413b06a0c974f2db91034b4b3c48f0a7deeeb10f177f6d9b"
+                      },
+                      {
+                        "delta_ms": -429.85687400001916,
+                        "repetition": 1,
+                        "baseline_id": "2d226de5-00b5-4dd8-a96d-52130928195b",
+                        "baseline_p95": 446.2247080000234,
+                        "candidate_id": "63dad023-988a-4ca6-813a-bf1c7c1098c2",
+                        "baseline_hash": "ffc6eb257064926e6bacc449e37be51154ba4216315e2d763635ee49c1086127",
+                        "candidate_p95": 16.367834000004223,
+                        "candidate_hash": "f92d286de2c019b3209cecb06116508909c344cdcf08c50c09e50ecfadcf7319"
+                      },
+                      {
+                        "delta_ms": -447.91312499996275,
+                        "repetition": 2,
+                        "baseline_id": "90752330-0d99-4ae9-9aa1-8f0ad938b9a4",
+                        "baseline_p95": 465.3768749999581,
+                        "candidate_id": "0ebcada2-d066-40ca-9355-cbbf053af542",
+                        "baseline_hash": "e996d599990f5cfea2f65002d2d0686b72aaaee501f928847301ce1b98a282cc",
+                        "candidate_p95": 17.463749999995343,
+                        "candidate_hash": "d53dd4adbe37e66f494d78f34a1d9219b5dde06c393d683e8ce7f834fc62ba66"
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "Observed association only; no server bottleneck attribution.",
+                  "No universal equivalence or guaranteed speedup.",
+                  "Synthetic fixtures; no custom model training."
+                ],
+                "evidence_refs": [
+                  "2d5c0e76-388d-45a6-bf8d-6a48f1e5b23f"
+                ],
+                "experiments_used": 8,
+                "valid_conclusions": 1,
+                "missed_seeded_failure": false,
+                "estimated_inference_spend": "unknown local inference"
+              },
+              "config_hash": "ba76b85af01d58973f555b46c345587981fe548c5a1398aef34e6c6ffeb17247"
+            },
+            {
+              "id": "7adebcf9-472b-4a8c-bb61-9942dc2ddbb7",
+              "verdict": {
+                "scope": "Supported local INSERT/UPDATE fixture only",
+                "result": "inconclusive",
+                "reasons": [
+                  "Incomplete pairs, interrupted experiment or compromised coordinator; performance comparison is inconclusive."
+                ],
+                "comparison": [
+                  {
+                    "level": 5,
+                    "pairs": [
+                      {
+                        "delta_ms": -514.5879169999971,
+                        "repetition": 0,
+                        "baseline_id": "e01b2b63-b6b0-4177-8e73-66f77ff19245",
+                        "baseline_p95": 532.3555840000045,
+                        "candidate_id": "477b1f15-432e-4145-adbd-cbe9b8898306",
+                        "baseline_hash": "0943086e23f2a25e0187e74ad45d985de80d713c1577e5ebd408a5cc1f4f061b",
+                        "candidate_p95": 17.76766700000735,
+                        "candidate_hash": "0716c9975f812de564b1a3dbc3c890057e85008236441adc8aec1b5213c5cce4"
+                      },
+                      {
+                        "delta_ms": -444.24608400001307,
+                        "repetition": 1,
+                        "baseline_id": "33b137df-da20-4a91-8339-811dc6b403c9",
+                        "baseline_p95": 468.58291699999245,
+                        "candidate_id": "6cf3e053-3030-4ba4-9983-e658249b4fb0",
+                        "baseline_hash": "070d738a60e609bbce39e84796828f185d5d8b2102a5694ef6bedc3c0f5d4dbb",
+                        "candidate_p95": 24.33683299997938,
+                        "candidate_hash": "3920b4566af1813278a86b28928ccec84da21a1a0d1ee1ee68e6741e2ca34499"
+                      },
+                      {
+                        "delta_ms": -464.90962500002934,
+                        "repetition": 2,
+                        "baseline_id": "df1e06f3-b5f3-4693-8534-c467f2f2318f",
+                        "baseline_p95": 478.6502920000057,
+                        "candidate_id": "cfdb6da5-6cac-41ff-89fb-eb0c2d72859e",
+                        "baseline_hash": "20cf150e30ad1291e6533f30f9fd8ec5f95c55b0758acc96971698d27a0fc29c",
+                        "candidate_p95": 13.740666999976384,
+                        "candidate_hash": "28a0988df886217e402e1da689f0bee638b38ed55a71dbc16d5c0331e727e641"
+                      }
+                    ]
+                  },
+                  {
+                    "level": 20,
+                    "pairs": [
+                      {
+                        "delta_ms": -479.74070900000515,
+                        "repetition": 0,
+                        "baseline_id": "96f17408-395c-4c9f-8aa2-af567a219f52",
+                        "baseline_p95": 497.033792000002,
+                        "candidate_id": "9d0b3c9d-644f-4f29-83a4-b1ae0d5bd9e4",
+                        "baseline_hash": "3e1ce4fa035d4f6b6faa2de11ceff042624c04634c3813619be1cca085ede46b",
+                        "candidate_p95": 17.29308299999684,
+                        "candidate_hash": "ca80565ae1283e9b91b8d07546159a41e33af8577356cae4fc5aec3b3a5541db"
+                      },
+                      {
+                        "delta_ms": -468.93754199999967,
+                        "repetition": 1,
+                        "baseline_id": "339599ad-7cd4-46c1-9b5b-738dfe41f067",
+                        "baseline_p95": 487.1664999999921,
+                        "candidate_id": "208d1611-c1b7-4ddf-a4e7-b672e587de4f",
+                        "baseline_hash": "92e451a04e1e3ac1695e50a821e409b66a149f2202f869b3fdcaa55a4fd9c704",
+                        "candidate_p95": 18.228957999992417,
+                        "candidate_hash": "e7fe6e8e8c9175f5d76e27e1e1710cd91a7033b898f958de0f4fe8881e0e509f"
+                      },
+                      {
+                        "delta_ms": -459.1810830000031,
+                        "repetition": 2,
+                        "baseline_id": "aa2d061c-da96-48a4-a3da-7055734fad86",
+                        "baseline_p95": 476.13287500001024,
+                        "candidate_id": "f547625d-62b2-4dc8-99c5-7fd58b3b344b",
+                        "baseline_hash": "9b46e7194dd9118a37f2abd7f7dfdb8079cfa0ea0ced3a3f702a4dd85896c137",
+                        "candidate_p95": 16.951792000007117,
+                        "candidate_hash": "a0fe51d6fc874fe1632351f8e30d35e9d9db138cbd36e1c34346af11f560a8dd"
+                      }
+                    ]
+                  },
+                  {
+                    "level": 50,
+                    "pairs": [
+                      {
+                        "delta_ms": -424.0258740000063,
+                        "repetition": 0,
+                        "baseline_id": "ac27a4cf-0a69-4b64-87a2-bbb4ed40e7af",
+                        "baseline_p95": 441.64316600000166,
+                        "candidate_id": "fe29fe36-e8dc-4188-ac78-291c51a1b6ce",
+                        "baseline_hash": "7d036a281f752301b6654beefb6b94525151e7a2ed8c09974c7f60f3121b6e5c",
+                        "candidate_p95": 17.61729199999536,
+                        "candidate_hash": "57b079394558900c7b9bec9834d8ecf42888155aada4a8c5c1fa3990877e2d5a"
+                      },
+                      {
+                        "delta_ms": -486.6269160000011,
+                        "repetition": 1,
+                        "baseline_id": "490c9652-c04d-440f-b761-6628c83dc15b",
+                        "baseline_p95": 502.56408300000476,
+                        "candidate_id": "1e4d8650-0d3a-4f97-9ef1-a5b629a524c3",
+                        "baseline_hash": "7b485462f209ccc128cc9dd04fb5a537dfc73e6fe186dc3ebc042f4e114fc6e9",
+                        "candidate_p95": 15.937167000003683,
+                        "candidate_hash": "a93d129775a0f6f8be57134864c50b4e8866af441dcee0dd6d859f2d9f32e3cf"
+                      },
+                      {
+                        "delta_ms": -442.11379200000374,
+                        "repetition": 2,
+                        "baseline_id": "71a93191-38b9-461c-804c-ab423506e28f",
+                        "baseline_p95": 458.2143749999959,
+                        "candidate_id": "6ac7d292-be1b-400a-bf41-598c208242c0",
+                        "baseline_hash": "130b7d10add7781a3d29bd7d5524b65e9fc218518433e6b28e1a26d0bac3fd4d",
+                        "candidate_p95": 16.100582999992184,
+                        "candidate_hash": "2997a0ba84918cfac2fe2df083b5bf93e7a1d0ba419fc22d9bb0ad09e08a84e0"
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "Observed association only; no server bottleneck attribution.",
+                  "No universal equivalence or guaranteed speedup.",
+                  "Synthetic fixtures; no custom model training."
+                ],
+                "evidence_refs": [
+                  "32cb9874-940f-4bf5-92c0-6e5c8518903e"
+                ],
+                "experiments_used": 20,
+                "valid_conclusions": 0,
+                "missed_seeded_failure": false,
+                "estimated_inference_spend": "unknown local inference"
+              },
+              "config_hash": "ea7d2af7fe15ec06e84c7415493ef77b41ae1ee36485570b9c00aedffdc0ed88"
+            }
+          ]
+        }
+      },
+      "content_hash": "6395a71d3dc01ca061a14bab7016296fdb90b752fbe67f284f225ea5479a3123",
+      "created_at": "2026-10-17T21:53:30.620Z"
+    },
+    {
+      "id": "e45fac9f-d3ce-4622-b608-56ed7aef8b3c",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "matrix_plan",
+      "content": {
+        "experiments": [
+          {
+            "level": 1,
+            "smoke": true,
+            "transport": "changes",
+            "repetition": -1
+          },
+          {
+            "level": 1,
+            "smoke": true,
+            "transport": "broadcast",
+            "repetition": -1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 0
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 0
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 2
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 2
+          }
+        ]
+      },
+      "content_hash": "82e4bfc239ff6484d58f441cc940bc6b007210e6488204d99e27745f63074940",
+      "created_at": "2026-10-17T21:53:30.623Z"
+    },
+    {
+      "id": "01fccb70-6694-44e7-9c4c-dc7ed5d1816e",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "b19397d3-b68e-4959-8d8b-7c51798a0522",
+        "observed_at": "2026-10-17T21:53:30.517Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": true,
+            "transport": "changes",
+            "repetition": -1
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "b19397d3-b68e-4959-8d8b-7c51798a0522",
+          "config_hash": "b81bc5dd2bbf77bb063d9fdd33b5a592596733ec52a82f2213484e0cdb58644e",
+          "observed_at": "2026-10-17T21:53:30.517Z",
+          "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664"
+        }
+      },
+      "content_hash": "6c0a7d2e232f53026cc92eba4d6291ec16fba7b7b5e487bb66c0807b7642139a",
+      "created_at": "2026-10-17T21:53:30.627Z"
+    },
+    {
+      "id": "4bf64ccc-942f-42d2-985a-ac79e83c5ec7",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "477affae-6fe4-43f3-a6c0-5b1013e4599e",
+        "observed_at": "2026-10-17T21:53:34.292Z",
+        "evidence_refs": [
+          "01fccb70-6694-44e7-9c4c-dc7ed5d1816e"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "477affae-6fe4-43f3-a6c0-5b1013e4599e",
+          "observed_at": "2026-10-17T21:53:34.292Z",
+          "evidence_refs": [
+            "01fccb70-6694-44e7-9c4c-dc7ed5d1816e"
+          ],
+          "experiment_id": "8b658065-87cc-4b1c-b44f-328319004664",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 381.1687090000005,
+              "p95": 415.05083300000024,
+              "p99": 415.05083300000024,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 177.946,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 83918848,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 17.399807,
+              "event_loop_delay_mean_ms": 10.835805460317461,
+              "actual_operations_per_second": 4.0012478891854375
+            },
+            "negative": [
+              {
+                "check": "anonymous_subscription",
+                "status": "SUBSCRIBED",
+                "expected": "RLS filters all forbidden rows",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 8.824666999999863,
+            "write_p95": 25.394916000000194,
+            "observed_at": "2026-10-17T21:53:33.975Z"
+          }
+        }
+      },
+      "content_hash": "6d81ee8348edc43ec742106196581bfd8e406e33b8b8a1b89d29b410ccd56bc8",
+      "created_at": "2026-10-17T21:53:34.822Z"
+    },
+    {
+      "id": "eb4e23b5-b767-48be-a7e2-85882c9e1825",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "8f10ce95-4ff0-45cd-ab94-cdb4bd08c7aa",
+        "observed_at": "2026-10-17T21:53:34.308Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": true,
+            "transport": "broadcast",
+            "repetition": -1
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "8f10ce95-4ff0-45cd-ab94-cdb4bd08c7aa",
+          "config_hash": "496d4c360be20017f2f568ec86c9fea679cd8960fb7f074fb47f5eaad21fb825",
+          "observed_at": "2026-10-17T21:53:34.308Z",
+          "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92"
+        }
+      },
+      "content_hash": "7b636c87076ed9318e9be7c556ed5ab1ce4a53054eb21c2f6fbcc001a23edc5c",
+      "created_at": "2026-10-17T21:53:34.839Z"
+    },
+    {
+      "id": "d54efba0-dca1-4eb4-88f3-48f9adfee91d",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "fe17441f-66b5-4eb0-919b-0cfb0463cebe",
+        "observed_at": "2026-10-17T21:53:47.867Z",
+        "evidence_refs": [
+          "eb4e23b5-b767-48be-a7e2-85882c9e1825"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "fe17441f-66b5-4eb0-919b-0cfb0463cebe",
+          "observed_at": "2026-10-17T21:53:47.867Z",
+          "evidence_refs": [
+            "eb4e23b5-b767-48be-a7e2-85882c9e1825"
+          ],
+          "experiment_id": "f64c5a73-ff60-4c2b-8ed0-25a30bfd7e92",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 13.526749999997264,
+              "p95": 13.75879200000054,
+              "p99": 13.75879200000054,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 158.488,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 71827456,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 31.588351,
+              "event_loop_delay_mean_ms": 10.862517894736841,
+              "actual_operations_per_second": 4.002051719849057
+            },
+            "negative": [
+              {
+                "check": "cross_tenant_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "observer-1"
+              },
+              {
+                "check": "anonymous_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 10.628499999998894,
+            "write_p95": 17.001250000001164,
+            "observed_at": "2026-10-17T21:53:47.539Z"
+          }
+        }
+      },
+      "content_hash": "5a53cee894efdca855d322d80cdaa8bfe0b45c85fa061867a74aaa76dde0b261",
+      "created_at": "2026-10-17T21:53:48.053Z"
+    },
+    {
+      "id": "035f0ba5-5fcf-40c2-bd29-8140a21e5892",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "matrix_plan",
+      "content": {
+        "experiments": [
+          {
+            "level": 1,
+            "smoke": true,
+            "transport": "changes",
+            "repetition": -1
+          },
+          {
+            "level": 1,
+            "smoke": true,
+            "transport": "broadcast",
+            "repetition": -1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 0
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 0
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 1
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 2
+          },
+          {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 2
+          }
+        ]
+      },
+      "content_hash": "82e4bfc239ff6484d58f441cc940bc6b007210e6488204d99e27745f63074940",
+      "created_at": "2026-10-17T21:53:51.793Z"
+    },
+    {
+      "id": "35d76fab-55b2-465e-81d4-6820b5743128",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "53340a97-5c24-48e7-acb9-03669f043ba6",
+        "observed_at": "2026-10-17T21:53:51.541Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 0
+          },
+          "status": "running",
+          "decision": {
+            "index": 0,
+            "model": "qwen2.5:3b",
+            "usage": {
+              "total_tokens": 428,
+              "prompt_tokens": 357,
+              "completion_tokens": 71,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "planner": "live model",
+            "summary": "Selected experiment uses the changes transport level with repetition set to -1, indicating it will run indefinitely until completion or failure. This experiment aims to test the system's ability to handle high-frequency updates without repetition limits, focusing on coverage, unauthorized access, and p95 latency metrics."
+          },
+          "action_id": "53340a97-5c24-48e7-acb9-03669f043ba6",
+          "config_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+          "observed_at": "2026-10-17T21:53:51.541Z",
+          "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3"
+        }
+      },
+      "content_hash": "24eae365c77b64234464af41f488ce5df5535bfc96cb60da7bb6908cb02788e8",
+      "created_at": "2026-10-17T21:53:51.805Z"
+    },
+    {
+      "id": "73298989-8689-4cad-840e-ec4be27515e8",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "c8c12c02-f5ee-4e07-9988-bcf4f910eb41",
+        "observed_at": "2026-10-17T21:53:55.012Z",
+        "evidence_refs": [
+          "35d76fab-55b2-465e-81d4-6820b5743128"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "c8c12c02-f5ee-4e07-9988-bcf4f910eb41",
+          "observed_at": "2026-10-17T21:53:55.012Z",
+          "evidence_refs": [
+            "35d76fab-55b2-465e-81d4-6820b5743128"
+          ],
+          "experiment_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 25.47633300000234,
+              "p95": 42.701084000000264,
+              "p99": 42.701084000000264,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 73.17,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 90980352,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 11.698175,
+              "event_loop_delay_mean_ms": 10.790144879725085,
+              "actual_operations_per_second": 4.002306164832928
+            },
+            "negative": [
+              {
+                "check": "anonymous_subscription",
+                "status": "SUBSCRIBED",
+                "expected": "RLS filters all forbidden rows",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 7.857834000002185,
+            "write_p95": 27.787334000000556,
+            "observed_at": "2026-10-17T21:53:54.699Z"
+          }
+        }
+      },
+      "content_hash": "49ad84ad1b9402ec27ca8b6b78aea1f8e6d742e5300672f66a4c058b6cb2853d",
+      "created_at": "2026-10-17T21:53:55.616Z"
+    },
+    {
+      "id": "33284881-31c4-48fb-ad36-d30ced91bcf4",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "ad229196-4edd-4d52-b78b-20bb38b619f9",
+        "observed_at": "2026-10-17T21:53:55.018Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 0
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "ad229196-4edd-4d52-b78b-20bb38b619f9",
+          "config_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71",
+          "observed_at": "2026-10-17T21:53:55.018Z",
+          "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5"
+        }
+      },
+      "content_hash": "8a0aff97aa0613fa05ecb10e4b2ce55af7685517e83bf73712db653153c9ce29",
+      "created_at": "2026-10-17T21:53:55.620Z"
+    },
+    {
+      "id": "9c5fb9e9-17b2-4dc3-b63c-607c898381e7",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "d350d5fa-0c90-4230-b76f-e1071ca621a3",
+        "observed_at": "2026-10-17T21:54:08.463Z",
+        "evidence_refs": [
+          "33284881-31c4-48fb-ad36-d30ced91bcf4"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "d350d5fa-0c90-4230-b76f-e1071ca621a3",
+          "observed_at": "2026-10-17T21:54:08.463Z",
+          "evidence_refs": [
+            "33284881-31c4-48fb-ad36-d30ced91bcf4"
+          ],
+          "experiment_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 4.395375000000058,
+              "p95": 5.212916000004043,
+              "p99": 5.212916000004043,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 193.461,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 70041600,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 12.107775,
+              "event_loop_delay_mean_ms": 10.86223567854184,
+              "actual_operations_per_second": 3.9993835950034162
+            },
+            "negative": [
+              {
+                "check": "cross_tenant_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "observer-1"
+              },
+              {
+                "check": "anonymous_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 4.151499999999942,
+            "write_p95": 20.70958399999654,
+            "observed_at": "2026-10-17T21:54:08.145Z"
+          }
+        }
+      },
+      "content_hash": "b0994732731627cc2eb81ea8f887e9693e8761333ff185e7d3efa2fdbc2dd6b0",
+      "created_at": "2026-10-17T21:54:08.520Z"
+    },
+    {
+      "id": "a3855cc0-2c9e-4948-bc80-8b79008b2419",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "a8b4f313-2f73-4d52-88e8-9a1936e4b166",
+        "observed_at": "2026-10-17T21:54:08.468Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 1
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "a8b4f313-2f73-4d52-88e8-9a1936e4b166",
+          "config_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293",
+          "observed_at": "2026-10-17T21:54:08.468Z",
+          "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8"
+        }
+      },
+      "content_hash": "4cc4ea0c38ba32759bf7d30b6772d10dce76ef8a9bdddbd32d2a5f55384edc81",
+      "created_at": "2026-10-17T21:54:08.525Z"
+    },
+    {
+      "id": "68203975-fa69-4866-a8c4-09e5786b4643",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "b70bc677-9fe0-4c16-be5f-f96b4bb5ccc7",
+        "observed_at": "2026-10-17T21:54:21.865Z",
+        "evidence_refs": [
+          "a3855cc0-2c9e-4948-bc80-8b79008b2419"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "b70bc677-9fe0-4c16-be5f-f96b4bb5ccc7",
+          "observed_at": "2026-10-17T21:54:21.865Z",
+          "evidence_refs": [
+            "a3855cc0-2c9e-4948-bc80-8b79008b2419"
+          ],
+          "experiment_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 5.310457999999926,
+              "p95": 12.46279200000572,
+              "p99": 12.46279200000572,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 133.321,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 73465856,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 17.694719,
+              "event_loop_delay_mean_ms": 10.87405670058382,
+              "actual_operations_per_second": 3.996948493699942
+            },
+            "negative": [
+              {
+                "check": "cross_tenant_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "observer-1"
+              },
+              {
+                "check": "anonymous_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 10.200666000004276,
+            "write_p95": 22.59100000000035,
+            "observed_at": "2026-10-17T21:54:21.528Z"
+          }
+        }
+      },
+      "content_hash": "5e7e202ed3c7c04ea4771fec43582d1647fde04928821f9d3da22bfc749536cb",
+      "created_at": "2026-10-17T21:54:21.866Z"
+    },
+    {
+      "id": "dbd1db6b-a4f3-4463-8c92-1a6b4e8ec8d9",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "3fd21552-ace7-4f3a-90ff-86867a551e64",
+        "observed_at": "2026-10-17T21:54:21.872Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 1
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "3fd21552-ace7-4f3a-90ff-86867a551e64",
+          "config_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+          "observed_at": "2026-10-17T21:54:21.872Z",
+          "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65"
+        }
+      },
+      "content_hash": "9ee072a6a2ee9dbe54161e5ce94cbebec569aa7ce04d660f631b17ddb151f9f4",
+      "created_at": "2026-10-17T21:54:21.872Z"
+    },
+    {
+      "id": "659ca524-3299-4a08-8d0f-290d7ad3ac92",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "927a404c-9480-4668-a89b-df02a1ae6f07",
+        "observed_at": "2026-10-17T21:54:25.271Z",
+        "evidence_refs": [
+          "dbd1db6b-a4f3-4463-8c92-1a6b4e8ec8d9"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "927a404c-9480-4668-a89b-df02a1ae6f07",
+          "observed_at": "2026-10-17T21:54:25.271Z",
+          "evidence_refs": [
+            "dbd1db6b-a4f3-4463-8c92-1a6b4e8ec8d9"
+          ],
+          "experiment_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 365.03870800000004,
+              "p95": 379.3225420000017,
+              "p99": 379.3225420000017,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 76.455,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 74842112,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 12.845055,
+              "event_loop_delay_mean_ms": 10.797344450704227,
+              "actual_operations_per_second": 3.998657614650847
+            },
+            "negative": [
+              {
+                "check": "anonymous_subscription",
+                "status": "SUBSCRIBED",
+                "expected": "RLS filters all forbidden rows",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 7.770167000002402,
+            "write_p95": 29.833333000002312,
+            "observed_at": "2026-10-17T21:54:24.957Z"
+          }
+        }
+      },
+      "content_hash": "76dd520547fd082212e6656b8c5e42b1072830872dc10845ba1c1932fc500efb",
+      "created_at": "2026-10-17T21:54:26.091Z"
+    },
+    {
+      "id": "743c5ab3-a7de-458f-9049-74cc06985a9e",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "8f4df8fa-8d1a-4b56-a760-cf7f53567fda",
+        "observed_at": "2026-10-17T21:54:25.277Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "changes",
+            "repetition": 2
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "8f4df8fa-8d1a-4b56-a760-cf7f53567fda",
+          "config_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+          "observed_at": "2026-10-17T21:54:25.277Z",
+          "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501"
+        }
+      },
+      "content_hash": "de9149797c2c3bba457792559e1e8148606f1f42264f001fa25c3d8b179d52de",
+      "created_at": "2026-10-17T21:54:26.097Z"
+    },
+    {
+      "id": "0c34eee7-d3b1-4302-a09f-5b5488ea333c",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "3827ddf9-2ac1-455c-b411-ab8a86e86b72",
+        "observed_at": "2026-10-17T21:54:28.706Z",
+        "evidence_refs": [
+          "743c5ab3-a7de-458f-9049-74cc06985a9e"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "3827ddf9-2ac1-455c-b411-ab8a86e86b72",
+          "observed_at": "2026-10-17T21:54:28.706Z",
+          "evidence_refs": [
+            "743c5ab3-a7de-458f-9049-74cc06985a9e"
+          ],
+          "experiment_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 174.03916700000264,
+              "p95": 192.88779200000135,
+              "p99": 192.88779200000135,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 70.893,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 72761344,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 18.317311,
+              "event_loop_delay_mean_ms": 10.796941825783971,
+              "actual_operations_per_second": 4.0017604424485445
+            },
+            "negative": [
+              {
+                "check": "anonymous_subscription",
+                "status": "SUBSCRIBED",
+                "expected": "RLS filters all forbidden rows",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 4.5679589999999735,
+            "write_p95": 22.518083999995724,
+            "observed_at": "2026-10-17T21:54:28.399Z"
+          }
+        }
+      },
+      "content_hash": "eb00fbced790251588041dcffcfe1a3e62da959e2c5850db68ef564f074a791f",
+      "created_at": "2026-10-17T21:54:29.527Z"
+    },
+    {
+      "id": "b4ff00eb-7552-42ab-b586-8cd193fc2d4e",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "schedule_experiment",
+      "content": {
+        "status": "running",
+        "action_id": "1c282d6d-2da9-4230-bb9b-3760dac45c98",
+        "observed_at": "2026-10-17T21:54:28.710Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "config": {
+            "level": 1,
+            "smoke": false,
+            "transport": "broadcast",
+            "repetition": 2
+          },
+          "status": "running",
+          "decision": {
+            "planner": "deterministic fixed matrix",
+            "summary": "Alternating paired order under the same budget."
+          },
+          "action_id": "1c282d6d-2da9-4230-bb9b-3760dac45c98",
+          "config_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e",
+          "observed_at": "2026-10-17T21:54:28.710Z",
+          "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444"
+        }
+      },
+      "content_hash": "a9374c0dd48027f36b646d46743946565a897ddb1458c58390dfdb6342969be5",
+      "created_at": "2026-10-17T21:54:29.531Z"
+    },
+    {
+      "id": "1daf769e-33db-4b4d-8430-289677f9fee9",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "inspect_ledger_discrepancies",
+      "content": {
+        "status": "completed",
+        "action_id": "1d897853-00a6-4147-9d3f-41fe4dc534f6",
+        "observed_at": "2026-10-17T21:54:42.125Z",
+        "evidence_refs": [
+          "b4ff00eb-7552-42ab-b586-8cd193fc2d4e"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "status": "completed",
+          "action_id": "1d897853-00a6-4147-9d3f-41fe4dc534f6",
+          "observed_at": "2026-10-17T21:54:42.125Z",
+          "evidence_refs": [
+            "b4ff00eb-7552-42ab-b586-8cd193fc2d4e"
+          ],
+          "experiment_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+          "structured_observations": {
+            "result": "pass",
+            "timing": "monotonic write-start-to-receipt; includes coordinator persistence before dispatch",
+            "metrics": {
+              "p50": 4.149166999995941,
+              "p95": 11.150833000006969,
+              "p99": 11.150833000006969,
+              "late": 0,
+              "missing": 0,
+              "on_time": 2,
+              "coverage": 1,
+              "duplicate": 0,
+              "denominator": 2,
+              "p99_unstable": true,
+              "unauthorized": 0,
+              "uncorrelated": 0,
+              "after_deadline": 0,
+              "on_time_coverage": 1
+            },
+            "quality": {
+              "cpu_ms": 126.312,
+              "requested": 1,
+              "subscribed": 1,
+              "compromised": false,
+              "memory_rss_bytes": 74006528,
+              "operation_errors": 0,
+              "connection_errors": [],
+              "persistence_error": false,
+              "event_loop_delay_max_ms": 16.539647,
+              "event_loop_delay_mean_ms": 10.861392505823627,
+              "actual_operations_per_second": 3.996892084662179
+            },
+            "negative": [
+              {
+                "check": "cross_tenant_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "observer-1"
+              },
+              {
+                "check": "anonymous_subscription",
+                "status": "CHANNEL_ERROR",
+                "expected": "join denied",
+                "client_id": "anonymous"
+              },
+              {
+                "rows": 0,
+                "check": "cross_tenant_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "viewer_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_write",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "check": "tenant_reassignment",
+                "denied": true,
+                "error_code": "42501"
+              },
+              {
+                "rows": 0,
+                "check": "anonymous_read",
+                "denied": true
+              }
+            ],
+            "window_ms": 1500,
+            "write_p50": 10.468332999997074,
+            "write_p95": 30.17720800000825,
+            "observed_at": "2026-10-17T21:54:41.779Z"
+          }
+        }
+      },
+      "content_hash": "f3d15b38481907b00ccd9045f5f6a2102e9645669d4dbc6c2e4185b2f16d1946",
+      "created_at": "2026-10-17T21:54:42.223Z"
+    },
+    {
+      "id": "e2574297-a01e-4ee8-83fc-8a51b030a5dc",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "compare_paired_runs",
+      "content": {
+        "status": "completed",
+        "action_id": "0aaec9ed-239f-4060-8f1f-dbc710a784cb",
+        "observed_at": "2026-10-17T21:54:42.134Z",
+        "evidence_refs": [],
+        "error_category": null,
+        "structured_observations": {
+          "scope": "Supported local INSERT/UPDATE fixture only",
+          "result": "pass",
+          "reasons": [
+            "Candidate met correctness and configured objective for this fixture and measured local conditions."
+          ],
+          "comparison": [
+            {
+              "level": 1,
+              "pairs": [
+                {
+                  "delta_ms": -37.48816799999622,
+                  "repetition": 0,
+                  "baseline_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+                  "baseline_p95": 42.701084000000264,
+                  "candidate_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+                  "baseline_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+                  "candidate_p95": 5.212916000004043,
+                  "candidate_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71"
+                },
+                {
+                  "delta_ms": -366.859749999996,
+                  "repetition": 1,
+                  "baseline_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+                  "baseline_p95": 379.3225420000017,
+                  "candidate_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+                  "baseline_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+                  "candidate_p95": 12.46279200000572,
+                  "candidate_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293"
+                },
+                {
+                  "delta_ms": -181.73695899999439,
+                  "repetition": 2,
+                  "baseline_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+                  "baseline_p95": 192.88779200000135,
+                  "candidate_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+                  "baseline_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+                  "candidate_p95": 11.150833000006969,
+                  "candidate_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e"
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "Observed association only; no server bottleneck attribution.",
+            "No universal equivalence or guaranteed speedup.",
+            "Synthetic fixtures; no custom model training."
+          ],
+          "evidence_refs": [],
+          "experiments_used": 8,
+          "valid_conclusions": 1,
+          "missed_seeded_failure": false,
+          "estimated_inference_spend": "unknown local inference"
+        }
+      },
+      "content_hash": "b5e6cf7a7a4242e29de3415a8f82e14c764cc51d1fe7c7a0eacc7cc468ec7431",
+      "created_at": "2026-10-17T21:54:42.232Z"
+    },
+    {
+      "id": "c6468fb9-b2f7-45e7-aa60-441dbeef8c67",
+      "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+      "workspace_id": "00000000-0000-4000-8000-000000000011",
+      "kind": "finish_verdict",
+      "content": {
+        "status": "completed",
+        "action_id": "cfb9b5b9-a70c-42ee-a11a-eeace4ce37e2",
+        "observed_at": "2026-10-17T21:54:42.136Z",
+        "evidence_refs": [
+          "e2574297-a01e-4ee8-83fc-8a51b030a5dc"
+        ],
+        "error_category": null,
+        "structured_observations": {
+          "scope": "Supported local INSERT/UPDATE fixture only",
+          "result": "pass",
+          "reasons": [
+            "Candidate met correctness and configured objective for this fixture and measured local conditions."
+          ],
+          "comparison": [
+            {
+              "level": 1,
+              "pairs": [
+                {
+                  "delta_ms": -37.48816799999622,
+                  "repetition": 0,
+                  "baseline_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+                  "baseline_p95": 42.701084000000264,
+                  "candidate_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+                  "baseline_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+                  "candidate_p95": 5.212916000004043,
+                  "candidate_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71"
+                },
+                {
+                  "delta_ms": -366.859749999996,
+                  "repetition": 1,
+                  "baseline_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+                  "baseline_p95": 379.3225420000017,
+                  "candidate_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+                  "baseline_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+                  "candidate_p95": 12.46279200000572,
+                  "candidate_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293"
+                },
+                {
+                  "delta_ms": -181.73695899999439,
+                  "repetition": 2,
+                  "baseline_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+                  "baseline_p95": 192.88779200000135,
+                  "candidate_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+                  "baseline_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+                  "candidate_p95": 11.150833000006969,
+                  "candidate_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e"
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "Observed association only; no server bottleneck attribution.",
+            "No universal equivalence or guaranteed speedup.",
+            "Synthetic fixtures; no custom model training."
+          ],
+          "evidence_refs": [
+            "e2574297-a01e-4ee8-83fc-8a51b030a5dc"
+          ],
+          "experiments_used": 8,
+          "valid_conclusions": 1,
+          "missed_seeded_failure": false,
+          "estimated_inference_spend": "unknown local inference"
+        }
+      },
+      "content_hash": "0ca1b6816bae6f3d12094e114578d2945894f29122b511be703cb3ac751df6d3",
+      "created_at": "2026-10-17T21:54:42.234Z"
+    }
+  ],
+  "limitations": [
+    "Local parity only, not a hosted benchmark.",
+    "Finite observation windows do not guarantee eventual delivery.",
+    "No DELETE, reconnect, replay delivery, revocation, arbitrary policy or schema equivalence.",
+    "Quantiles use observed authorized first receipts; coverage includes every intended pair.",
+    "p99 unstable below 100 observed samples.",
+    "No attribution of server bottlenecks from coordinator-only metrics."
+  ]
+}

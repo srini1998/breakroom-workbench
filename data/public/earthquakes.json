@@ -1,0 +1,155 @@
+{
+  "id": "earthquakes",
+  "name": "USGS earthquake observations",
+  "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+  "feed_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+  "retrieved_at": "2026-10-17T21:37:31.393Z",
+  "period": "Past-day feed snapshot; not a continuously connected alert service",
+  "license": "USGS-produced data: public domain; see USGS copyright policy",
+  "attribution": "U.S. Geological Survey Earthquake Hazards Program",
+  "transformation": "First 20 features; public ID, place, magnitude, origin time and source URL only. Replayed as application updates, not newly detected earthquakes.",
+  "rows": [
+    {
+      "id": "nc75451196",
+      "name": "2 km NW of The Geysers, CA",
+      "magnitude": 0.26,
+      "date": "2026-10-17T21:34:24.600Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196"
+    },
+    {
+      "id": "aka2026uplgqp",
+      "name": "85 km NNW of Karluk, Alaska",
+      "magnitude": 0.7,
+      "date": "2026-10-17T21:27:33.901Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp"
+    },
+    {
+      "id": "aka2026uplcme",
+      "name": "111 km S of McCarthy, Alaska",
+      "magnitude": 0.9,
+      "date": "2026-10-17T21:22:45.352Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme"
+    },
+    {
+      "id": "ci41348639",
+      "name": "11 km S of Anza, CA",
+      "magnitude": 0.5,
+      "date": "2026-10-17T21:22:37.320Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639"
+    },
+    {
+      "id": "aka2026uplbtx",
+      "name": "60 km SSW of Central, Alaska",
+      "magnitude": 1.7,
+      "date": "2026-10-17T21:21:56.748Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplbtx"
+    },
+    {
+      "id": "aka2026upkzuo",
+      "name": "18 km N of Skwentna, Alaska",
+      "magnitude": 1.6,
+      "date": "2026-10-17T21:19:40.099Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkzuo"
+    },
+    {
+      "id": "ci41348631",
+      "name": "22 km ESE of Anza, CA",
+      "magnitude": 0.94,
+      "date": "2026-10-17T21:03:33.340Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348631"
+    },
+    {
+      "id": "aka2026upkdpk",
+      "name": "55 km E of Whittier, Alaska",
+      "magnitude": 1.1,
+      "date": "2026-10-17T20:54:04.232Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkdpk"
+    },
+    {
+      "id": "hv75059831",
+      "name": "9 km SSW of Volcano, Hawaii",
+      "magnitude": 1.76,
+      "date": "2026-10-17T20:53:42.240Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059831"
+    },
+    {
+      "id": "aka2026upjkal",
+      "name": "26 km ENE of Susitna North, Alaska",
+      "magnitude": 1.5,
+      "date": "2026-10-17T20:31:29.300Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upjkal"
+    },
+    {
+      "id": "aka2026upisja",
+      "name": "58 km WNW of Happy Valley, Alaska",
+      "magnitude": 2.8,
+      "date": "2026-10-17T20:11:11.204Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upisja"
+    },
+    {
+      "id": "ci41348623",
+      "name": "4 km NNW of Big Bear City, CA",
+      "magnitude": 1.09,
+      "date": "2026-10-17T20:00:44.210Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348623"
+    },
+    {
+      "id": "nc75451131",
+      "name": "3 km SE of The Geysers, CA",
+      "magnitude": 1.23,
+      "date": "2026-10-17T19:48:39.660Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451131"
+    },
+    {
+      "id": "aka2026uphtgp",
+      "name": "11 km ENE of Fox, Alaska",
+      "magnitude": 1.4,
+      "date": "2026-10-17T19:42:10.340Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphtgp"
+    },
+    {
+      "id": "ci41348615",
+      "name": "4 km WSW of Anza, CA",
+      "magnitude": 1.02,
+      "date": "2026-10-17T19:37:30.510Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348615"
+    },
+    {
+      "id": "uu80160531",
+      "name": "1 km ENE of Summit Park, Utah",
+      "magnitude": 2.54,
+      "date": "2026-10-17T19:30:56.270Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80160531"
+    },
+    {
+      "id": "hv75059776",
+      "name": "7 km WSW of Volcano, Hawaii",
+      "magnitude": 1.32,
+      "date": "2026-10-17T19:24:08.300Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059776"
+    },
+    {
+      "id": "hv75059771",
+      "name": "13 km ENE of P\u0101hala, Hawaii",
+      "magnitude": 2.76,
+      "date": "2026-10-17T19:23:46.820Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059771"
+    },
+    {
+      "id": "aka2026uphcnz",
+      "name": "48 km ESE of Halibut Cove, Alaska",
+      "magnitude": 3.1,
+      "date": "2026-10-17T19:23:28.201Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphcnz"
+    },
+    {
+      "id": "hv75059766",
+      "name": "19 km ESE of Naalehu, Hawaii",
+      "magnitude": 2.06,
+      "date": "2026-10-17T19:20:30.190Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059766"
+    }
+  ],
+  "source_fingerprint_sha256": "46a308db466d57c336a53a2381de87014935b7d30044e660a3cac142c8faafa0",
+  "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+}

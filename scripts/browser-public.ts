@@ -1,0 +1,7 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import {writeFile}from'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+const routes=['','switchboard','accessproof','eventmedic','erasurecheck','importrescue','economybreaker'];
+for(const route of routes){await page.goto('http://127.0.0.1:4321/'+route);await page.getByText('Loading recorded evidence…').waitFor({state:'detached'});await page.getByRole('heading',{level:1}).waitFor();assert.match(await page.locator('main').innerText(),/Recorded evidence/);await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,route);await page.setViewportSize({width:1440,height:1000});}
+assert.equal(errors.length,0);await page.goto('http://127.0.0.1:4321/');await page.locator('.directory').waitFor();assert.equal(await page.locator('.directory a').first().getAttribute('href'),'/switchboard');await page.screenshot({path:'docs/evidence/public-profile.png',fullPage:true});await writeFile('docs/evidence/public-profile-browser.json',JSON.stringify({verified_at:new Date().toISOString(),routes,mobile_width:390,page_errors:errors,scope:'Static public projection of recorded local evidence. Not a fresh cloud experiment.'},null,2));await browser.close();console.log('All seven public routes passed, no mobile overflow or page errors.');

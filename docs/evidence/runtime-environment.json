@@ -1,0 +1,111 @@
+{
+  "verified_at": "2026-10-17T21:07:29.590Z",
+  "node": "v26.0.0",
+  "architecture": "arm64",
+  "supabase_postgres": "17.11",
+  "images": [
+    {
+      "container": "supabase_pg_meta_supa1",
+      "image": "public.ecr.aws/supabase/postgres-meta:v0.100.0",
+      "digests": [
+        "public.ecr.aws/supabase/postgres-meta@sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd"
+      ]
+    },
+    {
+      "container": "supabase_storage_supa1",
+      "image": "public.ecr.aws/supabase/storage-api:v1.82.1",
+      "digests": [
+        "public.ecr.aws/supabase/storage-api@sha256:ec2ad41411eac8fc2b769b4bb00d1af32ae37eca3745c15bdb329db27d218934"
+      ]
+    },
+    {
+      "container": "supabase_rest_supa1",
+      "image": "public.ecr.aws/supabase/postgrest:v16.4",
+      "digests": [
+        "public.ecr.aws/supabase/postgrest@sha256:d155c6718ed9a9f990d159a2ab7c0a3f16944dbb6d0a0344557421042acfe0df"
+      ]
+    },
+    {
+      "container": "supabase_realtime_supa1",
+      "image": "public.ecr.aws/supabase/realtime:v2.143.4",
+      "digests": [
+        "public.ecr.aws/supabase/realtime@sha256:35e99d3f1cbba5aa5585e8ac3cf70ecc54909ee4aee0626effed93c60fb41439"
+      ]
+    },
+    {
+      "container": "supabase_inbucket_supa1",
+      "image": "public.ecr.aws/supabase/mailpit:v1.31.3",
+      "digests": [
+        "public.ecr.aws/supabase/mailpit@sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d"
+      ]
+    },
+    {
+      "container": "supabase_auth_supa1",
+      "image": "public.ecr.aws/supabase/gotrue:v2.197.0",
+      "digests": [
+        "public.ecr.aws/supabase/gotrue@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b"
+      ]
+    },
+    {
+      "container": "supabase_kong_supa1",
+      "image": "public.ecr.aws/supabase/kong:2.8.1",
+      "digests": [
+        "public.ecr.aws/supabase/kong@sha256:1b53405d8680a09d6f44494b7990bf7da2ea43f84a258c59717d4539abf09f6d"
+      ]
+    },
+    {
+      "container": "supabase_analytics_supa1",
+      "image": "public.ecr.aws/supabase/logflare:1.53.0",
+      "digests": [
+        "public.ecr.aws/supabase/logflare@sha256:9d9c8f8c462650b5a99789e1adc6906df85cfb15e2515a8a3b44953893434470"
+      ]
+    },
+    {
+      "container": "supabase_db_supa1",
+      "image": "public.ecr.aws/supabase/postgres:17.11.0.004",
+      "digests": [
+        "public.ecr.aws/supabase/postgres@sha256:b15d862126dd2dac02da524696ccfde2dcce2ceaee0a58973b2727befe492706"
+      ]
+    }
+  ],
+  "models": {
+    "models": [
+      {
+        "name": "qwen2.5:3b",
+        "model": "qwen2.5:3b",
+        "modified_at": "2026-10-17T15:34:37.362523058-04:00",
+        "size": 1929912432,
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    ]
+  },
+  "roles": [
+    {
+      "current_user": "breakroom_control_owner",
+      "rolsuper": false,
+      "rolbypassrls": false
+    },
+    {
+      "current_user": "breakroom_target_owner",
+      "rolsuper": false,
+      "rolbypassrls": false
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "case": {
+    "id": "28ca0beb-14c9-4b82-b2b9-201304485cf7",
+    "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+    "workspace_id": "00000000-0000-4000-8000-000000000011",
+    "slug": "accessproof",
+    "source": {
+      "id": "issues",
+      "url": "https://github.com/supabase/supabase/issues",
+      "name": "Supabase public GitHub issue titles",
+      "rows": [
+        {
+          "id": "51868",
+          "url": "https://github.com/supabase/supabase/issues/51868",
+          "date": "2026-10-17T20:54:13Z",
+          "name": "[email removed]"
+        },
+        {
+          "id": "51836",
+          "url": "https://github.com/supabase/supabase/issues/51836",
+          "date": "2026-10-16T19:02:43Z",
+          "name": "SQL Editor auto-limit turns LIMIT ALL and LIMIT NULL queries into invalid SQL"
+        },
+        {
+          "id": "51827",
+          "url": "https://github.com/supabase/supabase/issues/51827",
+          "date": "2026-10-17T11:40:26Z",
+          "name": "Table Editor numeric filters round high-precision decimal values"
+        }
+      ],
+      "period": "Open-issue snapshot at retrieval",
+      "license": "Public issue metadata; linked to original posts. No author/body data copied.",
+      "raw_sha256": "4fc662f613e0c6b2bdd378f198624d77791c8599ca0ce2157b7b57e32ea29ab8",
+      "attribution": "Public contributors to supabase/supabase. No endorsement or affiliation.",
+      "content_hash": "e85ede3dc6cb2b9eefdc75b120154fba1b783b74f83930040ea858e3f184b22d",
+      "retrieved_at": "2026-10-17T21:37:31.393Z",
+      "transformation": "First 8 non-PR titles, IDs, URLs and dates. Fictional project/team assignments are added locally; these are not real private customer tickets."
+    },
+    "state": {
+      "documents": [
+        {
+          "id": "51868",
+          "url": "https://github.com/supabase/supabase/issues/51868",
+          "date": "2026-10-17T20:54:13Z",
+          "name": "[email removed]",
+          "status": "Reviewed locally",
+          "tenant": 1,
+          "assigned": true
+        },
+        {
+          "id": "51836",
+          "url": "https://github.com/supabase/supabase/issues/51836",
+          "date": "2026-10-16T19:02:43Z",
+          "name": "SQL Editor auto-limit turns LIMIT ALL and LIMIT NULL queries into invalid SQL",
+          "status": "Open",
+          "tenant": 2,
+          "assigned": false
+        },
+        {
+          "id": "51827",
+          "url": "https://github.com/supabase/supabase/issues/51827",
+          "date": "2026-10-17T11:40:26Z",
+          "name": "Table Editor numeric filters round high-precision decimal values",
+          "status": "Open",
+          "tenant": 1,
+          "assigned": false
+        }
+      ],
+      "last_check": {
+        "rule": "A different team owns this record",
+        "action": "access_check",
+        "allowed": false,
+        "persona": "owner",
+        "document_id": "51836"
+      }
+    },
+    "events": [
+      {
+        "at": "2026-10-17T21:41:56.207Z",
+        "id": "68e7aff6-1003-4179-bd35-87ebf3dba2c4",
+        "action": "access_update",
+        "message": "This request was blocked.",
+        "observation": {
+          "rule": "Only the owner may update",
+          "action": "access_update",
+          "allowed": false,
+          "persona": "member",
+          "document_id": "51868"
+        }
+      },
+      {
+        "at": "2026-10-17T21:41:56.216Z",
+        "id": "a9c16f8f-e86b-4cda-bb45-6a01bc68d474",
+        "action": "access_update",
+        "message": "Local issue copy marked reviewed. GitHub was not changed.",
+        "observation": {
+          "rule": "Only the owner may update",
+          "action": "access_update",
+          "allowed": true,
+          "persona": "owner",
+          "document_id": "51868"
+        }
+      },
+      {
+        "at": "2026-10-17T21:41:56.223Z",
+        "id": "c69e541c-d702-4e32-86e7-6f81086f8ddf",
+        "action": "access_check",
+        "message": "This colleague can open this record.",
+        "observation": {
+          "rule": "Contractors see assigned records only",
+          "action": "access_check",
+          "allowed": true,
+          "persona": "contractor",
+          "document_id": "51868"
+        }
+      },
+      {
+        "at": "2026-10-17T21:41:56.229Z",
+        "id": "eeaf521f-44f6-41cb-be35-8a807a8121ea",
+        "action": "access_check",
+        "message": "This request was blocked.",
+        "observation": {
+          "rule": "A different team owns this record",
+          "action": "access_check",
+          "allowed": false,
+          "persona": "owner",
+          "document_id": "51836"
+        }
+      }
+    ],
+    "created_at": "2026-10-17T21:41:56.899Z",
+    "updated_at": "2026-10-17T21:41:56.927Z"
+  },
+  "source_hash": "e85ede3dc6cb2b9eefdc75b120154fba1b783b74f83930040ea858e3f184b22d",
+  "workspace_denial": true
+}

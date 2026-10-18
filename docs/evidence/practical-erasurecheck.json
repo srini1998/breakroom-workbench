@@ -1,0 +1,412 @@
+{
+  "case": {
+    "id": "401fd272-31e2-4280-bea5-fb1813515d53",
+    "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+    "workspace_id": "00000000-0000-4000-8000-000000000011",
+    "slug": "erasurecheck",
+    "source": {
+      "id": "retail",
+      "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+      "name": "UCI Online Retail",
+      "rows": [
+        {
+          "id": "uci-row-2",
+          "sku": "85123A",
+          "date": "2010-12-01T08:26:00",
+          "name": "WHITE HANGING HEART T-LIGHT HOLDER",
+          "quantity": 6,
+          "unit_price_gbp": 2.55
+        },
+        {
+          "id": "uci-row-3",
+          "sku": "71053",
+          "date": "2010-12-01T08:26:00",
+          "name": "WHITE METAL LANTERN",
+          "quantity": 6,
+          "unit_price_gbp": 3.39
+        },
+        {
+          "id": "uci-row-4",
+          "sku": "84406B",
+          "date": "2010-12-01T08:26:00",
+          "name": "CREAM CUPID HEARTS COAT HANGER",
+          "quantity": 8,
+          "unit_price_gbp": 2.75
+        },
+        {
+          "id": "uci-row-5",
+          "sku": "84029G",
+          "date": "2010-12-01T08:26:00",
+          "name": "KNITTED UNION FLAG HOT WATER BOTTLE",
+          "quantity": 6,
+          "unit_price_gbp": 3.39
+        },
+        {
+          "id": "uci-row-6",
+          "sku": "84029E",
+          "date": "2010-12-01T08:26:00",
+          "name": "RED WOOLLY HOTTIE WHITE HEART.",
+          "quantity": 6,
+          "unit_price_gbp": 3.39
+        },
+        {
+          "id": "uci-row-7",
+          "sku": "22752",
+          "date": "2010-12-01T08:26:00",
+          "name": "SET 7 BABUSHKA NESTING BOXES",
+          "quantity": 2,
+          "unit_price_gbp": 7.65
+        },
+        {
+          "id": "uci-row-8",
+          "sku": "21730",
+          "date": "2010-12-01T08:26:00",
+          "name": "GLASS STAR FROSTED T-LIGHT HOLDER",
+          "quantity": 6,
+          "unit_price_gbp": 4.25
+        },
+        {
+          "id": "uci-row-9",
+          "sku": "22633",
+          "date": "2010-12-01T08:28:00",
+          "name": "HAND WARMER UNION JACK",
+          "quantity": 6,
+          "unit_price_gbp": 1.85
+        },
+        {
+          "id": "uci-row-10",
+          "sku": "22632",
+          "date": "2010-12-01T08:28:00",
+          "name": "HAND WARMER RED POLKA DOT",
+          "quantity": 6,
+          "unit_price_gbp": 1.85
+        },
+        {
+          "id": "uci-row-11",
+          "sku": "84879",
+          "date": "2010-12-01T08:34:00",
+          "name": "ASSORTED COLOUR BIRD ORNAMENT",
+          "quantity": 32,
+          "unit_price_gbp": 1.69
+        },
+        {
+          "id": "uci-row-12",
+          "sku": "22745",
+          "date": "2010-12-01T08:34:00",
+          "name": "POPPY'S PLAYHOUSE BEDROOM ",
+          "quantity": 6,
+          "unit_price_gbp": 2.1
+        },
+        {
+          "id": "uci-row-13",
+          "sku": "22748",
+          "date": "2010-12-01T08:34:00",
+          "name": "POPPY'S PLAYHOUSE KITCHEN",
+          "quantity": 6,
+          "unit_price_gbp": 2.1
+        },
+        {
+          "id": "uci-row-14",
+          "sku": "22749",
+          "date": "2010-12-01T08:34:00",
+          "name": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+          "quantity": 8,
+          "unit_price_gbp": 3.75
+        },
+        {
+          "id": "uci-row-15",
+          "sku": "22310",
+          "date": "2010-12-01T08:34:00",
+          "name": "IVORY KNITTED MUG COSY ",
+          "quantity": 6,
+          "unit_price_gbp": 1.65
+        },
+        {
+          "id": "uci-row-16",
+          "sku": "84969",
+          "date": "2010-12-01T08:34:00",
+          "name": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+          "quantity": 6,
+          "unit_price_gbp": 4.25
+        },
+        {
+          "id": "uci-row-17",
+          "sku": "22623",
+          "date": "2010-12-01T08:34:00",
+          "name": "BOX OF VINTAGE JIGSAW BLOCKS ",
+          "quantity": 3,
+          "unit_price_gbp": 4.95
+        },
+        {
+          "id": "uci-row-18",
+          "sku": "22622",
+          "date": "2010-12-01T08:34:00",
+          "name": "BOX OF VINTAGE ALPHABET BLOCKS",
+          "quantity": 2,
+          "unit_price_gbp": 9.95
+        },
+        {
+          "id": "uci-row-19",
+          "sku": "21754",
+          "date": "2010-12-01T08:34:00",
+          "name": "HOME BUILDING BLOCK WORD",
+          "quantity": 3,
+          "unit_price_gbp": 5.95
+        },
+        {
+          "id": "uci-row-20",
+          "sku": "21755",
+          "date": "2010-12-01T08:34:00",
+          "name": "LOVE BUILDING BLOCK WORD",
+          "quantity": 3,
+          "unit_price_gbp": 5.95
+        },
+        {
+          "id": "uci-row-21",
+          "sku": "21777",
+          "date": "2010-12-01T08:34:00",
+          "name": "RECIPE BOX WITH METAL HEART",
+          "quantity": 4,
+          "unit_price_gbp": 7.95
+        },
+        {
+          "id": "uci-row-22",
+          "sku": "48187",
+          "date": "2010-12-01T08:34:00",
+          "name": "DOORMAT NEW ENGLAND",
+          "quantity": 4,
+          "unit_price_gbp": 7.95
+        },
+        {
+          "id": "uci-row-23",
+          "sku": "22960",
+          "date": "2010-12-01T08:34:00",
+          "name": "JAM MAKING SET WITH JARS",
+          "quantity": 6,
+          "unit_price_gbp": 4.25
+        },
+        {
+          "id": "uci-row-24",
+          "sku": "22913",
+          "date": "2010-12-01T08:34:00",
+          "name": "RED COAT RACK PARIS FASHION",
+          "quantity": 3,
+          "unit_price_gbp": 4.95
+        },
+        {
+          "id": "uci-row-25",
+          "sku": "22912",
+          "date": "2010-12-01T08:34:00",
+          "name": "YELLOW COAT RACK PARIS FASHION",
+          "quantity": 3,
+          "unit_price_gbp": 4.95
+        }
+      ],
+      "period": "2010–2011 historical transactions",
+      "license": "CC BY 4.0",
+      "raw_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+      "attribution": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI:10.24432/C5BW33.",
+      "content_hash": "c8d7069938e21e7b7a13cecd4d0119dd024f314d1051bb140ef5deeb46c23fde",
+      "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+      "retrieved_at": "2026-10-17T21:37:07.249334+00:00",
+      "transformation": "First 24 positive-quantity rows; CustomerID, InvoiceNo and Country excluded. Source row number retained. No customer identities are imported."
+    },
+    "state": {
+      "result": {
+        "scope": "Real local Supabase Storage and target SQL; no backups or legal certification",
+        "actual": {
+          "rows": [
+            {
+              "id": "control-profile",
+              "owner": "control",
+              "shared": false
+            },
+            {
+              "id": "shared",
+              "owner": null,
+              "shared": true
+            }
+          ],
+          "delayed": "fenced",
+          "owned_objects": [],
+          "shared_objects": [
+            {
+              "id": "be4de0ab-bba6-495a-911b-fd3b2173bf42",
+              "name": "team.txt",
+              "version": "2dc862ee-835a-4018-a9ba-6513644e633b",
+              "metadata": {
+                "eTag": "\"3ebcefe38992ae918284af75ef7131b8\"",
+                "size": 36,
+                "mimetype": "text/plain",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2026-10-17T21:46:08.457Z",
+                "contentLength": 36,
+                "httpStatusCode": 200
+              },
+              "created_at": "2026-10-17T21:46:08.459Z",
+              "updated_at": "2026-10-17T21:46:08.459Z",
+              "archived_at": null,
+              "is_versioned": false,
+              "is_delete_marker": false,
+              "last_accessed_at": "2026-10-17T21:46:08.459Z"
+            }
+          ],
+          "storage_checks": {
+            "owned_download_absent": true,
+            "shared_content_unchanged": true,
+            "control_content_unchanged": true
+          },
+          "control_objects": [
+            {
+              "id": "54c127c2-d80a-423c-84fd-6fa7ea564142",
+              "name": "keep.txt",
+              "version": "49a7fe20-4dfd-4690-92eb-2058863a88e8",
+              "metadata": {
+                "eTag": "\"951961979b93a7bc4861acbb77bdc383\"",
+                "size": 37,
+                "mimetype": "text/plain",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2026-10-17T21:46:08.450Z",
+                "contentLength": 37,
+                "httpStatusCode": 200
+              },
+              "created_at": "2026-10-17T21:46:08.453Z",
+              "updated_at": "2026-10-17T21:46:08.453Z",
+              "archived_at": null,
+              "is_versioned": false,
+              "is_delete_marker": false,
+              "last_accessed_at": "2026-10-17T21:46:08.453Z"
+            }
+          ]
+        },
+        "passed": true,
+        "expected": "Owned live resources absent; control/shared preserved; delayed export fenced",
+        "invariant_id": "erasure.no_resurrection"
+      },
+      "status": "closed",
+      "account": null,
+      "approval": null,
+      "cleanup_plan": {
+        "run": "401fd272-31e2-4280-bea5-fb1813515d53",
+        "owner": "owned",
+        "ready": true,
+        "bucket": "breakroom-401fd272-31e2-4280-bea5-fb1813515d53",
+        "delete": [
+          "profile",
+          "export",
+          "owned/*"
+        ],
+        "detach": [
+          "shared"
+        ],
+        "module": "ErasureCheck",
+        "epoch_to": 1,
+        "preserve": [
+          "control-profile",
+          "control/keep.txt",
+          "shared/team.txt"
+        ],
+        "epoch_from": 0,
+        "delayed_job": "pending-export",
+        "limitations": [
+          "Live controlled resources only",
+          "No backup inspection or legal compliance verdict"
+        ],
+        "owned_object_prefix": "owned/"
+      },
+      "receipt_rows": []
+    },
+    "events": [
+      {
+        "at": "2026-10-17T21:46:08.416Z",
+        "id": "a983aecb-4fa5-4507-8bfb-08896194f307",
+        "action": "review_erasure",
+        "message": "Deletion plan prepared. Review the owned and preserved resources before approval.",
+        "observation": {
+          "action_hash": "be7ab4ed248c8fd0a6e49d6179ea12e31a765673f36fdbd10ddce5a578255bba"
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:08.463Z",
+        "id": "7857346f-fb7e-4407-9951-de594235788a",
+        "action": "approve_erasure",
+        "message": "Owned records and files removed. Shared files survived and the delayed export was blocked.",
+        "observation": {
+          "scope": "Real local Supabase Storage and target SQL; no backups or legal certification",
+          "actual": {
+            "rows": [
+              {
+                "id": "control-profile",
+                "owner": "control",
+                "shared": false
+              },
+              {
+                "id": "shared",
+                "owner": null,
+                "shared": true
+              }
+            ],
+            "delayed": "fenced",
+            "owned_objects": [],
+            "shared_objects": [
+              {
+                "id": "be4de0ab-bba6-495a-911b-fd3b2173bf42",
+                "name": "team.txt",
+                "version": "2dc862ee-835a-4018-a9ba-6513644e633b",
+                "metadata": {
+                  "eTag": "\"3ebcefe38992ae918284af75ef7131b8\"",
+                  "size": 36,
+                  "mimetype": "text/plain",
+                  "cacheControl": "max-age=3600",
+                  "lastModified": "2026-10-17T21:46:08.457Z",
+                  "contentLength": 36,
+                  "httpStatusCode": 200
+                },
+                "created_at": "2026-10-17T21:46:08.459Z",
+                "updated_at": "2026-10-17T21:46:08.459Z",
+                "archived_at": null,
+                "is_versioned": false,
+                "is_delete_marker": false,
+                "last_accessed_at": "2026-10-17T21:46:08.459Z"
+              }
+            ],
+            "storage_checks": {
+              "owned_download_absent": true,
+              "shared_content_unchanged": true,
+              "control_content_unchanged": true
+            },
+            "control_objects": [
+              {
+                "id": "54c127c2-d80a-423c-84fd-6fa7ea564142",
+                "name": "keep.txt",
+                "version": "49a7fe20-4dfd-4690-92eb-2058863a88e8",
+                "metadata": {
+                  "eTag": "\"951961979b93a7bc4861acbb77bdc383\"",
+                  "size": 37,
+                  "mimetype": "text/plain",
+                  "cacheControl": "max-age=3600",
+                  "lastModified": "2026-10-17T21:46:08.450Z",
+                  "contentLength": 37,
+                  "httpStatusCode": 200
+                },
+                "created_at": "2026-10-17T21:46:08.453Z",
+                "updated_at": "2026-10-17T21:46:08.453Z",
+                "archived_at": null,
+                "is_versioned": false,
+                "is_delete_marker": false,
+                "last_accessed_at": "2026-10-17T21:46:08.453Z"
+              }
+            ]
+          },
+          "passed": true,
+          "expected": "Owned live resources absent; control/shared preserved; delayed export fenced",
+          "invariant_id": "erasure.no_resurrection"
+        }
+      }
+    ],
+    "created_at": "2026-10-17T21:46:08.471Z",
+    "updated_at": "2026-10-17T21:46:08.488Z"
+  },
+  "source_hash": "c8d7069938e21e7b7a13cecd4d0119dd024f314d1051bb140ef5deeb46c23fde",
+  "workspace_denial": true
+}

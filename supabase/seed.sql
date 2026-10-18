@@ -1,0 +1,2 @@
+-- Workbench control-plane seed is non-destructively applied by npm run seed.
+-- This file intentionally contains no application data for the disposable Supabase stack.

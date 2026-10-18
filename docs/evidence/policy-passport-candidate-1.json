@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "contract": {
+    "version": 1,
+    "name": "Team audience contract",
+    "scope": "breakroom-two-tenant-fixture",
+    "rules": [
+      {
+        "role": "owner",
+        "action": "read_own",
+        "allow": true
+      },
+      {
+        "role": "owner",
+        "action": "read_foreign",
+        "allow": false
+      },
+      {
+        "role": "owner",
+        "action": "write_own",
+        "allow": true
+      },
+      {
+        "role": "owner",
+        "action": "unassigned",
+        "allow": true
+      },
+      {
+        "role": "owner",
+        "action": "attachment",
+        "allow": false
+      },
+      {
+        "role": "owner",
+        "action": "reassign",
+        "allow": true
+      },
+      {
+        "role": "member",
+        "action": "read_own",
+        "allow": true
+      },
+      {
+        "role": "member",
+        "action": "read_foreign",
+        "allow": false
+      },
+      {
+        "role": "member",
+        "action": "write_own",
+        "allow": false
+      },
+      {
+        "role": "member",
+        "action": "unassigned",
+        "allow": true
+      },
+      {
+        "role": "member",
+        "action": "attachment",
+        "allow": false
+      },
+      {
+        "role": "member",
+        "action": "reassign",
+        "allow": false
+      },
+      {
+        "role": "contractor",
+        "action": "read_own",
+        "allow": true
+      },
+      {
+        "role": "contractor",
+        "action": "read_foreign",
+        "allow": false
+      },
+      {
+        "role": "contractor",
+        "action": "write_own",
+        "allow": false
+      },
+      {
+        "role": "contractor",
+        "action": "unassigned",
+        "allow": false
+      },
+      {
+        "role": "contractor",
+        "action": "attachment",
+        "allow": false
+      },
+      {
+        "role": "contractor",
+        "action": "reassign",
+        "allow": false
+      }
+    ]
+  },
+  "baseline": {
+    "fixture_run_id": "eafc1982-5861-4afe-86ed-be88e78a4220",
+    "variant": "clean",
+    "contract_hash": "d44da48ab54eaed4a723e37ccc754dcc1a02259ba95f1f75d8ea097310ea7167",
+    "observed_at": "2026-10-17T21:47:30.470Z",
+    "result": "pass",
+    "observations": [
+      {
+        "fixture_run_id": "b6c2841d-fb60-4282-bc96-8f3df559dfe2",
+        "role": "owner",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "5666e69b-1c4e-4992-9463-52251df22771",
+        "role": "owner",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "9216c14b-5f3c-46d1-986f-57399bb42a54",
+        "role": "owner",
+        "action": "write_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "8df091fc-820f-4af3-bdb2-ee3a206e1751",
+        "role": "owner",
+        "action": "unassigned",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "88eedf84-31b7-4b7d-978d-acb4eb84047a",
+        "role": "owner",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "09f7ac4d-77c5-4f0b-87db-75c75f612a35",
+        "role": "owner",
+        "action": "reassign",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "4a4cfaa6-5552-42ef-931c-1df7adbf81c2",
+        "role": "member",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "6b923402-e84f-4ad3-b924-5784468b8c12",
+        "role": "member",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "9049e8c8-cb36-491d-81e1-0735611bcbb3",
+        "role": "member",
+        "action": "write_own",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "e4e67228-2ecb-4fbd-abfe-be7385791b46",
+        "role": "member",
+        "action": "unassigned",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "a976ab96-4d9b-4098-8c88-4dddea50d8bd",
+        "role": "member",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "a893df09-4a56-42a8-8620-0efa68628147",
+        "role": "member",
+        "action": "reassign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": "permission denied",
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "63a533ec-4979-4c8c-9806-630656d8df67",
+        "role": "contractor",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "b080e8e0-9352-49bc-b2eb-fbbb133db9d2",
+        "role": "contractor",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "e877b0a7-3415-49b7-b0bf-a2386e2a229b",
+        "role": "contractor",
+        "action": "write_own",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "27174118-918c-4856-ad99-9258e8cf8bbe",
+        "role": "contractor",
+        "action": "unassigned",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "93360da4-8805-4676-b052-084f5d920649",
+        "role": "contractor",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "5f82f688-a2ef-4bf4-814d-41c03bd6cb3a",
+        "role": "contractor",
+        "action": "reassign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      }
+    ],
+    "violations": [],
+    "scope": "breakroom-two-tenant-fixture",
+    "limitations": [
+      "Only the versioned local two-tenant fixture is supported.",
+      "Each probe has an isolated fixture; multi-action journeys are not covered.",
+      "A permission contract is supplied by the developer; completeness is not inferred.",
+      "Attachment probes cover metadata, not Storage object access.",
+      "This does not connect to arbitrary customer projects or apply production migrations."
+    ]
+  },
+  "candidate": {
+    "fixture_run_id": "f2c79e2e-6a8e-4fe3-8ef1-344784b79bf3",
+    "variant": "candidate-1",
+    "contract_hash": "d44da48ab54eaed4a723e37ccc754dcc1a02259ba95f1f75d8ea097310ea7167",
+    "observed_at": "2026-10-17T21:47:30.759Z",
+    "result": "fail",
+    "observations": [
+      {
+        "fixture_run_id": "f0208aa7-6904-4f9e-9f19-11f7307dfc01",
+        "role": "owner",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "a14892f0-4bba-4f61-9477-aea5e2f2506d",
+        "role": "owner",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": true,
+        "passed": false,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "33108215-61f0-490f-9617-825d217dfd99",
+        "role": "owner",
+        "action": "write_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "1c4da543-4c10-4d48-9a60-41661d9261c1",
+        "role": "owner",
+        "action": "unassigned",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "18aaf83d-594c-4c0c-a304-7c6e2d69c28e",
+        "role": "owner",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "75cac1e5-c706-4571-8d7e-1c791edef06e",
+        "role": "owner",
+        "action": "reassign",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "8e2b6869-0dd7-4def-b943-0e6c86e58533",
+        "role": "member",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "e937738e-1ece-4535-95bd-7a43b9ceacac",
+        "role": "member",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": true,
+        "passed": false,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "cc4e99f7-c3eb-43fc-be1e-425592e15ccf",
+        "role": "member",
+        "action": "write_own",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "fa989d0f-6f04-49be-a027-58b068f49564",
+        "role": "member",
+        "action": "unassigned",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "b2c70d90-a0f9-4ff1-86ee-a511c7706316",
+        "role": "member",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "610fa7a5-164d-4d14-beb1-0b2d993ada5b",
+        "role": "member",
+        "action": "reassign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": "permission denied",
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "986e60fb-a8ae-4e51-8e3e-5387cb2b9b08",
+        "role": "contractor",
+        "action": "read_own",
+        "expected": true,
+        "observed": true,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "56c02530-9b2d-48dc-87a7-b420a6b690c0",
+        "role": "contractor",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "244a4c6e-cadd-4057-a293-47bfb67e657b",
+        "role": "contractor",
+        "action": "write_own",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "2b2ea60c-62b2-4541-a9d0-1bc8c765f870",
+        "role": "contractor",
+        "action": "unassigned",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "ce9c15a4-5860-473f-b1da-910cc9ee3105",
+        "role": "contractor",
+        "action": "attachment",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "9ef22e21-8984-43c0-964e-4775a4631c2c",
+        "role": "contractor",
+        "action": "reassign",
+        "expected": false,
+        "observed": false,
+        "passed": true,
+        "session_user_id": "10000000-0000-4000-8000-000000000003",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      }
+    ],
+    "violations": [
+      {
+        "fixture_run_id": "a14892f0-4bba-4f61-9477-aea5e2f2506d",
+        "role": "owner",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": true,
+        "passed": false,
+        "session_user_id": "10000000-0000-4000-8000-000000000001",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      },
+      {
+        "fixture_run_id": "e937738e-1ece-4535-95bd-7a43b9ceacac",
+        "role": "member",
+        "action": "read_foreign",
+        "expected": false,
+        "observed": true,
+        "passed": false,
+        "session_user_id": "10000000-0000-4000-8000-000000000002",
+        "denial": null,
+        "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+      }
+    ],
+    "scope": "breakroom-two-tenant-fixture",
+    "limitations": [
+      "Only the versioned local two-tenant fixture is supported.",
+      "Each probe has an isolated fixture; multi-action journeys are not covered.",
+      "A permission contract is supplied by the developer; completeness is not inferred.",
+      "Attachment probes cover metadata, not Storage object access.",
+      "This does not connect to arbitrary customer projects or apply production migrations."
+    ]
+  },
+  "changes": [
+    {
+      "role": "owner",
+      "action": "read_foreign",
+      "before": false,
+      "after": true,
+      "expected": false
+    },
+    {
+      "role": "member",
+      "action": "read_foreign",
+      "before": false,
+      "after": true,
+      "expected": false
+    }
+  ],
+  "result": "fail",
+  "provenance": "Fresh actual local Supabase Auth → PostgREST → RLS observations. Seeded reviewed candidate templates; no upstream vulnerability claim."
+}

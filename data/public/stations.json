@@ -1,0 +1,98 @@
+{
+  "id": "stations",
+  "name": "Citi Bike public station availability",
+  "url": "https://citibikenyc.com/system-data",
+  "license": "NYCBS Data Use Policy \u2014 https://citibikenyc.com/data-sharing-policy",
+  "attribution": "Citi Bike / NYC Bike Share, GBFS public feed. No affiliation.",
+  "retrieved_at": "2026-10-17T21:37:31.393Z",
+  "period": "Availability observed at retrieval, not current availability after this timestamp",
+  "transformation": "First 12 installed stations with at least 2 bikes; public station metadata only. Subsequent checkout/return actions are local simulations, not real rides.",
+  "rows": [
+    {
+      "id": "1862008939006380034",
+      "name": "E 189 St & Bathgate Ave",
+      "bikes": 10,
+      "docks": 9,
+      "reported_at": 1792272917
+    },
+    {
+      "id": "1898751402035634700",
+      "name": "E 51 St & Linden Blvd",
+      "bikes": 18,
+      "docks": 0,
+      "reported_at": 1792272918
+    },
+    {
+      "id": "f9ed9a6b-097e-48b9-a9d1-79d084dcd2d9",
+      "name": "Anthony Ave & E 175 St",
+      "bikes": 2,
+      "docks": 15,
+      "reported_at": 1792272919
+    },
+    {
+      "id": "498d7e8e-5164-4f26-9ce6-399947d73b1a",
+      "name": "Suydam St & St Nicholas Ave",
+      "bikes": 13,
+      "docks": 3,
+      "reported_at": 1792272918
+    },
+    {
+      "id": "66de677e-0aca-11e7-82f6-3863bb44ef7c",
+      "name": "E 106 St & Lexington Ave",
+      "bikes": 23,
+      "docks": 2,
+      "reported_at": 1792272921
+    },
+    {
+      "id": "cb05443c-e68e-48f7-8d17-35353fa19d4d",
+      "name": "W 34 St & Hudson Blvd E",
+      "bikes": 17,
+      "docks": 36,
+      "reported_at": 1792272921
+    },
+    {
+      "id": "d979131e-0b9f-4aa2-88c5-46d4ff94abc8",
+      "name": "Pacific St & Sackman St",
+      "bikes": 3,
+      "docks": 14,
+      "reported_at": 1792272918
+    },
+    {
+      "id": "47da6ab2-c841-4f2d-97ef-dd8d441c96b1",
+      "name": "Loring Pl North & W 183 St",
+      "bikes": 2,
+      "docks": 14,
+      "reported_at": 1792272919
+    },
+    {
+      "id": "d2b23c87-b7c3-48c2-a634-db4b76ecbcf7",
+      "name": "Pacific St & Utica Ave",
+      "bikes": 3,
+      "docks": 16,
+      "reported_at": 1792272919
+    },
+    {
+      "id": "66dd26f9-0aca-11e7-82f6-3863bb44ef7c",
+      "name": "9 St & 44 Rd",
+      "bikes": 30,
+      "docks": 3,
+      "reported_at": 1792272920
+    },
+    {
+      "id": "1822663031356509142",
+      "name": "Matthews Ct & Coney Island Ave",
+      "bikes": 19,
+      "docks": 0,
+      "reported_at": 1792272919
+    },
+    {
+      "id": "640a9a95-194f-42f5-8d88-1df67129f388",
+      "name": "E 171 St & 3 Ave",
+      "bikes": 10,
+      "docks": 8,
+      "reported_at": 1792272922
+    }
+  ],
+  "source_fingerprint_sha256": "4be63181e2d84f5169b6d1019e17502ba369632639112a9448cdf217d795beb7",
+  "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+}

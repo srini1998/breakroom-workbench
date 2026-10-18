@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "name": "Team audience contract",
+  "scope": "breakroom-two-tenant-fixture",
+  "rules": [
+    {
+      "role": "owner",
+      "action": "read_own",
+      "allow": true
+    },
+    {
+      "role": "owner",
+      "action": "read_foreign",
+      "allow": false
+    },
+    {
+      "role": "owner",
+      "action": "write_own",
+      "allow": true
+    },
+    {
+      "role": "owner",
+      "action": "unassigned",
+      "allow": true
+    },
+    {
+      "role": "owner",
+      "action": "attachment",
+      "allow": false
+    },
+    {
+      "role": "owner",
+      "action": "reassign",
+      "allow": true
+    },
+    {
+      "role": "member",
+      "action": "read_own",
+      "allow": true
+    },
+    {
+      "role": "member",
+      "action": "read_foreign",
+      "allow": false
+    },
+    {
+      "role": "member",
+      "action": "write_own",
+      "allow": false
+    },
+    {
+      "role": "member",
+      "action": "unassigned",
+      "allow": true
+    },
+    {
+      "role": "member",
+      "action": "attachment",
+      "allow": false
+    },
+    {
+      "role": "member",
+      "action": "reassign",
+      "allow": false
+    },
+    {
+      "role": "contractor",
+      "action": "read_own",
+      "allow": true
+    },
+    {
+      "role": "contractor",
+      "action": "read_foreign",
+      "allow": false
+    },
+    {
+      "role": "contractor",
+      "action": "write_own",
+      "allow": false
+    },
+    {
+      "role": "contractor",
+      "action": "unassigned",
+      "allow": false
+    },
+    {
+      "role": "contractor",
+      "action": "attachment",
+      "allow": false
+    },
+    {
+      "role": "contractor",
+      "action": "reassign",
+      "allow": false
+    }
+  ]
+}

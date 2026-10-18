@@ -1,0 +1,11 @@
+{
+  "sha256": "199abd189c06dd724dbf10ac75b11fd402dc09ee131f8f8d66057477349b9eb8",
+  "files": [
+    "index.html",
+    "app.js",
+    "style.css",
+    "evidence.json",
+    "manifest.json"
+  ],
+  "scope": "Actual recorded local experiments. Static public projection. No fresh backend operations run on this website. Email-bearing issue titles omitted from publication; source corpus remains in the private repository."
+}

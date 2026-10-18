@@ -1,0 +1,293 @@
+{
+  "case": {
+    "id": "d522550b-13ec-41aa-ae77-168e4f543f1a",
+    "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+    "workspace_id": "00000000-0000-4000-8000-000000000011",
+    "slug": "eventmedic",
+    "source": {
+      "id": "stations",
+      "url": "https://citibikenyc.com/system-data",
+      "name": "Citi Bike public station availability",
+      "rows": [
+        {
+          "id": "1862008939006380034",
+          "name": "E 189 St & Bathgate Ave",
+          "bikes": 10,
+          "docks": 9,
+          "reported_at": 1792272917
+        },
+        {
+          "id": "1898751402035634700",
+          "name": "E 51 St & Linden Blvd",
+          "bikes": 18,
+          "docks": 0,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "f9ed9a6b-097e-48b9-a9d1-79d084dcd2d9",
+          "name": "Anthony Ave & E 175 St",
+          "bikes": 2,
+          "docks": 15,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "498d7e8e-5164-4f26-9ce6-399947d73b1a",
+          "name": "Suydam St & St Nicholas Ave",
+          "bikes": 13,
+          "docks": 3,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "66de677e-0aca-11e7-82f6-3863bb44ef7c",
+          "name": "E 106 St & Lexington Ave",
+          "bikes": 23,
+          "docks": 2,
+          "reported_at": 1792272921
+        },
+        {
+          "id": "cb05443c-e68e-48f7-8d17-35353fa19d4d",
+          "name": "W 34 St & Hudson Blvd E",
+          "bikes": 17,
+          "docks": 36,
+          "reported_at": 1792272921
+        },
+        {
+          "id": "d979131e-0b9f-4aa2-88c5-46d4ff94abc8",
+          "name": "Pacific St & Sackman St",
+          "bikes": 3,
+          "docks": 14,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "47da6ab2-c841-4f2d-97ef-dd8d441c96b1",
+          "name": "Loring Pl North & W 183 St",
+          "bikes": 2,
+          "docks": 14,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "d2b23c87-b7c3-48c2-a634-db4b76ecbcf7",
+          "name": "Pacific St & Utica Ave",
+          "bikes": 3,
+          "docks": 16,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "66dd26f9-0aca-11e7-82f6-3863bb44ef7c",
+          "name": "9 St & 44 Rd",
+          "bikes": 30,
+          "docks": 3,
+          "reported_at": 1792272920
+        },
+        {
+          "id": "1822663031356509142",
+          "name": "Matthews Ct & Coney Island Ave",
+          "bikes": 19,
+          "docks": 0,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "640a9a95-194f-42f5-8d88-1df67129f388",
+          "name": "E 171 St & 3 Ave",
+          "bikes": 10,
+          "docks": 8,
+          "reported_at": 1792272922
+        }
+      ],
+      "period": "Availability observed at retrieval, not current availability after this timestamp",
+      "license": "NYCBS Data Use Policy — https://citibikenyc.com/data-sharing-policy",
+      "raw_sha256": "4be63181e2d84f5169b6d1019e17502ba369632639112a9448cdf217d795beb7",
+      "attribution": "Citi Bike / NYC Bike Share, GBFS public feed. No affiliation.",
+      "content_hash": "021089557e25a850569041eaed8dc82bed73bafb4ffae4a3588028f7059e3fba",
+      "retrieved_at": "2026-10-17T21:37:31.393Z",
+      "transformation": "First 12 installed stations with at least 2 bikes; public station metadata only. Subsequent checkout/return actions are local simulations, not real rides."
+    },
+    "state": {
+      "receipts": {
+        "1d44f0d1-a814-4458-b828-f7c16907f935": {
+          "hash": "d5076d1beb16fde2cf71ff0cf22e089a7e921828293e459c252cf0393718ff61",
+          "type": "checkout",
+          "returned": true,
+          "station_id": "1862008939006380034"
+        },
+        "d393a58b-f6f2-451d-9b66-e4cf990c4e60": {
+          "hash": "80f0eb8510c3dc90df6711f7cf5fee1c3700c89828c7e2bf526edd445f467246",
+          "type": "return",
+          "station_id": "1862008939006380034"
+        }
+      },
+      "selected": "1862008939006380034",
+      "stations": [
+        {
+          "id": "1862008939006380034",
+          "name": "E 189 St & Bathgate Ave",
+          "bikes": 10,
+          "docks": 9,
+          "initial": 10,
+          "available": 10,
+          "outstanding": 0,
+          "reported_at": 1792272917
+        },
+        {
+          "id": "1898751402035634700",
+          "name": "E 51 St & Linden Blvd",
+          "bikes": 18,
+          "docks": 0,
+          "initial": 18,
+          "available": 18,
+          "outstanding": 0,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "f9ed9a6b-097e-48b9-a9d1-79d084dcd2d9",
+          "name": "Anthony Ave & E 175 St",
+          "bikes": 2,
+          "docks": 15,
+          "initial": 2,
+          "available": 2,
+          "outstanding": 0,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "498d7e8e-5164-4f26-9ce6-399947d73b1a",
+          "name": "Suydam St & St Nicholas Ave",
+          "bikes": 13,
+          "docks": 3,
+          "initial": 13,
+          "available": 13,
+          "outstanding": 0,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "66de677e-0aca-11e7-82f6-3863bb44ef7c",
+          "name": "E 106 St & Lexington Ave",
+          "bikes": 23,
+          "docks": 2,
+          "initial": 23,
+          "available": 23,
+          "outstanding": 0,
+          "reported_at": 1792272921
+        },
+        {
+          "id": "cb05443c-e68e-48f7-8d17-35353fa19d4d",
+          "name": "W 34 St & Hudson Blvd E",
+          "bikes": 17,
+          "docks": 36,
+          "initial": 17,
+          "available": 17,
+          "outstanding": 0,
+          "reported_at": 1792272921
+        },
+        {
+          "id": "d979131e-0b9f-4aa2-88c5-46d4ff94abc8",
+          "name": "Pacific St & Sackman St",
+          "bikes": 3,
+          "docks": 14,
+          "initial": 3,
+          "available": 3,
+          "outstanding": 0,
+          "reported_at": 1792272918
+        },
+        {
+          "id": "47da6ab2-c841-4f2d-97ef-dd8d441c96b1",
+          "name": "Loring Pl North & W 183 St",
+          "bikes": 2,
+          "docks": 14,
+          "initial": 2,
+          "available": 2,
+          "outstanding": 0,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "d2b23c87-b7c3-48c2-a634-db4b76ecbcf7",
+          "name": "Pacific St & Utica Ave",
+          "bikes": 3,
+          "docks": 16,
+          "initial": 3,
+          "available": 3,
+          "outstanding": 0,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "66dd26f9-0aca-11e7-82f6-3863bb44ef7c",
+          "name": "9 St & 44 Rd",
+          "bikes": 30,
+          "docks": 3,
+          "initial": 30,
+          "available": 30,
+          "outstanding": 0,
+          "reported_at": 1792272920
+        },
+        {
+          "id": "1822663031356509142",
+          "name": "Matthews Ct & Coney Island Ave",
+          "bikes": 19,
+          "docks": 0,
+          "initial": 19,
+          "available": 19,
+          "outstanding": 0,
+          "reported_at": 1792272919
+        },
+        {
+          "id": "640a9a95-194f-42f5-8d88-1df67129f388",
+          "name": "E 171 St & 3 Ave",
+          "bikes": 10,
+          "docks": 8,
+          "initial": 10,
+          "available": 10,
+          "outstanding": 0,
+          "reported_at": 1792272922
+        }
+      ],
+      "last_result": {
+        "message": "Return saved. Exactly one bike is back.",
+        "available": 10,
+        "conserved": true,
+        "outstanding": 0
+      },
+      "last_checkout": "1d44f0d1-a814-4458-b828-f7c16907f935"
+    },
+    "events": [
+      {
+        "at": "2026-10-17T21:46:07.967Z",
+        "id": "1ab3a02b-9f54-4eec-94c1-1c814823de6e",
+        "action": "checkout",
+        "message": "Local checkout saved. One bike is out.",
+        "observation": {
+          "message": "Local checkout saved. One bike is out.",
+          "available": 9,
+          "conserved": true,
+          "outstanding": 1
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:07.972Z",
+        "id": "e846216e-3d22-4461-ae2c-a534971e1384",
+        "action": "checkout",
+        "message": "Repeated delivery recognized. No additional inventory change.",
+        "observation": {
+          "message": "Repeated delivery recognized. No additional inventory change.",
+          "available": 9,
+          "conserved": true,
+          "outstanding": 1
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:07.985Z",
+        "id": "c68d8e1e-0373-4bba-99f4-24929251dec6",
+        "action": "return",
+        "message": "Return saved. Exactly one bike is back.",
+        "observation": {
+          "message": "Return saved. Exactly one bike is back.",
+          "available": 10,
+          "conserved": true,
+          "outstanding": 0
+        }
+      }
+    ],
+    "created_at": "2026-10-17T21:46:08.018Z",
+    "updated_at": "2026-10-17T21:46:08.044Z"
+  },
+  "source_hash": "021089557e25a850569041eaed8dc82bed73bafb4ffae4a3588028f7059e3fba",
+  "workspace_denial": true
+}

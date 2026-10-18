@@ -1,0 +1,206 @@
+{
+  "id": "retail",
+  "name": "UCI Online Retail",
+  "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+  "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+  "retrieved_at": "2026-10-17T21:37:07.249334+00:00",
+  "period": "2010\u20132011 historical transactions",
+  "license": "CC BY 4.0",
+  "attribution": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI:10.24432/C5BW33.",
+  "transformation": "First 24 positive-quantity rows; CustomerID, InvoiceNo and Country excluded. Source row number retained. No customer identities are imported.",
+  "raw_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+  "rows": [
+    {
+      "id": "uci-row-2",
+      "sku": "85123A",
+      "name": "WHITE HANGING HEART T-LIGHT HOLDER",
+      "quantity": 6,
+      "unit_price_gbp": 2.55,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-3",
+      "sku": "71053",
+      "name": "WHITE METAL LANTERN",
+      "quantity": 6,
+      "unit_price_gbp": 3.39,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-4",
+      "sku": "84406B",
+      "name": "CREAM CUPID HEARTS COAT HANGER",
+      "quantity": 8,
+      "unit_price_gbp": 2.75,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-5",
+      "sku": "84029G",
+      "name": "KNITTED UNION FLAG HOT WATER BOTTLE",
+      "quantity": 6,
+      "unit_price_gbp": 3.39,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-6",
+      "sku": "84029E",
+      "name": "RED WOOLLY HOTTIE WHITE HEART.",
+      "quantity": 6,
+      "unit_price_gbp": 3.39,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-7",
+      "sku": "22752",
+      "name": "SET 7 BABUSHKA NESTING BOXES",
+      "quantity": 2,
+      "unit_price_gbp": 7.65,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-8",
+      "sku": "21730",
+      "name": "GLASS STAR FROSTED T-LIGHT HOLDER",
+      "quantity": 6,
+      "unit_price_gbp": 4.25,
+      "date": "2010-12-01T08:26:00"
+    },
+    {
+      "id": "uci-row-9",
+      "sku": "22633",
+      "name": "HAND WARMER UNION JACK",
+      "quantity": 6,
+      "unit_price_gbp": 1.85,
+      "date": "2010-12-01T08:28:00"
+    },
+    {
+      "id": "uci-row-10",
+      "sku": "22632",
+      "name": "HAND WARMER RED POLKA DOT",
+      "quantity": 6,
+      "unit_price_gbp": 1.85,
+      "date": "2010-12-01T08:28:00"
+    },
+    {
+      "id": "uci-row-11",
+      "sku": "84879",
+      "name": "ASSORTED COLOUR BIRD ORNAMENT",
+      "quantity": 32,
+      "unit_price_gbp": 1.69,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-12",
+      "sku": "22745",
+      "name": "POPPY'S PLAYHOUSE BEDROOM ",
+      "quantity": 6,
+      "unit_price_gbp": 2.1,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-13",
+      "sku": "22748",
+      "name": "POPPY'S PLAYHOUSE KITCHEN",
+      "quantity": 6,
+      "unit_price_gbp": 2.1,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-14",
+      "sku": "22749",
+      "name": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+      "quantity": 8,
+      "unit_price_gbp": 3.75,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-15",
+      "sku": "22310",
+      "name": "IVORY KNITTED MUG COSY ",
+      "quantity": 6,
+      "unit_price_gbp": 1.65,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-16",
+      "sku": "84969",
+      "name": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+      "quantity": 6,
+      "unit_price_gbp": 4.25,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-17",
+      "sku": "22623",
+      "name": "BOX OF VINTAGE JIGSAW BLOCKS ",
+      "quantity": 3,
+      "unit_price_gbp": 4.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-18",
+      "sku": "22622",
+      "name": "BOX OF VINTAGE ALPHABET BLOCKS",
+      "quantity": 2,
+      "unit_price_gbp": 9.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-19",
+      "sku": "21754",
+      "name": "HOME BUILDING BLOCK WORD",
+      "quantity": 3,
+      "unit_price_gbp": 5.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-20",
+      "sku": "21755",
+      "name": "LOVE BUILDING BLOCK WORD",
+      "quantity": 3,
+      "unit_price_gbp": 5.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-21",
+      "sku": "21777",
+      "name": "RECIPE BOX WITH METAL HEART",
+      "quantity": 4,
+      "unit_price_gbp": 7.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-22",
+      "sku": "48187",
+      "name": "DOORMAT NEW ENGLAND",
+      "quantity": 4,
+      "unit_price_gbp": 7.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-23",
+      "sku": "22960",
+      "name": "JAM MAKING SET WITH JARS",
+      "quantity": 6,
+      "unit_price_gbp": 4.25,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-24",
+      "sku": "22913",
+      "name": "RED COAT RACK PARIS FASHION",
+      "quantity": 3,
+      "unit_price_gbp": 4.95,
+      "date": "2010-12-01T08:34:00"
+    },
+    {
+      "id": "uci-row-25",
+      "sku": "22912",
+      "name": "YELLOW COAT RACK PARIS FASHION",
+      "quantity": 3,
+      "unit_price_gbp": 4.95,
+      "date": "2010-12-01T08:34:00"
+    }
+  ]
+}

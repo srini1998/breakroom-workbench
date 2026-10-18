@@ -1,0 +1,32 @@
+{
+  "id": "issues",
+  "name": "Supabase public GitHub issue titles",
+  "url": "https://github.com/supabase/supabase/issues",
+  "license": "Public issue metadata; linked to original posts. No author/body data copied.",
+  "attribution": "Public contributors to supabase/supabase. No endorsement or affiliation.",
+  "retrieved_at": "2026-10-17T21:37:31.393Z",
+  "period": "Open-issue snapshot at retrieval",
+  "transformation": "First 8 non-PR titles, IDs, URLs and dates. Fictional project/team assignments are added locally; these are not real private customer tickets.",
+  "rows": [
+    {
+      "id": "51868",
+      "name": "[email removed]",
+      "url": "https://github.com/supabase/supabase/issues/51868",
+      "date": "2026-10-17T20:54:13Z"
+    },
+    {
+      "id": "51836",
+      "name": "SQL Editor auto-limit turns LIMIT ALL and LIMIT NULL queries into invalid SQL",
+      "url": "https://github.com/supabase/supabase/issues/51836",
+      "date": "2026-10-16T19:02:43Z"
+    },
+    {
+      "id": "51827",
+      "name": "Table Editor numeric filters round high-precision decimal values",
+      "url": "https://github.com/supabase/supabase/issues/51827",
+      "date": "2026-10-17T11:40:26Z"
+    }
+  ],
+  "source_fingerprint_sha256": "4fc662f613e0c6b2bdd378f198624d77791c8599ca0ce2157b7b57e32ea29ab8",
+  "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+}

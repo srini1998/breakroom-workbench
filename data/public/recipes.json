@@ -1,0 +1,35 @@
+{
+  "id": "recipes",
+  "name": "Luanti Minetest Game crafting rules",
+  "url": "https://github.com/luanti-org/minetest_game/blob/686fdb5c064d60146a6d343ad9dda866586a7a8b/mods/default/crafting.lua",
+  "license": "Recipe facts extracted from LGPL-2.1-or-later source; upstream license retained at repository.",
+  "attribution": "Minetest Game contributors / luanti-org",
+  "retrieved_at": "2026-10-17T21:37:31.393Z",
+  "period": "Pinned source revision 686fdb5c064d60146a6d343ad9dda866586a7a8b",
+  "transformation": "Three verified 9-ingot \u2192 1-block recipe facts. Starting balances and player actions are authored local examples, not real player telemetry.",
+  "rows": [
+    {
+      "id": "steel",
+      "name": "Steel block",
+      "input": "steel ingot",
+      "input_units": 9,
+      "output_units": 1
+    },
+    {
+      "id": "copper",
+      "name": "Copper block",
+      "input": "copper ingot",
+      "input_units": 9,
+      "output_units": 1
+    },
+    {
+      "id": "gold",
+      "name": "Gold block",
+      "input": "gold ingot",
+      "input_units": 9,
+      "output_units": 1
+    }
+  ],
+  "source_fingerprint_sha256": "ae3f963e362f8248734b23bd658d959144c6ac5b07d0358a69064fb307029f00",
+  "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+}

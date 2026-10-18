@@ -1,0 +1,32 @@
+-- Control plane only. The target database is separate.
+create table if not exists public.workspaces(id uuid primary key, name text not null);
+create table if not exists public.memberships(workspace_id uuid references workspaces on delete cascade, user_id uuid not null, role text not null check(role in ('owner','member')), primary key(workspace_id,user_id));
+create table if not exists public.projects(id uuid primary key, workspace_id uuid not null references workspaces, name text not null, created_at timestamptz not null default now(), unique(id,workspace_id));
+create table if not exists public.fixture_versions(id text primary key, module text not null, contract jsonb not null, content_hash text not null, created_at timestamptz default now());
+create table if not exists public.runs(id uuid primary key, workspace_id uuid not null references workspaces, project_id uuid not null, fixture_version text references fixture_versions, spec jsonb not null, config_hash text not null, status text not null default 'queued' check(status in ('queued','running','completed','failed','cancelled')), verdict jsonb, parent_id uuid references runs, created_at timestamptz not null default now(), updated_at timestamptz not null default now(), lease_until timestamptz, worker_id uuid, attempts int not null default 0, cancel_requested boolean not null default false, deadline_at timestamptz not null default now()+interval '120 seconds', foreign key(project_id,workspace_id) references projects(id,workspace_id), unique(id,workspace_id));
+create table if not exists public.steps(id uuid primary key, workspace_id uuid not null references workspaces, run_id uuid not null, ordinal int not null, decision_summary text not null, created_at timestamptz default now(), foreign key(run_id,workspace_id) references runs(id,workspace_id), unique(run_id,ordinal));
+create table if not exists public.tool_calls(id uuid primary key, workspace_id uuid not null references workspaces, run_id uuid not null, step_id uuid references steps, action jsonb not null, result jsonb not null, created_at timestamptz default now(), foreign key(run_id,workspace_id) references runs(id,workspace_id));
+create table if not exists public.artifacts(id uuid primary key, workspace_id uuid not null references workspaces, run_id uuid not null, kind text not null, content jsonb not null, content_hash text not null, created_at timestamptz default now(), foreign key(run_id,workspace_id) references runs(id,workspace_id));
+create table if not exists public.findings(id uuid primary key, workspace_id uuid not null references workspaces, run_id uuid not null, finding jsonb not null, foreign key(run_id,workspace_id) references runs(id,workspace_id));
+create table if not exists public.approvals(id uuid primary key, workspace_id uuid not null references workspaces, run_id uuid not null, action_hash text not null, plan jsonb not null, approved_by uuid, approved_at timestamptz, expires_at timestamptz not null default now()+interval '15 minutes', consumed_at timestamptz, foreign key(run_id,workspace_id) references runs(id,workspace_id),unique(run_id,action_hash));
+alter table workspaces enable row level security;
+alter table memberships enable row level security;
+create policy membership_self on memberships for select to authenticated using(user_id=(select auth.uid()));
+create policy workspace_member on workspaces for select to authenticated using(exists(select 1 from memberships m where m.workspace_id=workspaces.id and m.user_id=(select auth.uid())));
+do $$ declare t text; begin foreach t in array array['projects','runs','steps','tool_calls','artifacts','findings','approvals'] loop
+ execute format('alter table %I enable row level security',t);
+ execute format('create policy workspace_access on %I for select to authenticated using(exists(select 1 from memberships m where m.workspace_id=%I.workspace_id and m.user_id=(select auth.uid())))',t,t);
+ end loop; end $$;
+create policy project_create on projects for insert to authenticated with check(exists(select 1 from memberships m where m.workspace_id=projects.workspace_id and m.user_id=(select auth.uid())));
+alter table fixture_versions enable row level security;
+create policy public_contract on fixture_versions for select to authenticated using(true);
+grant usage on schema public to authenticated;
+grant select on all tables in schema public to authenticated;
+grant insert on projects to authenticated;
+create index runs_claim on runs(status,lease_until,created_at);
+create index memberships_user on memberships(user_id,workspace_id);
+create index projects_workspace on projects(workspace_id);
+create index runs_workspace on runs(workspace_id,created_at desc);
+create index artifacts_run on artifacts(run_id);
+create index tools_run on tool_calls(run_id);
+create index findings_run on findings(run_id);

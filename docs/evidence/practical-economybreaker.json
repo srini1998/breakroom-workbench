@@ -1,0 +1,181 @@
+{
+  "case": {
+    "id": "63ba9d56-7395-4c7a-8fec-464a59f0d49e",
+    "project_id": "20f1cf44-7dea-4fda-9939-3f75d3230a71",
+    "workspace_id": "00000000-0000-4000-8000-000000000011",
+    "slug": "economybreaker",
+    "source": {
+      "id": "recipes",
+      "url": "https://github.com/luanti-org/minetest_game/blob/686fdb5c064d60146a6d343ad9dda866586a7a8b/mods/default/crafting.lua",
+      "name": "Luanti Minetest Game crafting rules",
+      "rows": [
+        {
+          "id": "steel",
+          "name": "Steel block",
+          "input": "steel ingot",
+          "input_units": 9,
+          "output_units": 1
+        },
+        {
+          "id": "copper",
+          "name": "Copper block",
+          "input": "copper ingot",
+          "input_units": 9,
+          "output_units": 1
+        },
+        {
+          "id": "gold",
+          "name": "Gold block",
+          "input": "gold ingot",
+          "input_units": 9,
+          "output_units": 1
+        }
+      ],
+      "period": "Pinned source revision 686fdb5c064d60146a6d343ad9dda866586a7a8b",
+      "license": "Recipe facts extracted from LGPL-2.1-or-later source; upstream license retained at repository.",
+      "raw_sha256": "ae3f963e362f8248734b23bd658d959144c6ac5b07d0358a69064fb307029f00",
+      "attribution": "Minetest Game contributors / luanti-org",
+      "content_hash": "d2c6890516d4a42452417793c55eda41d8618eaa56b707ebb243ad86c2ba4572",
+      "retrieved_at": "2026-10-17T21:37:31.393Z",
+      "transformation": "Three verified 9-ingot → 1-block recipe facts. Starting balances and player actions are authored local examples, not real player telemetry."
+    },
+    "state": {
+      "blocks": 0,
+      "ingots": 0,
+      "recipe": {
+        "id": "steel",
+        "name": "Steel block",
+        "input": "steel ingot",
+        "input_units": 9,
+        "output_units": 1
+      },
+      "recipes": [
+        {
+          "id": "steel",
+          "name": "Steel block",
+          "input": "steel ingot",
+          "input_units": 9,
+          "output_units": 1
+        },
+        {
+          "id": "copper",
+          "name": "Copper block",
+          "input": "copper ingot",
+          "input_units": 9,
+          "output_units": 1
+        },
+        {
+          "id": "gold",
+          "name": "Gold block",
+          "input": "gold ingot",
+          "input_units": 9,
+          "output_units": 1
+        }
+      ],
+      "receipts": {
+        "89a11376-2e3c-4d78-b11f-0334c006cd25": {
+          "type": "craft",
+          "value": 9,
+          "message": "Craft blocked: not enough ingredients remain.",
+          "accepted": false,
+          "replayed": false
+        },
+        "c05077cb-34ac-4888-8426-cf14ae9524fd": {
+          "type": "craft",
+          "value": 9,
+          "message": "One block crafted. Ingredients were spent once.",
+          "accepted": true,
+          "replayed": false
+        },
+        "ebff7b5e-8e99-4ee7-9251-afef02f4770a": {
+          "type": "transfer",
+          "value": 9,
+          "message": "One block transferred atomically to the example teammate.",
+          "accepted": true,
+          "replayed": false
+        }
+      },
+      "last_result": {
+        "type": "transfer",
+        "value": 9,
+        "message": "One block transferred atomically to the example teammate.",
+        "accepted": true,
+        "replayed": true
+      },
+      "last_receipt": "ebff7b5e-8e99-4ee7-9251-afef02f4770a",
+      "initial_value": 9,
+      "teammate_blocks": 1
+    },
+    "events": [
+      {
+        "at": "2026-10-17T21:46:09.097Z",
+        "id": "9f5a7cce-501c-4365-be8d-94267314a807",
+        "action": "craft",
+        "message": "One block crafted. Ingredients were spent once.",
+        "observation": {
+          "type": "craft",
+          "value": 9,
+          "message": "One block crafted. Ingredients were spent once.",
+          "accepted": true,
+          "replayed": false
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:09.099Z",
+        "id": "cee5c9c0-5acc-4c55-9ba9-3c1b735aa046",
+        "action": "craft",
+        "message": "Craft blocked: not enough ingredients remain.",
+        "observation": {
+          "type": "craft",
+          "value": 9,
+          "message": "Craft blocked: not enough ingredients remain.",
+          "accepted": false,
+          "replayed": false
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:09.108Z",
+        "id": "795de83f-0f6e-42a7-b3f0-5ab1eb1bf5b5",
+        "action": "craft",
+        "message": "Repeated request recognized. Inventory did not change.",
+        "observation": {
+          "type": "craft",
+          "value": 9,
+          "message": "Craft blocked: not enough ingredients remain.",
+          "accepted": false,
+          "replayed": true
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:09.113Z",
+        "id": "0d491b22-f6ea-4dcd-9aaa-0398f2096048",
+        "action": "transfer",
+        "message": "One block transferred atomically to the example teammate.",
+        "observation": {
+          "type": "transfer",
+          "value": 9,
+          "message": "One block transferred atomically to the example teammate.",
+          "accepted": true,
+          "replayed": false
+        }
+      },
+      {
+        "at": "2026-10-17T21:46:09.117Z",
+        "id": "6b6ca1df-3799-475c-ab49-74d206e0a48f",
+        "action": "transfer",
+        "message": "Repeated request recognized. Inventory did not change.",
+        "observation": {
+          "type": "transfer",
+          "value": 9,
+          "message": "One block transferred atomically to the example teammate.",
+          "accepted": true,
+          "replayed": true
+        }
+      }
+    ],
+    "created_at": "2026-10-17T21:46:09.159Z",
+    "updated_at": "2026-10-17T21:46:09.183Z"
+  },
+  "source_hash": "d2c6890516d4a42452417793c55eda41d8618eaa56b707ebb243ad86c2ba4572",
+  "workspace_denial": true
+}

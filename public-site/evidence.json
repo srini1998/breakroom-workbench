@@ -1,0 +1,2703 @@
+{
+  "version": 1,
+  "mode": "recorded-evidence",
+  "generated_at": "2026-10-18T01:43:42.481Z",
+  "source_commit": "f53eb5209ec5569544ac6818af3bb26c344a5708",
+  "scope": "Actual recorded local experiments. Static public projection. No fresh backend operations run on this website. Email-bearing issue titles omitted from publication; source corpus remains in the private repository.",
+  "products": [
+    {
+      "slug": "switchboard",
+      "name": "Switchboard",
+      "copy": {
+        "title": "Will every update reach the right people?",
+        "subtitle": "Check a Realtime change before changing the route.",
+        "audience": "Teams building live feeds and tenant dashboards",
+        "problem": "Changing how updates travel can lose events or expose another team’s records. A fast graph alone cannot prove the audience is right.",
+        "example": "Two fictional teams receive recorded USGS earthquake observations. The experiment sends real row payloads through Postgres Changes and private Broadcast, then compares expected recipients with actual receipts.",
+        "agent": "The local model chooses bounded load-group order. An independent evaluator checks audience and delivery objectives. It does not predict earthquakes or decide geological risk.",
+        "steps": [
+          "Freeze a public observation snapshot.",
+          "Send the same supported INSERT/UPDATE workload through both transports.",
+          "Compare actual receipts with the declared audience and measured objectives."
+        ],
+        "limit": "Recorded USGS observations, fictional teams and local writes. This is not a live warning service. The small recorded live-model workload passed; an earlier full live workload remained inconclusive due coordinator delay."
+      },
+      "source": {
+        "id": "earthquakes",
+        "name": "USGS earthquake observations",
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+        "feed_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+        "retrieved_at": "2026-10-17T21:37:31.393Z",
+        "period": "Past-day feed snapshot; not a continuously connected alert service",
+        "license": "USGS-produced data: public domain; see USGS copyright policy",
+        "attribution": "U.S. Geological Survey Earthquake Hazards Program",
+        "transformation": "First 20 features; public ID, place, magnitude, origin time and source URL only. Replayed as application updates, not newly detected earthquakes.",
+        "rows": [
+          {
+            "id": "nc75451196",
+            "name": "2 km NW of The Geysers, CA",
+            "magnitude": 0.26,
+            "date": "2026-10-17T21:34:24.600Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196"
+          },
+          {
+            "id": "aka2026uplgqp",
+            "name": "85 km NNW of Karluk, Alaska",
+            "magnitude": 0.7,
+            "date": "2026-10-17T21:27:33.901Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp"
+          },
+          {
+            "id": "aka2026uplcme",
+            "name": "111 km S of McCarthy, Alaska",
+            "magnitude": 0.9,
+            "date": "2026-10-17T21:22:45.352Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme"
+          },
+          {
+            "id": "ci41348639",
+            "name": "11 km S of Anza, CA",
+            "magnitude": 0.5,
+            "date": "2026-10-17T21:22:37.320Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639"
+          },
+          {
+            "id": "aka2026uplbtx",
+            "name": "60 km SSW of Central, Alaska",
+            "magnitude": 1.7,
+            "date": "2026-10-17T21:21:56.748Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplbtx"
+          },
+          {
+            "id": "aka2026upkzuo",
+            "name": "18 km N of Skwentna, Alaska",
+            "magnitude": 1.6,
+            "date": "2026-10-17T21:19:40.099Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkzuo"
+          },
+          {
+            "id": "ci41348631",
+            "name": "22 km ESE of Anza, CA",
+            "magnitude": 0.94,
+            "date": "2026-10-17T21:03:33.340Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348631"
+          },
+          {
+            "id": "aka2026upkdpk",
+            "name": "55 km E of Whittier, Alaska",
+            "magnitude": 1.1,
+            "date": "2026-10-17T20:54:04.232Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upkdpk"
+          },
+          {
+            "id": "hv75059831",
+            "name": "9 km SSW of Volcano, Hawaii",
+            "magnitude": 1.76,
+            "date": "2026-10-17T20:53:42.240Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059831"
+          },
+          {
+            "id": "aka2026upjkal",
+            "name": "26 km ENE of Susitna North, Alaska",
+            "magnitude": 1.5,
+            "date": "2026-10-17T20:31:29.300Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upjkal"
+          },
+          {
+            "id": "aka2026upisja",
+            "name": "58 km WNW of Happy Valley, Alaska",
+            "magnitude": 2.8,
+            "date": "2026-10-17T20:11:11.204Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026upisja"
+          },
+          {
+            "id": "ci41348623",
+            "name": "4 km NNW of Big Bear City, CA",
+            "magnitude": 1.09,
+            "date": "2026-10-17T20:00:44.210Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348623"
+          },
+          {
+            "id": "nc75451131",
+            "name": "3 km SE of The Geysers, CA",
+            "magnitude": 1.23,
+            "date": "2026-10-17T19:48:39.660Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451131"
+          },
+          {
+            "id": "aka2026uphtgp",
+            "name": "11 km ENE of Fox, Alaska",
+            "magnitude": 1.4,
+            "date": "2026-10-17T19:42:10.340Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphtgp"
+          },
+          {
+            "id": "ci41348615",
+            "name": "4 km WSW of Anza, CA",
+            "magnitude": 1.02,
+            "date": "2026-10-17T19:37:30.510Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348615"
+          },
+          {
+            "id": "uu80160531",
+            "name": "1 km ENE of Summit Park, Utah",
+            "magnitude": 2.54,
+            "date": "2026-10-17T19:30:56.270Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80160531"
+          },
+          {
+            "id": "hv75059776",
+            "name": "7 km WSW of Volcano, Hawaii",
+            "magnitude": 1.32,
+            "date": "2026-10-17T19:24:08.300Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059776"
+          },
+          {
+            "id": "hv75059771",
+            "name": "13 km ENE of Pāhala, Hawaii",
+            "magnitude": 2.76,
+            "date": "2026-10-17T19:23:46.820Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059771"
+          },
+          {
+            "id": "aka2026uphcnz",
+            "name": "48 km ESE of Halibut Cove, Alaska",
+            "magnitude": 3.1,
+            "date": "2026-10-17T19:23:28.201Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uphcnz"
+          },
+          {
+            "id": "hv75059766",
+            "name": "19 km ESE of Naalehu, Hawaii",
+            "magnitude": 2.06,
+            "date": "2026-10-17T19:20:30.190Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75059766"
+          }
+        ],
+        "source_fingerprint_sha256": "46a308db466d57c336a53a2381de87014935b7d30044e660a3cac142c8faafa0",
+        "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+      },
+      "checks": {
+        "run_id": "aa5add2b-fd64-4e47-a589-b7a5c40e9c03",
+        "status": "completed",
+        "verdict": {
+          "scope": "Supported local INSERT/UPDATE fixture only",
+          "result": "pass",
+          "reasons": [
+            "Candidate met correctness and configured objective for this fixture and measured local conditions."
+          ],
+          "comparison": [
+            {
+              "level": 1,
+              "pairs": [
+                {
+                  "delta_ms": -37.48816799999622,
+                  "repetition": 0,
+                  "baseline_id": "f526bb85-240a-461b-aa12-25561ac91dc3",
+                  "baseline_p95": 42.701084000000264,
+                  "candidate_id": "43c238ac-39bd-451f-8ad8-57e755e0cda5",
+                  "baseline_hash": "2c511b53db270f85b995af6deb3cb9d0c5360c2408522aedd8a14cd912b82096",
+                  "candidate_p95": 5.212916000004043,
+                  "candidate_hash": "3172cd16567153d9ba75816b0a5fedcafd959d300db95d7dd120d9b49ff64c71"
+                },
+                {
+                  "delta_ms": -366.859749999996,
+                  "repetition": 1,
+                  "baseline_id": "6d884fce-f038-4047-a7a5-29b4487c7b65",
+                  "baseline_p95": 379.3225420000017,
+                  "candidate_id": "2104b187-d30a-4320-9797-85d6b67d97e8",
+                  "baseline_hash": "6196f654d36d67b45076e06661161762aeb3cb0a8f4e529274566efcab1e60f1",
+                  "candidate_p95": 12.46279200000572,
+                  "candidate_hash": "0dca0191fd7decd6af81845ed8cc0f7df1e289aabba43e1f08c6a9945975f293"
+                },
+                {
+                  "delta_ms": -181.73695899999439,
+                  "repetition": 2,
+                  "baseline_id": "b9434b1b-81ba-4fde-aa04-bcd0263c6501",
+                  "baseline_p95": 192.88779200000135,
+                  "candidate_id": "55463840-5cb2-48d2-82fa-a1571ede2444",
+                  "baseline_hash": "52809aa9f66bb46fa819df5ad79c5463cb35a6f97c0d320c3259865326706c58",
+                  "candidate_p95": 11.150833000006969,
+                  "candidate_hash": "d50e26ad9f5bd154fd3fdf942ac3d716ad181b53cc450b2b44c69b1e4228ed2e"
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "Observed association only; no server bottleneck attribution.",
+            "No universal equivalence or guaranteed speedup.",
+            "Synthetic fixtures; no custom model training."
+          ],
+          "evidence_refs": [
+            "e2574297-a01e-4ee8-83fc-8a51b030a5dc"
+          ],
+          "experiments_used": 8,
+          "valid_conclusions": 1,
+          "missed_seeded_failure": false,
+          "estimated_inference_spend": "unknown local inference"
+        },
+        "experiments": 8,
+        "operations": 32,
+        "receipts": 16,
+        "config_hash": "c55fbbb33cd030e2108e503c5d8c0f85593106315792f58273a1dfe51b609b54",
+        "recorded_at": "2026-10-17T21:54:42.235Z"
+      },
+      "cases": []
+    },
+    {
+      "slug": "accessproof",
+      "name": "AccessProof",
+      "copy": {
+        "title": "Give each teammate the right view.",
+        "subtitle": "A shared work desk, without sharing everything.",
+        "audience": "Teams building customer portals, agency workspaces or internal tools",
+        "problem": "A teammate needs one project, a contractor needs one assigned item, and another client’s records must stay private. A policy that looks sensible can still expose the wrong row.",
+        "agent": "The verification agent signs in as supported test roles, tries bounded reads and changes, and compares what happened with the permission rules. It reports a specific forbidden action that succeeded; it does not infer who should have access.",
+        "example": "An agency has two clients. A member can read their own client’s work. A contractor sees only the assigned issue. Neither may open the other client’s work; only the owner may update the local copy.",
+        "steps": [
+          "Import public issue titles into two example teams.",
+          "Preview a colleague’s view and ask the server whether an action is allowed.",
+          "Use the technical workbench to exercise real Auth identities and database policies."
+        ],
+        "limit": "Issue titles are real public records. Team assignments and colleague roles are fictional examples. This role preview is not an authentication system; actual Supabase policy tests are in the workbench."
+      },
+      "source": {
+        "id": "issues",
+        "name": "Supabase public GitHub issue titles",
+        "url": "https://github.com/supabase/supabase/issues",
+        "license": "Public issue metadata; linked to original posts. No author/body data copied.",
+        "attribution": "Public contributors to supabase/supabase. No endorsement or affiliation.",
+        "retrieved_at": "2026-10-17T21:37:31.393Z",
+        "period": "Open-issue snapshot at retrieval",
+        "transformation": "First 8 non-PR titles, IDs, URLs and dates. Fictional project/team assignments are added locally; these are not real private customer tickets.",
+        "rows": [
+          {
+            "id": "51836",
+            "name": "SQL Editor auto-limit turns LIMIT ALL and LIMIT NULL queries into invalid SQL",
+            "url": "https://github.com/supabase/supabase/issues/51836",
+            "date": "2026-10-16T19:02:43Z"
+          },
+          {
+            "id": "51827",
+            "name": "Table Editor numeric filters round high-precision decimal values",
+            "url": "https://github.com/supabase/supabase/issues/51827",
+            "date": "2026-10-17T11:40:26Z"
+          }
+        ],
+        "source_fingerprint_sha256": "4fc662f613e0c6b2bdd378f198624d77791c8599ca0ce2157b7b57e32ea29ab8",
+        "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+      },
+      "checks": {
+        "recorded_case_id": "28ca0beb-14c9-4b82-b2b9-201304485cf7",
+        "checks": {
+          "source_hash": "e85ede3dc6cb2b9eefdc75b120154fba1b783b74f83930040ea858e3f184b22d",
+          "workspace_denial": true
+        },
+        "actions": [
+          {
+            "at": "2026-10-17T21:41:56.207Z"
+          },
+          {
+            "at": "2026-10-17T21:41:56.216Z"
+          },
+          {
+            "at": "2026-10-17T21:41:56.223Z"
+          },
+          {
+            "at": "2026-10-17T21:41:56.229Z"
+          }
+        ],
+        "saved_state": {
+          "documents": [
+            {
+              "id": "51868",
+              "url": "https://github.com/supabase/supabase/issues/51868",
+              "date": "2026-10-17T20:54:13Z",
+              "name": "[email removed]",
+              "status": "Reviewed locally",
+              "tenant": 1,
+              "assigned": true
+            },
+            {
+              "id": "51836",
+              "url": "https://github.com/supabase/supabase/issues/51836",
+              "date": "2026-10-16T19:02:43Z",
+              "name": "SQL Editor auto-limit turns LIMIT ALL and LIMIT NULL queries into invalid SQL",
+              "status": "Open",
+              "tenant": 2,
+              "assigned": false
+            },
+            {
+              "id": "51827",
+              "url": "https://github.com/supabase/supabase/issues/51827",
+              "date": "2026-10-17T11:40:26Z",
+              "name": "Table Editor numeric filters round high-precision decimal values",
+              "status": "Open",
+              "tenant": 1,
+              "assigned": false
+            }
+          ],
+          "last_check": {
+            "rule": "A different team owns this record",
+            "action": "access_check",
+            "allowed": false,
+            "persona": "owner",
+            "document_id": "51836"
+          }
+        }
+      },
+      "cases": [
+        {
+          "module": "AccessProof",
+          "scenario": "clean",
+          "mode": "baseline",
+          "run_id": "fa30d0fd-6ee7-4698-aceb-d023548c24d6",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 351
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "clean",
+          "mode": "live",
+          "run_id": "5470f25e-e1b3-4dd1-977a-75808b960782",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8773
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-1",
+          "mode": "baseline",
+          "run_id": "6b16165f-b660-4418-b23e-0a0bdf6e2fdb",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 103
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-1",
+          "mode": "live",
+          "run_id": "6b752edd-2f55-4708-bc10-95ca7a4a3b47",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8683
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-2",
+          "mode": "baseline",
+          "run_id": "f2cf8b10-c34d-4f1e-be36-4443f79aa632",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 90
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-2",
+          "mode": "live",
+          "run_id": "b41fa732-2881-4d30-bb5c-2ca1d6cfba45",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8602
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-3",
+          "mode": "baseline",
+          "run_id": "c9b252b8-2909-4b02-9c00-89013c4ae00a",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 90
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-3",
+          "mode": "live",
+          "run_id": "c533c77d-52de-44e9-bad3-ee083e3aa81b",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8427
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-4",
+          "mode": "baseline",
+          "run_id": "b26d6ee2-0e32-498b-9139-a950c85e38cf",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 90
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-4",
+          "mode": "live",
+          "run_id": "b7782e68-aa50-4d41-b128-92535e8a48b3",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8780
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-5",
+          "mode": "baseline",
+          "run_id": "fe6cbe8d-9916-4d5f-ab0f-43800bbfbd8c",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 93
+        },
+        {
+          "module": "AccessProof",
+          "scenario": "candidate-5",
+          "mode": "live",
+          "run_id": "655dda96-02c9-47b8-bcdf-93ba2995064d",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8598
+        }
+      ]
+    },
+    {
+      "slug": "eventmedic",
+      "name": "EventMedic",
+      "copy": {
+        "title": "One ride. One inventory change.",
+        "subtitle": "Recover messy deliveries without losing track of the bikes.",
+        "audience": "Rental platforms, booking systems and event-driven inventory apps",
+        "problem": "A checkout message arrives twice, a return arrives first, or a worker stops after saving a change. Counting every delivery as a new event quietly corrupts the number of available items.",
+        "agent": "The verification agent inspects pending operations and saved receipts, delivers supported events in an order that respects dependencies, then checks stock. A durable receipt makes a repeated delivery safe.",
+        "example": "A rental station starts with the number of bikes in a real Citi Bike snapshot. A local checkout removes one bike. Sending that same request again must not remove a second bike. Returning it restores one bike.",
+        "steps": [
+          "Choose a station with a real recorded availability count.",
+          "Create a local checkout, resend it and return the bike.",
+          "Read the resulting availability and saved receipt; use the lab for interrupted/reordered scenarios."
+        ],
+        "limit": "Station names and starting availability are real observations at the stated time. Your clicks simulate rides in this local app; they never reserve bikes or change Citi Bike."
+      },
+      "source": {
+        "id": "stations",
+        "name": "Citi Bike public station availability",
+        "url": "https://citibikenyc.com/system-data",
+        "license": "NYCBS Data Use Policy — https://citibikenyc.com/data-sharing-policy",
+        "attribution": "Citi Bike / NYC Bike Share, GBFS public feed. No affiliation.",
+        "retrieved_at": "2026-10-17T21:37:31.393Z",
+        "period": "Availability observed at retrieval, not current availability after this timestamp",
+        "transformation": "First 12 installed stations with at least 2 bikes; public station metadata only. Subsequent checkout/return actions are local simulations, not real rides.",
+        "rows": [
+          {
+            "id": "1862008939006380034",
+            "name": "E 189 St & Bathgate Ave",
+            "bikes": 10,
+            "docks": 9,
+            "reported_at": 1792272917
+          },
+          {
+            "id": "1898751402035634700",
+            "name": "E 51 St & Linden Blvd",
+            "bikes": 18,
+            "docks": 0,
+            "reported_at": 1792272918
+          },
+          {
+            "id": "f9ed9a6b-097e-48b9-a9d1-79d084dcd2d9",
+            "name": "Anthony Ave & E 175 St",
+            "bikes": 2,
+            "docks": 15,
+            "reported_at": 1792272919
+          },
+          {
+            "id": "498d7e8e-5164-4f26-9ce6-399947d73b1a",
+            "name": "Suydam St & St Nicholas Ave",
+            "bikes": 13,
+            "docks": 3,
+            "reported_at": 1792272918
+          },
+          {
+            "id": "66de677e-0aca-11e7-82f6-3863bb44ef7c",
+            "name": "E 106 St & Lexington Ave",
+            "bikes": 23,
+            "docks": 2,
+            "reported_at": 1792272921
+          },
+          {
+            "id": "cb05443c-e68e-48f7-8d17-35353fa19d4d",
+            "name": "W 34 St & Hudson Blvd E",
+            "bikes": 17,
+            "docks": 36,
+            "reported_at": 1792272921
+          },
+          {
+            "id": "d979131e-0b9f-4aa2-88c5-46d4ff94abc8",
+            "name": "Pacific St & Sackman St",
+            "bikes": 3,
+            "docks": 14,
+            "reported_at": 1792272918
+          },
+          {
+            "id": "47da6ab2-c841-4f2d-97ef-dd8d441c96b1",
+            "name": "Loring Pl North & W 183 St",
+            "bikes": 2,
+            "docks": 14,
+            "reported_at": 1792272919
+          },
+          {
+            "id": "d2b23c87-b7c3-48c2-a634-db4b76ecbcf7",
+            "name": "Pacific St & Utica Ave",
+            "bikes": 3,
+            "docks": 16,
+            "reported_at": 1792272919
+          },
+          {
+            "id": "66dd26f9-0aca-11e7-82f6-3863bb44ef7c",
+            "name": "9 St & 44 Rd",
+            "bikes": 30,
+            "docks": 3,
+            "reported_at": 1792272920
+          },
+          {
+            "id": "1822663031356509142",
+            "name": "Matthews Ct & Coney Island Ave",
+            "bikes": 19,
+            "docks": 0,
+            "reported_at": 1792272919
+          },
+          {
+            "id": "640a9a95-194f-42f5-8d88-1df67129f388",
+            "name": "E 171 St & 3 Ave",
+            "bikes": 10,
+            "docks": 8,
+            "reported_at": 1792272922
+          }
+        ],
+        "source_fingerprint_sha256": "4be63181e2d84f5169b6d1019e17502ba369632639112a9448cdf217d795beb7",
+        "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+      },
+      "checks": {
+        "recorded_case_id": "d522550b-13ec-41aa-ae77-168e4f543f1a",
+        "checks": {
+          "source_hash": "021089557e25a850569041eaed8dc82bed73bafb4ffae4a3588028f7059e3fba",
+          "workspace_denial": true
+        },
+        "actions": [
+          {
+            "at": "2026-10-17T21:46:07.967Z"
+          },
+          {
+            "at": "2026-10-17T21:46:07.972Z"
+          },
+          {
+            "at": "2026-10-17T21:46:07.985Z"
+          }
+        ],
+        "saved_state": {
+          "receipts": {
+            "1d44f0d1-a814-4458-b828-f7c16907f935": {
+              "hash": "d5076d1beb16fde2cf71ff0cf22e089a7e921828293e459c252cf0393718ff61",
+              "type": "checkout",
+              "returned": true,
+              "station_id": "1862008939006380034"
+            },
+            "d393a58b-f6f2-451d-9b66-e4cf990c4e60": {
+              "hash": "80f0eb8510c3dc90df6711f7cf5fee1c3700c89828c7e2bf526edd445f467246",
+              "type": "return",
+              "station_id": "1862008939006380034"
+            }
+          },
+          "selected": "1862008939006380034",
+          "stations": [
+            {
+              "id": "1862008939006380034",
+              "name": "E 189 St & Bathgate Ave",
+              "bikes": 10,
+              "docks": 9,
+              "initial": 10,
+              "available": 10,
+              "outstanding": 0,
+              "reported_at": 1792272917
+            },
+            {
+              "id": "1898751402035634700",
+              "name": "E 51 St & Linden Blvd",
+              "bikes": 18,
+              "docks": 0,
+              "initial": 18,
+              "available": 18,
+              "outstanding": 0,
+              "reported_at": 1792272918
+            },
+            {
+              "id": "f9ed9a6b-097e-48b9-a9d1-79d084dcd2d9",
+              "name": "Anthony Ave & E 175 St",
+              "bikes": 2,
+              "docks": 15,
+              "initial": 2,
+              "available": 2,
+              "outstanding": 0,
+              "reported_at": 1792272919
+            },
+            {
+              "id": "498d7e8e-5164-4f26-9ce6-399947d73b1a",
+              "name": "Suydam St & St Nicholas Ave",
+              "bikes": 13,
+              "docks": 3,
+              "initial": 13,
+              "available": 13,
+              "outstanding": 0,
+              "reported_at": 1792272918
+            },
+            {
+              "id": "66de677e-0aca-11e7-82f6-3863bb44ef7c",
+              "name": "E 106 St & Lexington Ave",
+              "bikes": 23,
+              "docks": 2,
+              "initial": 23,
+              "available": 23,
+              "outstanding": 0,
+              "reported_at": 1792272921
+            },
+            {
+              "id": "cb05443c-e68e-48f7-8d17-35353fa19d4d",
+              "name": "W 34 St & Hudson Blvd E",
+              "bikes": 17,
+              "docks": 36,
+              "initial": 17,
+              "available": 17,
+              "outstanding": 0,
+              "reported_at": 1792272921
+            },
+            {
+              "id": "d979131e-0b9f-4aa2-88c5-46d4ff94abc8",
+              "name": "Pacific St & Sackman St",
+              "bikes": 3,
+              "docks": 14,
+              "initial": 3,
+              "available": 3,
+              "outstanding": 0,
+              "reported_at": 1792272918
+            },
+            {
+              "id": "47da6ab2-c841-4f2d-97ef-dd8d441c96b1",
+              "name": "Loring Pl North & W 183 St",
+              "bikes": 2,
+              "docks": 14,
+              "initial": 2,
+              "available": 2,
+              "outstanding": 0,
+              "reported_at": 1792272919
+            },
+            {
+              "id": "d2b23c87-b7c3-48c2-a634-db4b76ecbcf7",
+              "name": "Pacific St & Utica Ave",
+              "bikes": 3,
+              "docks": 16,
+              "initial": 3,
+              "available": 3,
+              "outstanding": 0,
+              "reported_at": 1792272919
+            },
+            {
+              "id": "66dd26f9-0aca-11e7-82f6-3863bb44ef7c",
+              "name": "9 St & 44 Rd",
+              "bikes": 30,
+              "docks": 3,
+              "initial": 30,
+              "available": 30,
+              "outstanding": 0,
+              "reported_at": 1792272920
+            },
+            {
+              "id": "1822663031356509142",
+              "name": "Matthews Ct & Coney Island Ave",
+              "bikes": 19,
+              "docks": 0,
+              "initial": 19,
+              "available": 19,
+              "outstanding": 0,
+              "reported_at": 1792272919
+            },
+            {
+              "id": "640a9a95-194f-42f5-8d88-1df67129f388",
+              "name": "E 171 St & 3 Ave",
+              "bikes": 10,
+              "docks": 8,
+              "initial": 10,
+              "available": 10,
+              "outstanding": 0,
+              "reported_at": 1792272922
+            }
+          ],
+          "last_result": {
+            "message": "Return saved. Exactly one bike is back.",
+            "available": 10,
+            "conserved": true,
+            "outstanding": 0
+          },
+          "last_checkout": "1d44f0d1-a814-4458-b828-f7c16907f935"
+        }
+      },
+      "cases": [
+        {
+          "module": "EventMedic",
+          "scenario": "ordered",
+          "mode": "baseline",
+          "run_id": "3f5d1417-91b6-40dd-a121-317396c77a0e",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 78
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "ordered",
+          "mode": "live",
+          "run_id": "c00c47bd-f330-4877-adb5-b9158e53a8da",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8368
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "duplicate",
+          "mode": "baseline",
+          "run_id": "8659d808-aa48-4a75-9fe2-1d0769ec8fe0",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 110
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "duplicate",
+          "mode": "live",
+          "run_id": "d7124e25-2d12-45f2-8566-5e193027cda9",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8261
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "reordered",
+          "mode": "baseline",
+          "run_id": "b019e160-f2cc-4f02-93af-dd37fe4c2062",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 69
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "reordered",
+          "mode": "live",
+          "run_id": "de03bf34-abc5-473e-82f0-36cba7e28c89",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8188
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "interrupted",
+          "mode": "baseline",
+          "run_id": "3cc5115a-c2b5-4564-b774-a015e0283861",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 0,
+          "milliseconds": 73
+        },
+        {
+          "module": "EventMedic",
+          "scenario": "interrupted",
+          "mode": "live",
+          "run_id": "9b339890-4491-4f1b-a258-4adc6efe5200",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 9,
+          "inference_decisions": 9,
+          "milliseconds": 8480
+        }
+      ]
+    },
+    {
+      "slug": "erasurecheck",
+      "name": "ErasureCheck",
+      "copy": {
+        "title": "Close an account. Keep it closed.",
+        "subtitle": "Check the files and jobs a delete button can miss.",
+        "audience": "Apps with user uploads, generated exports and background jobs",
+        "problem": "Deleting a profile row can leave files behind. Worse, a queued export can recreate deleted data. Shared team files and other accounts must survive the cleanup.",
+        "agent": "The verification agent inventories supported owned resources and proposes an exact plan. After your approval, a worker deletes owned data and tries releasing delayed work. Independent checks confirm what remains.",
+        "example": "An example shopper has a profile, an attachment and an export referencing real public retail product names. Closing the fictional account should remove its owned records and files, stop the delayed export and preserve the shared handover file.",
+        "steps": [
+          "Create a fictional account and real local Storage resources.",
+          "Review exactly which resources will be deleted or preserved.",
+          "Approve the displayed plan and inspect actual deletion and delayed-job checks."
+        ],
+        "limit": "The account is synthetic. Public product names are not customer data. This checks supported live resources; it is not a GDPR certification, backup audit or deletion of a real person’s account."
+      },
+      "source": {
+        "id": "retail",
+        "name": "UCI Online Retail",
+        "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+        "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+        "retrieved_at": "2026-10-17T21:37:07.249334+00:00",
+        "period": "2010–2011 historical transactions",
+        "license": "CC BY 4.0",
+        "attribution": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI:10.24432/C5BW33.",
+        "transformation": "First 24 positive-quantity rows; CustomerID, InvoiceNo and Country excluded. Source row number retained. No customer identities are imported.",
+        "raw_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+        "rows": [
+          {
+            "id": "uci-row-2",
+            "sku": "85123A",
+            "name": "WHITE HANGING HEART T-LIGHT HOLDER",
+            "quantity": 6,
+            "unit_price_gbp": 2.55,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-3",
+            "sku": "71053",
+            "name": "WHITE METAL LANTERN",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-4",
+            "sku": "84406B",
+            "name": "CREAM CUPID HEARTS COAT HANGER",
+            "quantity": 8,
+            "unit_price_gbp": 2.75,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-5",
+            "sku": "84029G",
+            "name": "KNITTED UNION FLAG HOT WATER BOTTLE",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-6",
+            "sku": "84029E",
+            "name": "RED WOOLLY HOTTIE WHITE HEART.",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-7",
+            "sku": "22752",
+            "name": "SET 7 BABUSHKA NESTING BOXES",
+            "quantity": 2,
+            "unit_price_gbp": 7.65,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-8",
+            "sku": "21730",
+            "name": "GLASS STAR FROSTED T-LIGHT HOLDER",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-9",
+            "sku": "22633",
+            "name": "HAND WARMER UNION JACK",
+            "quantity": 6,
+            "unit_price_gbp": 1.85,
+            "date": "2010-12-01T08:28:00"
+          },
+          {
+            "id": "uci-row-10",
+            "sku": "22632",
+            "name": "HAND WARMER RED POLKA DOT",
+            "quantity": 6,
+            "unit_price_gbp": 1.85,
+            "date": "2010-12-01T08:28:00"
+          },
+          {
+            "id": "uci-row-11",
+            "sku": "84879",
+            "name": "ASSORTED COLOUR BIRD ORNAMENT",
+            "quantity": 32,
+            "unit_price_gbp": 1.69,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-12",
+            "sku": "22745",
+            "name": "POPPY'S PLAYHOUSE BEDROOM ",
+            "quantity": 6,
+            "unit_price_gbp": 2.1,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-13",
+            "sku": "22748",
+            "name": "POPPY'S PLAYHOUSE KITCHEN",
+            "quantity": 6,
+            "unit_price_gbp": 2.1,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-14",
+            "sku": "22749",
+            "name": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+            "quantity": 8,
+            "unit_price_gbp": 3.75,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-15",
+            "sku": "22310",
+            "name": "IVORY KNITTED MUG COSY ",
+            "quantity": 6,
+            "unit_price_gbp": 1.65,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-16",
+            "sku": "84969",
+            "name": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-17",
+            "sku": "22623",
+            "name": "BOX OF VINTAGE JIGSAW BLOCKS ",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-18",
+            "sku": "22622",
+            "name": "BOX OF VINTAGE ALPHABET BLOCKS",
+            "quantity": 2,
+            "unit_price_gbp": 9.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-19",
+            "sku": "21754",
+            "name": "HOME BUILDING BLOCK WORD",
+            "quantity": 3,
+            "unit_price_gbp": 5.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-20",
+            "sku": "21755",
+            "name": "LOVE BUILDING BLOCK WORD",
+            "quantity": 3,
+            "unit_price_gbp": 5.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-21",
+            "sku": "21777",
+            "name": "RECIPE BOX WITH METAL HEART",
+            "quantity": 4,
+            "unit_price_gbp": 7.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-22",
+            "sku": "48187",
+            "name": "DOORMAT NEW ENGLAND",
+            "quantity": 4,
+            "unit_price_gbp": 7.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-23",
+            "sku": "22960",
+            "name": "JAM MAKING SET WITH JARS",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-24",
+            "sku": "22913",
+            "name": "RED COAT RACK PARIS FASHION",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-25",
+            "sku": "22912",
+            "name": "YELLOW COAT RACK PARIS FASHION",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          }
+        ]
+      },
+      "checks": {
+        "recorded_case_id": "401fd272-31e2-4280-bea5-fb1813515d53",
+        "checks": {
+          "source_hash": "c8d7069938e21e7b7a13cecd4d0119dd024f314d1051bb140ef5deeb46c23fde",
+          "workspace_denial": true
+        },
+        "actions": [
+          {
+            "at": "2026-10-17T21:46:08.416Z"
+          },
+          {
+            "at": "2026-10-17T21:46:08.463Z"
+          }
+        ],
+        "saved_state": {
+          "result": {
+            "scope": "Real local Supabase Storage and target SQL; no backups or legal certification",
+            "actual": {
+              "rows": [
+                {
+                  "id": "control-profile",
+                  "owner": "control",
+                  "shared": false
+                },
+                {
+                  "id": "shared",
+                  "owner": null,
+                  "shared": true
+                }
+              ],
+              "delayed": "fenced",
+              "owned_objects": [],
+              "shared_objects": [
+                {
+                  "id": "be4de0ab-bba6-495a-911b-fd3b2173bf42",
+                  "name": "team.txt",
+                  "version": "2dc862ee-835a-4018-a9ba-6513644e633b",
+                  "metadata": {
+                    "eTag": "\"3ebcefe38992ae918284af75ef7131b8\"",
+                    "size": 36,
+                    "mimetype": "text/plain",
+                    "cacheControl": "max-age=3600",
+                    "lastModified": "2026-10-17T21:46:08.457Z",
+                    "contentLength": 36,
+                    "httpStatusCode": 200
+                  },
+                  "created_at": "2026-10-17T21:46:08.459Z",
+                  "updated_at": "2026-10-17T21:46:08.459Z",
+                  "archived_at": null,
+                  "is_versioned": false,
+                  "is_delete_marker": false,
+                  "last_accessed_at": "2026-10-17T21:46:08.459Z"
+                }
+              ],
+              "storage_checks": {
+                "owned_download_absent": true,
+                "shared_content_unchanged": true,
+                "control_content_unchanged": true
+              },
+              "control_objects": [
+                {
+                  "id": "54c127c2-d80a-423c-84fd-6fa7ea564142",
+                  "name": "keep.txt",
+                  "version": "49a7fe20-4dfd-4690-92eb-2058863a88e8",
+                  "metadata": {
+                    "eTag": "\"951961979b93a7bc4861acbb77bdc383\"",
+                    "size": 37,
+                    "mimetype": "text/plain",
+                    "cacheControl": "max-age=3600",
+                    "lastModified": "2026-10-17T21:46:08.450Z",
+                    "contentLength": 37,
+                    "httpStatusCode": 200
+                  },
+                  "created_at": "2026-10-17T21:46:08.453Z",
+                  "updated_at": "2026-10-17T21:46:08.453Z",
+                  "archived_at": null,
+                  "is_versioned": false,
+                  "is_delete_marker": false,
+                  "last_accessed_at": "2026-10-17T21:46:08.453Z"
+                }
+              ]
+            },
+            "passed": true,
+            "expected": "Owned live resources absent; control/shared preserved; delayed export fenced",
+            "invariant_id": "erasure.no_resurrection"
+          },
+          "status": "closed",
+          "account": null,
+          "approval": null,
+          "cleanup_plan": {
+            "run": "401fd272-31e2-4280-bea5-fb1813515d53",
+            "owner": "owned",
+            "ready": true,
+            "bucket": "breakroom-401fd272-31e2-4280-bea5-fb1813515d53",
+            "delete": [
+              "profile",
+              "export",
+              "owned/*"
+            ],
+            "detach": [
+              "shared"
+            ],
+            "module": "ErasureCheck",
+            "epoch_to": 1,
+            "preserve": [
+              "control-profile",
+              "control/keep.txt",
+              "shared/team.txt"
+            ],
+            "epoch_from": 0,
+            "delayed_job": "pending-export",
+            "limitations": [
+              "Live controlled resources only",
+              "No backup inspection or legal compliance verdict"
+            ],
+            "owned_object_prefix": "owned/"
+          },
+          "receipt_rows": []
+        }
+      },
+      "cases": [
+        {
+          "module": "ErasureCheck",
+          "scenario": "clean",
+          "mode": "baseline",
+          "run_id": "b4a113b1-63f7-4d64-9600-6a36801108be",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 171
+        },
+        {
+          "module": "ErasureCheck",
+          "scenario": "clean",
+          "mode": "live",
+          "run_id": "e0b8d816-01dc-49e9-a7d1-4728f7611be7",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 3,
+          "milliseconds": 2029
+        },
+        {
+          "module": "ErasureCheck",
+          "scenario": "incomplete",
+          "mode": "baseline",
+          "run_id": "cdc419ac-7bb3-420a-88b8-801104900fc1",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 107
+        },
+        {
+          "module": "ErasureCheck",
+          "scenario": "incomplete",
+          "mode": "live",
+          "run_id": "038e0c52-571b-4864-bb97-bfe59ee653f3",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 3,
+          "milliseconds": 2054
+        },
+        {
+          "module": "ErasureCheck",
+          "scenario": "delayed",
+          "mode": "baseline",
+          "run_id": "211a936c-a4f3-48a3-b9ec-5ad0d8f6a3ae",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 89
+        },
+        {
+          "module": "ErasureCheck",
+          "scenario": "delayed",
+          "mode": "live",
+          "run_id": "914cb9ff-f178-4980-ad51-485486243b2c",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 3,
+          "milliseconds": 2030
+        }
+      ]
+    },
+    {
+      "slug": "importrescue",
+      "name": "ImportRescue",
+      "copy": {
+        "title": "Turn a spreadsheet into usable records.",
+        "subtitle": "Catch the mistakes before they reach your ledger.",
+        "audience": "Retail operations, inventory teams and developers importing supplier files",
+        "problem": "Files arrive with different column names, repeated lines and quantities that are not safe to import. A half-imported batch or a repeated upload can double the numbers.",
+        "agent": "The verification agent inspects the supported file and declared conversion facts, proposes a mapping and dry-runs the whole batch. It asks for exact approval before the worker commits supported stock changes. Unknown facts cause rejection.",
+        "example": "Import a small real historical sales sample from UCI into a local sales ledger. Map SKU, quantity and source-row columns, review the totals, then commit once. Uploading the same rows again must not duplicate them.",
+        "steps": [
+          "Load the real historical CSV or upload a bounded file using its catalog.",
+          "Map the columns and preview every accepted line and unit total.",
+          "Approve the exact staged batch; repeated source rows are deduplicated or rejected on conflict."
+        ],
+        "limit": "The public sample records sales in 2010–2011, not current supplier deliveries. This practical page imports a local sales ledger; the workbench separately tests supported inventory pack conversions. Customer and invoice identifiers are excluded."
+      },
+      "source": {
+        "id": "retail",
+        "name": "UCI Online Retail",
+        "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+        "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+        "retrieved_at": "2026-10-17T21:37:07.249334+00:00",
+        "period": "2010–2011 historical transactions",
+        "license": "CC BY 4.0",
+        "attribution": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI:10.24432/C5BW33.",
+        "transformation": "First 24 positive-quantity rows; CustomerID, InvoiceNo and Country excluded. Source row number retained. No customer identities are imported.",
+        "raw_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+        "rows": [
+          {
+            "id": "uci-row-2",
+            "sku": "85123A",
+            "name": "WHITE HANGING HEART T-LIGHT HOLDER",
+            "quantity": 6,
+            "unit_price_gbp": 2.55,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-3",
+            "sku": "71053",
+            "name": "WHITE METAL LANTERN",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-4",
+            "sku": "84406B",
+            "name": "CREAM CUPID HEARTS COAT HANGER",
+            "quantity": 8,
+            "unit_price_gbp": 2.75,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-5",
+            "sku": "84029G",
+            "name": "KNITTED UNION FLAG HOT WATER BOTTLE",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-6",
+            "sku": "84029E",
+            "name": "RED WOOLLY HOTTIE WHITE HEART.",
+            "quantity": 6,
+            "unit_price_gbp": 3.39,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-7",
+            "sku": "22752",
+            "name": "SET 7 BABUSHKA NESTING BOXES",
+            "quantity": 2,
+            "unit_price_gbp": 7.65,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-8",
+            "sku": "21730",
+            "name": "GLASS STAR FROSTED T-LIGHT HOLDER",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:26:00"
+          },
+          {
+            "id": "uci-row-9",
+            "sku": "22633",
+            "name": "HAND WARMER UNION JACK",
+            "quantity": 6,
+            "unit_price_gbp": 1.85,
+            "date": "2010-12-01T08:28:00"
+          },
+          {
+            "id": "uci-row-10",
+            "sku": "22632",
+            "name": "HAND WARMER RED POLKA DOT",
+            "quantity": 6,
+            "unit_price_gbp": 1.85,
+            "date": "2010-12-01T08:28:00"
+          },
+          {
+            "id": "uci-row-11",
+            "sku": "84879",
+            "name": "ASSORTED COLOUR BIRD ORNAMENT",
+            "quantity": 32,
+            "unit_price_gbp": 1.69,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-12",
+            "sku": "22745",
+            "name": "POPPY'S PLAYHOUSE BEDROOM ",
+            "quantity": 6,
+            "unit_price_gbp": 2.1,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-13",
+            "sku": "22748",
+            "name": "POPPY'S PLAYHOUSE KITCHEN",
+            "quantity": 6,
+            "unit_price_gbp": 2.1,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-14",
+            "sku": "22749",
+            "name": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+            "quantity": 8,
+            "unit_price_gbp": 3.75,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-15",
+            "sku": "22310",
+            "name": "IVORY KNITTED MUG COSY ",
+            "quantity": 6,
+            "unit_price_gbp": 1.65,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-16",
+            "sku": "84969",
+            "name": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-17",
+            "sku": "22623",
+            "name": "BOX OF VINTAGE JIGSAW BLOCKS ",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-18",
+            "sku": "22622",
+            "name": "BOX OF VINTAGE ALPHABET BLOCKS",
+            "quantity": 2,
+            "unit_price_gbp": 9.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-19",
+            "sku": "21754",
+            "name": "HOME BUILDING BLOCK WORD",
+            "quantity": 3,
+            "unit_price_gbp": 5.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-20",
+            "sku": "21755",
+            "name": "LOVE BUILDING BLOCK WORD",
+            "quantity": 3,
+            "unit_price_gbp": 5.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-21",
+            "sku": "21777",
+            "name": "RECIPE BOX WITH METAL HEART",
+            "quantity": 4,
+            "unit_price_gbp": 7.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-22",
+            "sku": "48187",
+            "name": "DOORMAT NEW ENGLAND",
+            "quantity": 4,
+            "unit_price_gbp": 7.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-23",
+            "sku": "22960",
+            "name": "JAM MAKING SET WITH JARS",
+            "quantity": 6,
+            "unit_price_gbp": 4.25,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-24",
+            "sku": "22913",
+            "name": "RED COAT RACK PARIS FASHION",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          },
+          {
+            "id": "uci-row-25",
+            "sku": "22912",
+            "name": "YELLOW COAT RACK PARIS FASHION",
+            "quantity": 3,
+            "unit_price_gbp": 4.95,
+            "date": "2010-12-01T08:34:00"
+          }
+        ]
+      },
+      "checks": {
+        "recorded_case_id": "ff126506-4762-47e4-bc3e-33cd177dd67b",
+        "checks": {
+          "source_hash": "c8d7069938e21e7b7a13cecd4d0119dd024f314d1051bb140ef5deeb46c23fde",
+          "workspace_denial": true
+        },
+        "actions": [
+          {
+            "at": "2026-10-17T21:46:08.776Z"
+          },
+          {
+            "at": "2026-10-17T21:46:08.783Z"
+          },
+          {
+            "at": "2026-10-17T21:46:08.785Z"
+          }
+        ],
+        "saved_state": {
+          "ledger": [
+            {
+              "sku": "85123A",
+              "name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "receipt": "uci-row-2",
+              "quantity": 6
+            },
+            {
+              "sku": "71053",
+              "name": "WHITE METAL LANTERN",
+              "receipt": "uci-row-3",
+              "quantity": 6
+            },
+            {
+              "sku": "84406B",
+              "name": "CREAM CUPID HEARTS COAT HANGER",
+              "receipt": "uci-row-4",
+              "quantity": 8
+            },
+            {
+              "sku": "84029G",
+              "name": "KNITTED UNION FLAG HOT WATER BOTTLE",
+              "receipt": "uci-row-5",
+              "quantity": 6
+            },
+            {
+              "sku": "84029E",
+              "name": "RED WOOLLY HOTTIE WHITE HEART.",
+              "receipt": "uci-row-6",
+              "quantity": 6
+            },
+            {
+              "sku": "22752",
+              "name": "SET 7 BABUSHKA NESTING BOXES",
+              "receipt": "uci-row-7",
+              "quantity": 2
+            },
+            {
+              "sku": "21730",
+              "name": "GLASS STAR FROSTED T-LIGHT HOLDER",
+              "receipt": "uci-row-8",
+              "quantity": 6
+            },
+            {
+              "sku": "22633",
+              "name": "HAND WARMER UNION JACK",
+              "receipt": "uci-row-9",
+              "quantity": 6
+            },
+            {
+              "sku": "22632",
+              "name": "HAND WARMER RED POLKA DOT",
+              "receipt": "uci-row-10",
+              "quantity": 6
+            },
+            {
+              "sku": "84879",
+              "name": "ASSORTED COLOUR BIRD ORNAMENT",
+              "receipt": "uci-row-11",
+              "quantity": 32
+            },
+            {
+              "sku": "22745",
+              "name": "POPPY'S PLAYHOUSE BEDROOM ",
+              "receipt": "uci-row-12",
+              "quantity": 6
+            },
+            {
+              "sku": "22748",
+              "name": "POPPY'S PLAYHOUSE KITCHEN",
+              "receipt": "uci-row-13",
+              "quantity": 6
+            },
+            {
+              "sku": "22749",
+              "name": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+              "receipt": "uci-row-14",
+              "quantity": 8
+            },
+            {
+              "sku": "22310",
+              "name": "IVORY KNITTED MUG COSY ",
+              "receipt": "uci-row-15",
+              "quantity": 6
+            },
+            {
+              "sku": "84969",
+              "name": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+              "receipt": "uci-row-16",
+              "quantity": 6
+            },
+            {
+              "sku": "22623",
+              "name": "BOX OF VINTAGE JIGSAW BLOCKS ",
+              "receipt": "uci-row-17",
+              "quantity": 3
+            },
+            {
+              "sku": "22622",
+              "name": "BOX OF VINTAGE ALPHABET BLOCKS",
+              "receipt": "uci-row-18",
+              "quantity": 2
+            },
+            {
+              "sku": "21754",
+              "name": "HOME BUILDING BLOCK WORD",
+              "receipt": "uci-row-19",
+              "quantity": 3
+            },
+            {
+              "sku": "21755",
+              "name": "LOVE BUILDING BLOCK WORD",
+              "receipt": "uci-row-20",
+              "quantity": 3
+            },
+            {
+              "sku": "21777",
+              "name": "RECIPE BOX WITH METAL HEART",
+              "receipt": "uci-row-21",
+              "quantity": 4
+            },
+            {
+              "sku": "48187",
+              "name": "DOORMAT NEW ENGLAND",
+              "receipt": "uci-row-22",
+              "quantity": 4
+            },
+            {
+              "sku": "22960",
+              "name": "JAM MAKING SET WITH JARS",
+              "receipt": "uci-row-23",
+              "quantity": 6
+            },
+            {
+              "sku": "22913",
+              "name": "RED COAT RACK PARIS FASHION",
+              "receipt": "uci-row-24",
+              "quantity": 3
+            },
+            {
+              "sku": "22912",
+              "name": "YELLOW COAT RACK PARIS FASHION",
+              "receipt": "uci-row-25",
+              "quantity": 3
+            }
+          ],
+          "catalog": {
+            "21730": "GLASS STAR FROSTED T-LIGHT HOLDER",
+            "21754": "HOME BUILDING BLOCK WORD",
+            "21755": "LOVE BUILDING BLOCK WORD",
+            "21777": "RECIPE BOX WITH METAL HEART",
+            "22310": "IVORY KNITTED MUG COSY ",
+            "22622": "BOX OF VINTAGE ALPHABET BLOCKS",
+            "22623": "BOX OF VINTAGE JIGSAW BLOCKS ",
+            "22632": "HAND WARMER RED POLKA DOT",
+            "22633": "HAND WARMER UNION JACK",
+            "22745": "POPPY'S PLAYHOUSE BEDROOM ",
+            "22748": "POPPY'S PLAYHOUSE KITCHEN",
+            "22749": "FELTCRAFT PRINCESS CHARLOTTE DOLL",
+            "22752": "SET 7 BABUSHKA NESTING BOXES",
+            "22912": "YELLOW COAT RACK PARIS FASHION",
+            "22913": "RED COAT RACK PARIS FASHION",
+            "22960": "JAM MAKING SET WITH JARS",
+            "48187": "DOORMAT NEW ENGLAND",
+            "71053": "WHITE METAL LANTERN",
+            "84879": "ASSORTED COLOUR BIRD ORNAMENT",
+            "84969": "BOX OF 6 ASSORTED COLOUR TEASPOONS",
+            "84029E": "RED WOOLLY HOTTIE WHITE HEART.",
+            "84029G": "KNITTED UNION FLAG HOT WATER BOTTLE",
+            "84406B": "CREAM CUPID HEARTS COAT HANGER",
+            "85123A": "WHITE HANGING HEART T-LIGHT HOLDER"
+          },
+          "commits": {
+            "4cc811c2d7e6203753e2ee404afa005722e545c58de69560860f60e46ac14d5a": true
+          },
+          "approval": null,
+          "last_result": {
+            "new_rows": 0,
+            "replayed": true,
+            "new_units": 0
+          },
+          "catalog_hash": "c8d7069938e21e7b7a13cecd4d0119dd024f314d1051bb140ef5deeb46c23fde"
+        }
+      },
+      "cases": [
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-a",
+          "mode": "baseline",
+          "run_id": "6a99fe0c-2a6f-4225-8c3c-9da52a9a13f8",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 0,
+          "milliseconds": 52
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-a",
+          "mode": "live",
+          "run_id": "98b9ba2a-f21e-4c52-8ec0-ff4c2b733e39",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 4,
+          "milliseconds": 2475
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-b",
+          "mode": "baseline",
+          "run_id": "ce0b4589-b6ee-4fc9-bac6-8191e7b88bd9",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 0,
+          "milliseconds": 41
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-b",
+          "mode": "live",
+          "run_id": "e58bd8f3-8f20-405f-a694-5df236d34bdb",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 4,
+          "milliseconds": 2415
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-c",
+          "mode": "baseline",
+          "run_id": "cd6ab1de-ad20-4f11-81db-0b37a62ad115",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 0,
+          "milliseconds": 37
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "supplier-c",
+          "mode": "live",
+          "run_id": "4a357ef3-0321-45e8-bceb-d57550cb714f",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 4,
+          "milliseconds": 2421
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "missing-pack",
+          "mode": "baseline",
+          "run_id": "74de0e1a-0ad2-4fde-9412-989b7ec5f6aa",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 26
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "missing-pack",
+          "mode": "live",
+          "run_id": "b3be5165-2c43-4f2d-b30e-8233955e4687",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 4,
+          "milliseconds": 2406
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "invalid-row",
+          "mode": "baseline",
+          "run_id": "b95544a6-7607-4b31-8115-e4397776f52f",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 25
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "invalid-row",
+          "mode": "live",
+          "run_id": "5d467607-2023-4926-9d3a-9941aec3d139",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 4,
+          "milliseconds": 2403
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "conflict",
+          "mode": "baseline",
+          "run_id": "eb29bc4b-a6ed-4071-a00f-ed9ab5875af8",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 0,
+          "milliseconds": 26
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "conflict",
+          "mode": "live",
+          "run_id": "e4396306-3080-4b3b-943f-0b80edaac7a0",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 4,
+          "inference_decisions": 4,
+          "milliseconds": 2413
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "stale-approval",
+          "mode": "baseline",
+          "run_id": "0a66de63-a4da-4a32-820d-9a1bd19a5f7b",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 0,
+          "milliseconds": 40
+        },
+        {
+          "module": "ImportRescue",
+          "scenario": "stale-approval",
+          "mode": "live",
+          "run_id": "6e4d258e-fada-4e82-ad7d-0d305a195d6c",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 5,
+          "inference_decisions": 4,
+          "milliseconds": 2417
+        }
+      ]
+    },
+    {
+      "slug": "economybreaker",
+      "name": "EconomyBreaker",
+      "copy": {
+        "title": "Keep a crafting race from creating wealth.",
+        "subtitle": "Make game inventory obey the rules, even under simultaneous requests.",
+        "audience": "Game backends, crafting systems and virtual-item economies",
+        "problem": "Two crafting requests can both spend the same ingredients. A retried request can mint another item. A transfer that stops halfway can leave the economy richer or poorer.",
+        "agent": "The verification agent coordinates bounded withdrawal, craft and transfer traces, checks conserved inventory value, reduces a failing trace, and runs the same trace against a correction. It cannot change the expected recipe or certify an entire game.",
+        "example": "The real Minetest Game rule needs nine steel ingots for one steel block. Start a fictional player with nine ingots and send two craft requests together. Only one can succeed. A replay must not make a second block.",
+        "steps": [
+          "Use a recipe fact from a pinned open-source game revision.",
+          "Launch two real concurrent local requests against the same saved inventory.",
+          "Check that value is conserved, retry a receipt and transfer the crafted item atomically."
+        ],
+        "limit": "Recipe facts are real. Player balances and actions are authored examples. This is not live player telemetry, real money, or proof that every game mechanic is safe."
+      },
+      "source": {
+        "id": "recipes",
+        "name": "Luanti Minetest Game crafting rules",
+        "url": "https://github.com/luanti-org/minetest_game/blob/686fdb5c064d60146a6d343ad9dda866586a7a8b/mods/default/crafting.lua",
+        "license": "Recipe facts extracted from LGPL-2.1-or-later source; upstream license retained at repository.",
+        "attribution": "Minetest Game contributors / luanti-org",
+        "retrieved_at": "2026-10-17T21:37:31.393Z",
+        "period": "Pinned source revision 686fdb5c064d60146a6d343ad9dda866586a7a8b",
+        "transformation": "Three verified 9-ingot → 1-block recipe facts. Starting balances and player actions are authored local examples, not real player telemetry.",
+        "rows": [
+          {
+            "id": "steel",
+            "name": "Steel block",
+            "input": "steel ingot",
+            "input_units": 9,
+            "output_units": 1
+          },
+          {
+            "id": "copper",
+            "name": "Copper block",
+            "input": "copper ingot",
+            "input_units": 9,
+            "output_units": 1
+          },
+          {
+            "id": "gold",
+            "name": "Gold block",
+            "input": "gold ingot",
+            "input_units": 9,
+            "output_units": 1
+          }
+        ],
+        "source_fingerprint_sha256": "ae3f963e362f8248734b23bd658d959144c6ac5b07d0358a69064fb307029f00",
+        "fingerprint_method": "SHA-256 of JSON-encoded source text. For stations: combined canonical hash of the information/status text fingerprints."
+      },
+      "checks": {
+        "recorded_case_id": "63ba9d56-7395-4c7a-8fec-464a59f0d49e",
+        "checks": {
+          "source_hash": "d2c6890516d4a42452417793c55eda41d8618eaa56b707ebb243ad86c2ba4572",
+          "workspace_denial": true
+        },
+        "actions": [
+          {
+            "at": "2026-10-17T21:46:09.097Z"
+          },
+          {
+            "at": "2026-10-17T21:46:09.099Z"
+          },
+          {
+            "at": "2026-10-17T21:46:09.108Z"
+          },
+          {
+            "at": "2026-10-17T21:46:09.113Z"
+          },
+          {
+            "at": "2026-10-17T21:46:09.117Z"
+          }
+        ],
+        "saved_state": {
+          "blocks": 0,
+          "ingots": 0,
+          "recipe": {
+            "id": "steel",
+            "name": "Steel block",
+            "input": "steel ingot",
+            "input_units": 9,
+            "output_units": 1
+          },
+          "recipes": [
+            {
+              "id": "steel",
+              "name": "Steel block",
+              "input": "steel ingot",
+              "input_units": 9,
+              "output_units": 1
+            },
+            {
+              "id": "copper",
+              "name": "Copper block",
+              "input": "copper ingot",
+              "input_units": 9,
+              "output_units": 1
+            },
+            {
+              "id": "gold",
+              "name": "Gold block",
+              "input": "gold ingot",
+              "input_units": 9,
+              "output_units": 1
+            }
+          ],
+          "receipts": {
+            "89a11376-2e3c-4d78-b11f-0334c006cd25": {
+              "type": "craft",
+              "value": 9,
+              "message": "Craft blocked: not enough ingredients remain.",
+              "accepted": false,
+              "replayed": false
+            },
+            "c05077cb-34ac-4888-8426-cf14ae9524fd": {
+              "type": "craft",
+              "value": 9,
+              "message": "One block crafted. Ingredients were spent once.",
+              "accepted": true,
+              "replayed": false
+            },
+            "ebff7b5e-8e99-4ee7-9251-afef02f4770a": {
+              "type": "transfer",
+              "value": 9,
+              "message": "One block transferred atomically to the example teammate.",
+              "accepted": true,
+              "replayed": false
+            }
+          },
+          "last_result": {
+            "type": "transfer",
+            "value": 9,
+            "message": "One block transferred atomically to the example teammate.",
+            "accepted": true,
+            "replayed": true
+          },
+          "last_receipt": "ebff7b5e-8e99-4ee7-9251-afef02f4770a",
+          "initial_value": 9,
+          "teammate_blocks": 1
+        }
+      },
+      "cases": [
+        {
+          "module": "EconomyBreaker",
+          "scenario": "clean",
+          "mode": "baseline",
+          "run_id": "502a9b55-5842-4468-8964-64f254549985",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 0,
+          "milliseconds": 69
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "clean",
+          "mode": "live",
+          "run_id": "ffc72e5c-07dd-439f-94b3-e9ae9941a537",
+          "expected": "pass",
+          "observed": "pass",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 6,
+          "milliseconds": 4113
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "withdrawal",
+          "mode": "baseline",
+          "run_id": "1692e339-e7ca-42fe-8583-76d3051d57cc",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 0,
+          "milliseconds": 82
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "withdrawal",
+          "mode": "live",
+          "run_id": "992d497e-c34a-4644-976b-b3c21dc290bd",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 6,
+          "milliseconds": 4479
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "craft",
+          "mode": "baseline",
+          "run_id": "9e853c0f-ddd5-4661-980a-7dd717ab84b3",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 0,
+          "milliseconds": 73
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "craft",
+          "mode": "live",
+          "run_id": "5e4b5ef4-9c05-4aa0-8d5e-6d8ad2875b45",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 6,
+          "milliseconds": 4515
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "transfer",
+          "mode": "baseline",
+          "run_id": "28c85e61-248b-4fc5-af26-66f9158d10fe",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 0,
+          "milliseconds": 69
+        },
+        {
+          "module": "EconomyBreaker",
+          "scenario": "transfer",
+          "mode": "live",
+          "run_id": "31c18e43-aa92-4ad9-8f28-f379553efcc4",
+          "expected": "fail",
+          "observed": "fail",
+          "matched": true,
+          "tool_count": 6,
+          "inference_decisions": 6,
+          "milliseconds": 4442
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "version": 1,
+    "contract": {
+      "version": 1,
+      "name": "Team audience contract",
+      "scope": "breakroom-two-tenant-fixture",
+      "rules": [
+        {
+          "role": "owner",
+          "action": "read_own",
+          "allow": true
+        },
+        {
+          "role": "owner",
+          "action": "read_foreign",
+          "allow": false
+        },
+        {
+          "role": "owner",
+          "action": "write_own",
+          "allow": true
+        },
+        {
+          "role": "owner",
+          "action": "unassigned",
+          "allow": true
+        },
+        {
+          "role": "owner",
+          "action": "attachment",
+          "allow": false
+        },
+        {
+          "role": "owner",
+          "action": "reassign",
+          "allow": true
+        },
+        {
+          "role": "member",
+          "action": "read_own",
+          "allow": true
+        },
+        {
+          "role": "member",
+          "action": "read_foreign",
+          "allow": false
+        },
+        {
+          "role": "member",
+          "action": "write_own",
+          "allow": false
+        },
+        {
+          "role": "member",
+          "action": "unassigned",
+          "allow": true
+        },
+        {
+          "role": "member",
+          "action": "attachment",
+          "allow": false
+        },
+        {
+          "role": "member",
+          "action": "reassign",
+          "allow": false
+        },
+        {
+          "role": "contractor",
+          "action": "read_own",
+          "allow": true
+        },
+        {
+          "role": "contractor",
+          "action": "read_foreign",
+          "allow": false
+        },
+        {
+          "role": "contractor",
+          "action": "write_own",
+          "allow": false
+        },
+        {
+          "role": "contractor",
+          "action": "unassigned",
+          "allow": false
+        },
+        {
+          "role": "contractor",
+          "action": "attachment",
+          "allow": false
+        },
+        {
+          "role": "contractor",
+          "action": "reassign",
+          "allow": false
+        }
+      ]
+    },
+    "baseline": {
+      "fixture_run_id": "eafc1982-5861-4afe-86ed-be88e78a4220",
+      "variant": "clean",
+      "contract_hash": "d44da48ab54eaed4a723e37ccc754dcc1a02259ba95f1f75d8ea097310ea7167",
+      "observed_at": "2026-10-17T21:47:30.470Z",
+      "result": "pass",
+      "observations": [
+        {
+          "fixture_run_id": "b6c2841d-fb60-4282-bc96-8f3df559dfe2",
+          "role": "owner",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "5666e69b-1c4e-4992-9463-52251df22771",
+          "role": "owner",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "9216c14b-5f3c-46d1-986f-57399bb42a54",
+          "role": "owner",
+          "action": "write_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "8df091fc-820f-4af3-bdb2-ee3a206e1751",
+          "role": "owner",
+          "action": "unassigned",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "88eedf84-31b7-4b7d-978d-acb4eb84047a",
+          "role": "owner",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "09f7ac4d-77c5-4f0b-87db-75c75f612a35",
+          "role": "owner",
+          "action": "reassign",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "4a4cfaa6-5552-42ef-931c-1df7adbf81c2",
+          "role": "member",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "6b923402-e84f-4ad3-b924-5784468b8c12",
+          "role": "member",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "9049e8c8-cb36-491d-81e1-0735611bcbb3",
+          "role": "member",
+          "action": "write_own",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "e4e67228-2ecb-4fbd-abfe-be7385791b46",
+          "role": "member",
+          "action": "unassigned",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "a976ab96-4d9b-4098-8c88-4dddea50d8bd",
+          "role": "member",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "a893df09-4a56-42a8-8620-0efa68628147",
+          "role": "member",
+          "action": "reassign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": "permission denied",
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "63a533ec-4979-4c8c-9806-630656d8df67",
+          "role": "contractor",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "b080e8e0-9352-49bc-b2eb-fbbb133db9d2",
+          "role": "contractor",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "e877b0a7-3415-49b7-b0bf-a2386e2a229b",
+          "role": "contractor",
+          "action": "write_own",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "27174118-918c-4856-ad99-9258e8cf8bbe",
+          "role": "contractor",
+          "action": "unassigned",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "93360da4-8805-4676-b052-084f5d920649",
+          "role": "contractor",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "5f82f688-a2ef-4bf4-814d-41c03bd6cb3a",
+          "role": "contractor",
+          "action": "reassign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        }
+      ],
+      "violations": [],
+      "scope": "breakroom-two-tenant-fixture",
+      "limitations": [
+        "Only the versioned local two-tenant fixture is supported.",
+        "Each probe has an isolated fixture; multi-action journeys are not covered.",
+        "A permission contract is supplied by the developer; completeness is not inferred.",
+        "Attachment probes cover metadata, not Storage object access.",
+        "This does not connect to arbitrary customer projects or apply production migrations."
+      ]
+    },
+    "candidate": {
+      "fixture_run_id": "f2c79e2e-6a8e-4fe3-8ef1-344784b79bf3",
+      "variant": "candidate-1",
+      "contract_hash": "d44da48ab54eaed4a723e37ccc754dcc1a02259ba95f1f75d8ea097310ea7167",
+      "observed_at": "2026-10-17T21:47:30.759Z",
+      "result": "fail",
+      "observations": [
+        {
+          "fixture_run_id": "f0208aa7-6904-4f9e-9f19-11f7307dfc01",
+          "role": "owner",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "a14892f0-4bba-4f61-9477-aea5e2f2506d",
+          "role": "owner",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": true,
+          "passed": false,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "33108215-61f0-490f-9617-825d217dfd99",
+          "role": "owner",
+          "action": "write_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "1c4da543-4c10-4d48-9a60-41661d9261c1",
+          "role": "owner",
+          "action": "unassigned",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "18aaf83d-594c-4c0c-a304-7c6e2d69c28e",
+          "role": "owner",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "75cac1e5-c706-4571-8d7e-1c791edef06e",
+          "role": "owner",
+          "action": "reassign",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "8e2b6869-0dd7-4def-b943-0e6c86e58533",
+          "role": "member",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "e937738e-1ece-4535-95bd-7a43b9ceacac",
+          "role": "member",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": true,
+          "passed": false,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "cc4e99f7-c3eb-43fc-be1e-425592e15ccf",
+          "role": "member",
+          "action": "write_own",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "fa989d0f-6f04-49be-a027-58b068f49564",
+          "role": "member",
+          "action": "unassigned",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "b2c70d90-a0f9-4ff1-86ee-a511c7706316",
+          "role": "member",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "610fa7a5-164d-4d14-beb1-0b2d993ada5b",
+          "role": "member",
+          "action": "reassign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": "permission denied",
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "986e60fb-a8ae-4e51-8e3e-5387cb2b9b08",
+          "role": "contractor",
+          "action": "read_own",
+          "expected": true,
+          "observed": true,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "56c02530-9b2d-48dc-87a7-b420a6b690c0",
+          "role": "contractor",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "244a4c6e-cadd-4057-a293-47bfb67e657b",
+          "role": "contractor",
+          "action": "write_own",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "2b2ea60c-62b2-4541-a9d0-1bc8c765f870",
+          "role": "contractor",
+          "action": "unassigned",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "ce9c15a4-5860-473f-b1da-910cc9ee3105",
+          "role": "contractor",
+          "action": "attachment",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "9ef22e21-8984-43c0-964e-4775a4631c2c",
+          "role": "contractor",
+          "action": "reassign",
+          "expected": false,
+          "observed": false,
+          "passed": true,
+          "session_user_id": "10000000-0000-4000-8000-000000000003",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        }
+      ],
+      "violations": [
+        {
+          "fixture_run_id": "a14892f0-4bba-4f61-9477-aea5e2f2506d",
+          "role": "owner",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": true,
+          "passed": false,
+          "session_user_id": "10000000-0000-4000-8000-000000000001",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        },
+        {
+          "fixture_run_id": "e937738e-1ece-4535-95bd-7a43b9ceacac",
+          "role": "member",
+          "action": "read_foreign",
+          "expected": false,
+          "observed": true,
+          "passed": false,
+          "session_user_id": "10000000-0000-4000-8000-000000000002",
+          "denial": null,
+          "scope": "Real Supabase Auth JWT → PostgREST security-invoker RPC → RLS; attachment metadata only"
+        }
+      ],
+      "scope": "breakroom-two-tenant-fixture",
+      "limitations": [
+        "Only the versioned local two-tenant fixture is supported.",
+        "Each probe has an isolated fixture; multi-action journeys are not covered.",
+        "A permission contract is supplied by the developer; completeness is not inferred.",
+        "Attachment probes cover metadata, not Storage object access.",
+        "This does not connect to arbitrary customer projects or apply production migrations."
+      ]
+    },
+    "changes": [
+      {
+        "role": "owner",
+        "action": "read_foreign",
+        "before": false,
+        "after": true,
+        "expected": false
+      },
+      {
+        "role": "member",
+        "action": "read_foreign",
+        "before": false,
+        "after": true,
+        "expected": false
+      }
+    ],
+    "result": "fail",
+    "provenance": "Fresh actual local Supabase Auth → PostgREST → RLS observations. Seeded reviewed candidate templates; no upstream vulnerability claim."
+  }
+}
