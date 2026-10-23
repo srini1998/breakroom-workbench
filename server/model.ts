@@ -56,6 +56,10 @@ export async function modelAction(
       model: name,
       temperature: 0,
       max_tokens: 200,
+      // Reasoning models (e.g. Groq openai/gpt-oss-20b) spend output tokens on reasoning; "low" keeps the JSON inside 200 tokens.
+      ...(process.env.MODEL_REASONING_EFFORT
+        ? { reasoning_effort: process.env.MODEL_REASONING_EFFORT }
+        : {}),
       response_format: {
         type: "json_schema",
         json_schema: {
