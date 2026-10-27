@@ -1,0 +1,51 @@
+.ask {
+  margin: 22px 0;
+  padding: 16px;
+  border: 1px solid #c9d3b4;
+  border-radius: 12px;
+  background: #fbfcf5;
+}
+.ask h3 {
+  margin: 0 0 6px;
+}
+.ask-hint {
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.ask form {
+  display: grid;
+  gap: 8px;
+}
+.ask label {
+  font-size: 11px;
+}
+.ask input {
+  font: inherit;
+  font-size: 13px;
+  padding: 9px 10px;
+  border: 1px solid #c9d3b4;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  min-width: 0;
+}
+.ask .button {
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.ask button[disabled] {
+  opacity: 0.6;
+}
+.ask-answer small {
+  display: block;
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+.ask-answer p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 4px 0 0;
+}

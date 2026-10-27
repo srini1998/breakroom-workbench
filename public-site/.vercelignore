@@ -6,3 +6,5 @@
 !manifest.json
 !vercel.json
 !.vercelignore
+!ask.js
+!ask.css
